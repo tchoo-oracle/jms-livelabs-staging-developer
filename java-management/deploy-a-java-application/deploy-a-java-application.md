@@ -196,7 +196,7 @@ In this workshop, you will:
     ```
     <copy>
     public class HelloWorld {
-      public static void main(String[] args){
+      public static void main(String[] args) throws InterruptedException{
         System.out.println("This is my first program in java");
         int number=15;  
         System.out.println("List of even numbers from 1 to "+number+": ");  
