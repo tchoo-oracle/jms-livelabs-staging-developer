@@ -154,7 +154,10 @@ Sign in to the Oracle Cloud Console as an administrator using the credentials pr
 
 4. Create a user group.
 
-    * In the Oracle Cloud Console, open the navigation menu and click Identity & Security. Under Identity, click Groups.
+    * In the Oracle Cloud Console, open the navigation menu and click **Identity & Security**. Under Identity, click **Groups**.
+
+        > **Note:** If **Groups** is not indicated under Identity, Click **Domains** -> **Default** -> **Groups**.
+
         ![image of console navigation to groups](images/console-navigation-groups.png)
         &nbsp;
     * Click **Create Group**.
