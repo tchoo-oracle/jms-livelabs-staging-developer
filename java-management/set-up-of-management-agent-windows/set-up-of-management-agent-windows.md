@@ -296,21 +296,7 @@ Install Management Agent (If your host is Linux, skip to Lab 5: Install Manageme
 
   ![image of agents details page](images/tagged-mgmt-agent.png)
 
-8. JMS has been linked to the management agent and will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can also be changed in the Oracle Cloud Console.
-
-9. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
-
-  ![image of console navigation to java management](images/console-navigation-jms.png)
-
-10. Select the compartment that the fleet is in and click the fleet.
-
-11. Click on **Modify Agent Settings**.
-
-  ![image of fleet details page](images/fleet-details-page-new.png)
-
-12. Change the **Java Runtime Discovery** and **Java Runtime Usage** to the desired value. For this example, change **Java Runtime Discovery** to **3 hours**, and **Java Runtime Usage** to **5 minutes**.
-
-  ![image of modify agent settings page](images/fleet-modify-agent-settings-new.png)
+8. JMS has been linked to the management agent and will collect information on your Java runtimes. The scanning frequency was set in [Lab 2: Set Up a Fleet](?lab=setup-a-fleet).
 
 ## Task 6: Verify detection of Java applications and runtimes
 For the logging of applications to be visible, Java applications must be run again after the installation of the Management Agent. Now that the Management Agent has been set up in your compute instance, it will be able to detect new Java applications that have been executed. This can be observed in the Oracle Cloud Console.
@@ -344,7 +330,7 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
 
   ![image of runtimes after successful installation](images/successful-installation.png)
 
-12. Click **Applications** under **Resources**. You should now see two applications. The first is from the javac compiler command and the second is from the HelloWorld application.
+5. Click **Applications** under **Resources**. You should now see two applications. The first is from the javac compiler command and the second is from the HelloWorld application.
 
   ![image of applications after successful installation](images/successful-installation-applications.png)
 

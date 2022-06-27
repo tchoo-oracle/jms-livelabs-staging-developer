@@ -58,6 +58,16 @@ In this lab, you will:
 
   Click **Done** once the download is complete. The downloaded file will be used in [Lab 5: Install Management Agent on non-OCI Hosts - Linux](?lab=set-up-of-management-agent-linux) to install the Management Agent.
 
+10. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
+
+11. Click the fleet. In the detail page, click on **Modify Agent Settings**.
+
+  ![image of fleet details page](images/fleet-details-page-new.png)
+
+12. Change the **Java Runtime Discovery** and **Java Runtime Usage** to the desired value. For this example, change **Java Runtime Discovery** to **3 hours**, and **Java Runtime Usage** to **5 minutes**.
+
+  ![image of modify agent settings page](images/fleet-modify-agent-settings-new.png)
+
 You may now **proceed to the next lab**.
 
 ## Learn More
