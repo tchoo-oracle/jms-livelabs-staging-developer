@@ -155,7 +155,7 @@ In this workshop, you will:
     </copy>
     ```
 
-4. To save the file, type **CTRL+x**. Before exiting, nano will ask you if you wish to save the file: Type **y** to save and exit, type **n** to abandon your changes and exit.
+4. To save the file, type **CTRL+x**. Before exiting, nano will ask you if you wish to save the file: Type **y** and **Enter** to save and exit, type **n** to abandon your changes and exit.
 
 ### For **Windows**
 
