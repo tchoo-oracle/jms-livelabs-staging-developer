@@ -37,7 +37,7 @@ In this lab, you will:
 
 ## Task 2: Install Management Agent
 
-Install Management Agent (If your host is Linux, skip to skip to Lab 5: Install Management Agent on non-OCI Hosts - Linux).
+Install Management Agent (If your host is Linux, skip to Lab 5: Install Management Agent on non-OCI Hosts - Linux).
 
 1. To install the management agent software on Windows, perform the following steps:
 
