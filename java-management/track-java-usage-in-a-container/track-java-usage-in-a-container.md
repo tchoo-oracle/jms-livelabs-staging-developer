@@ -35,19 +35,13 @@ The following steps will describe installation of Docker on a compute instance r
     ```
     ```
     <copy>
-    sudo yum-config-manager --enable *addons
+    sudo yum config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
     </copy>
     ```
-3. Continue by running the following commands.
+3. Install Docker and enable it by running.
     ```
     <copy>
-    sudo yum update
-    </copy>
-    ```
-4. Install Docker and enable it by running.
-    ```
-    <copy>
-    sudo yum install docker-engine
+    sudo yum install -y docker-ce --nobest
     </copy>
     ```
     ```
@@ -60,13 +54,13 @@ The following steps will describe installation of Docker on a compute instance r
     sudo systemctl start docker
     </copy>
     ```
-5. You can check the version of your Docker installation by running the following:
+4. You can check the version of your Docker installation by running the following:
     ```
     <copy>
     sudo docker version
     </copy>
     ```
-6. You can verify that Docker is correctly installed by running this.
+5. You can verify that Docker is correctly installed by running this.
     ```
     <copy>
     sudo docker run hello-world
