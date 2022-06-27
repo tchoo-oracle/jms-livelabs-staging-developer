@@ -59,8 +59,8 @@ In this workshop, you will:
     Review the **Image and shape** settings. Take the default values provided by the wizard.
 
     **Image**
-    * **Image**: Oracle Linux 7.9
-    * **Image build**: 2022.01.24-0
+    * **Image**: Oracle Linux 8
+    * **Image build**: Default image build
     * **Shape**: Any AMD or Intel shape
     * **OCPU count**: 1
     * **Memory (GB)**: 1
