@@ -174,7 +174,7 @@ Install Management Agent (If your host is Windows, skip to Lab 6: Install Manage
 
      ```
      <copy>
-     sudo bash /opt/oracle/mgmt_agent/agent_inst/config/destinations/OCI/services/jms/"${VERSION}"/scripts/setup.sh
+     sudo bash /opt/oracle/mgmt_agent/agent_inst/config/destinations/OCI/services/jms/"${VERSION}"/scripts/setup.sh --force
      </copy>
      ```
 

@@ -101,7 +101,7 @@ Do not disturb the setup in this time and only proceed after the status of the M
     ```
     ```
     <copy>
-    sudo bash /var/lib/oracle-cloud-agent/plugins/oci-managementagent/polaris/agent_inst/config/destinations/OCI/services/jms/"${VERSION}"/scripts/setup.sh
+    sudo bash /var/lib/oracle-cloud-agent/plugins/oci-managementagent/polaris/agent_inst/config/destinations/OCI/services/jms/"${VERSION}"/scripts/setup.sh --force
     </copy>
     ```
 
@@ -143,7 +143,7 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
 
   ![image of successful installation](images/successful-installation.png)
 
-12. Click **Applications** under **Resources**. You should now see two applications. The first is from the javac compiler command and the second is from the HelloWorld application.
+5. Click **Applications** under **Resources**. You should now see two applications. The first is from the javac compiler command and the second is from the HelloWorld application.
 
   ![image of applications after successful installation](images/successful-installation-applications.png)
 

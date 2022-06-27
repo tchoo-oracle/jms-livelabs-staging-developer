@@ -239,7 +239,7 @@ Install Management Agent (If your host is Linux, skip to Lab 5: Install Manageme
     	ECHO Setting JMS configuration
     	DIR /b C:\Oracle\mgmt_agent\agent_inst\config\destinations\OCI\services\jms >%TEMP%\version.txt
     	SET /p VERSION=<%TEMP%\version.txt
-    	POWERSHELL -ep Bypass C:\Oracle\mgmt_agent\agent_inst\config\destinations\OCI\services\jms\!VERSION!\scripts\setup.ps1
+    	POWERSHELL -ep Bypass C:\Oracle\mgmt_agent\agent_inst\config\destinations\OCI\services\jms\!VERSION!\scripts\setup.ps1 --force
     ) ELSE (
     	ECHO JMS Plugin Folder does not exist, please install management agent and try running it again.
     )
