@@ -110,7 +110,7 @@ Sign in to the Oracle Cloud Console as an administrator using the credentials pr
         &nbsp;
     * Click **Create Compartment**.
         &nbsp;
-    * Find your new compartment in the table of compartments, then hover over the compartment's OCID. Click **Copy** to copy the OCID into the clipboard and then paste it into a text editor. You will require it in a later step.
+    * Find your new compartment in the table of compartments, then hover over the compartment's OCID. Click **Copy** to copy the OCID into the clipboard and then ***paste it into a text editor***. You will require it in a later step.
         &nbsp;
         ![image of compartments main page after creation](images/compartment-main-page-after-create.png)
         &nbsp;
