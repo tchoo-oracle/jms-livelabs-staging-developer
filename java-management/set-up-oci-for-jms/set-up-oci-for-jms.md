@@ -146,7 +146,7 @@ Sign in to the Oracle Cloud Console as an administrator using the credentials pr
         &nbsp;
     * Click **Create Tag Key Definition**.
         &nbsp;
-    * In the Create Tag Key Definition dialog box, enter the name for the new tag key: `fleet_ocid` and its description: `Use to tag a management agent with JMS fleet membership.`.
+    * In the Create Tag Key Definition dialog box, enter the name for the new tag key: `fleet_ocid` and its description: `Use to tag a management agent with JMS fleet membership`.
         ![image of tag key create page](images/tag-namespaces-jms-tag-key-definition.png)
         &nbsp;
     * Click **Create Tag Key Definition**.
