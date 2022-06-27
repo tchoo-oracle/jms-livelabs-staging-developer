@@ -93,7 +93,7 @@ Do not disturb the setup in this time and only proceed after the status of the M
   ![image of add tag to agent](images/add-agent-tag.png)
 
 ## Task 4: Configure Java Usage Tracker
-1. Configure Java Usage Tracker by executing the following JMS service plug-in setup scripts:
+1. Connect to the instance, then configure Java Usage Tracker by executing the following JMS service plug-in setup scripts:
     ```
     <copy>
     VERSION=$(sudo ls /var/lib/oracle-cloud-agent/plugins/oci-managementagent/polaris/agent_inst/config/destinations/OCI/services/jms/)
