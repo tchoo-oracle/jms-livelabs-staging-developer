@@ -349,4 +349,4 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
 ## Acknowledgements
 
 * **Author** - Esther Neoh, Java Management Service
-* **Last Updated By** - Xin Yi Tay, April 2022
+* **Last Updated By** - Yixin Wei, June 2022

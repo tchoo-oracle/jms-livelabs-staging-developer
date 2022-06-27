@@ -274,4 +274,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Alvin Lam, Java Management Service
-* **Last Updated By/Date** - Bhuvesh Kumar, April 2022
+* **Last Updated By/Date** - Yixin Wei, June 2022
