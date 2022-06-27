@@ -33,7 +33,7 @@ In this workshop, you will:
 
 3. To get started installing your Compute Instance with the **Create a VM Instance** wizard, follow these steps:
   From the main landing page, select **Create a VM Instance** wizard.
-    ![image of quick actions menu on the main landing page](/../images/action-menu.png)
+    ![image of quick actions menu on the main landing page](images/action-menu.png)
 
     The **Create Compute Instance** page is displayed. It has a section for **Placement**, **Image and shape**, **Networking**, **Add SSH keys**, and **Boot volume**.
 
@@ -45,7 +45,7 @@ In this workshop, you will:
 
       It is important for Compute Instance to be created in a Compartment with correct set of Policies. So, select the `Fleet_Compartment` Compartment if you selected Onboarding Wizard option in Lab 1, otherwise select the Compartment that you have created.
 
-      ![image of selecting correct compartment for the Compute Instance](/../images/select-correct-compartment.png)
+      ![image of selecting correct compartment for the Compute Instance](images/select-correct-compartment.png)
 
     Enter a value for the name or leave the system supplied default.
 
@@ -92,7 +92,7 @@ In this workshop, you will:
 
 1. Open the navigation menu and click **Compute**. Under **Compute**, click **Instances**.
 
-  ![image of console navigation to instance](/../images/console-navigation-instance.png)
+  ![image of console navigation to instance](images/console-navigation-instance.png)
 
 2. Click the link to the Instance you created in the previous step.
 

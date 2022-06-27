@@ -27,12 +27,12 @@ In this lab, you will:
 
 
  1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you have created.
-  ![image of console navigation to java management service](/../images/console-navigation-jms.png)
+  ![image of console navigation to java management service](images/console-navigation-jms.png)
 
 2. Click **Set Up Management Agent**.
-  ![image of fleet details page](/../images/fleet-details-page.png)
+  ![image of fleet details page](images/fleet-details-page.png)
 3. Click **Download management agent software** and download the software for Windows (Windows-x86_64).
-  ![image of set up management agent page](/../images/fleet-set-up-management-agent.png)
+  ![image of set up management agent page](images/fleet-set-up-management-agent.png)
 
 
 ## Task 2: Install Management Agent
@@ -206,12 +206,12 @@ Install Management Agent (If your host is Linux, skip to skip to Lab 5: Install 
 
 1. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Agents** under **Management Agent**.
 
-  ![image of console navigation to access management agent overview](/../images/management-agent-overview.png)
+  ![image of console navigation to access management agent overview](images/management-agent-overview.png)
 
 
   2. From the Agents list, look for the agent that was recently installed. This Agent should be in the compartment created in [Lab 1](?lab=set-up-oci-for-jms).
 
-      ![image of agents main page](/../images/agents-main-page-new.png)
+      ![image of agents main page](images/agents-main-page-new.png)
 
 
 ## Task 4: Configure Java Usage Tracker
@@ -272,45 +272,45 @@ Install Management Agent (If your host is Linux, skip to skip to Lab 5: Install 
 
 1. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
 
-  ![image of console navigation to java management service](/../images/console-navigation-jms.png)
+  ![image of console navigation to java management service](images/console-navigation-jms.png)
 
 2. Select the Fleet created in [Lab 2](?lab=setup-a-fleet).
 
-  ![image of fleet page](/../images/check-fleet-ocid-page.png)
+  ![image of fleet page](images/check-fleet-ocid-page.png)
 
 
 3. Take note of the fleet ocid.
 
-  ![image of fleet ocid](/../images/check-fleet-ocid.png)
+  ![image of fleet ocid](images/check-fleet-ocid.png)
 
 4. In the Oracle Cloud Console, open the navigation menu and click **Observability & Management**, and then click **Agents**.
-  ![image of console navigation to management agents](/../images/console-navigation-agents.png)
+  ![image of console navigation to management agents](images/console-navigation-agents.png)
 
 5. Select the compartment that the management agent is contained in.
 
-  ![image of agents main page](/../images/agents-main-page-new.png)
+  ![image of agents main page](images/agents-main-page-new.png)
 
 6. Select the management agent to view more details
 
 7. Under **Tags**, the `jms` tag will be indicated to show that the management agent is linked to that fleet. The fleet ocid under the jms tag should be the same fleet ocid noted in Step 3.
 
-  ![image of agents details page](/../images/tagged-mgmt-agent.png)
+  ![image of agents details page](images/tagged-mgmt-agent.png)
 
 8. JMS has been linked to the management agent and will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can also be changed in the Oracle Cloud Console.
 
 9. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
 
-  ![image of console navigation to java management](/../images/console-navigation-jms.png)
+  ![image of console navigation to java management](images/console-navigation-jms.png)
 
 10. Select the compartment that the fleet is in and click the fleet.
 
 11. Click on **Modify Agent Settings**.
 
-  ![image of fleet details page](/../images/fleet-details-page-new.png)
+  ![image of fleet details page](images/fleet-details-page-new.png)
 
 12. Change the **Java Runtime Discovery** and **Java Runtime Usage** to the desired value. For this example, change **Java Runtime Discovery** to **3 hours**, and **Java Runtime Usage** to **5 minutes**.
 
-  ![image of modify agent settings page](/../images/fleet-modify-agent-settings-new.png)
+  ![image of modify agent settings page](images/fleet-modify-agent-settings-new.png)
 
 ## Task 6: Verify detection of Java applications and runtimes
 For the logging of applications to be visible, Java applications must be run again after the installation of the Management Agent. Now that the Management Agent has been set up in your compute instance, it will be able to detect new Java applications that have been executed. This can be observed in the Oracle Cloud Console.
@@ -334,7 +334,7 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
 
 2. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
 
-  ![image of console navigation to java management](/../images/console-navigation-jms.png)
+  ![image of console navigation to java management](images/console-navigation-jms.png)
 
 3. Select the compartment that the fleet is in and click the fleet.
 
@@ -342,11 +342,11 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
 
   You should see only one Java Runtime. This corresponds to the Java 8 installation from [Lab 3](?lab=deploy-a-java-application).
 
-  ![image of runtimes after successful installation](/../images/successful-installation.png)
+  ![image of runtimes after successful installation](images/successful-installation.png)
 
 12. Click **Applications** under **Resources**. You should now see two applications. The first is from the javac compiler command and the second is from the HelloWorld application.
 
-  ![image of applications after successful installation](/../images/successful-installation-applications.png)
+  ![image of applications after successful installation](images/successful-installation-applications.png)
 
   You may now **proceed to the next lab.**
 

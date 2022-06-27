@@ -249,7 +249,7 @@ This section will provide guidance on creating a Docker image running a Oracle J
     </copy>
     ```
 
-  ![image of dockerfile listed](/../images/dockerfile-check.png)
+  ![image of dockerfile listed](images/dockerfile-check.png)
 
 <!--  -->
 4. Edit the Dockerfile to include our jar file in the build by running these commands.
@@ -269,7 +269,7 @@ This section will provide guidance on creating a Docker image running a Oracle J
     </copy>
     ```
 
-    ![image of dockerfile in nano text editor](/../images/dockerfile.png)
+    ![image of dockerfile in nano text editor](images/dockerfile.png)
 
   * When done, save and exit the Nano text editor by pressing **CTRL+x** then **y** and then **ENTER**.
 <!--  -->
@@ -320,7 +320,7 @@ You should now have a compute instance with Docker installed and a Docker image 
     ```
 
   Check for the "Mounts" section, which should not be empty.
-    ![image of inspect container](/../images/bind-mounts.png)
+    ![image of inspect container](images/bind-mounts.png)
 
 ## Task 5: Verify configuration
 
@@ -333,12 +333,12 @@ You should now have a compute instance with Docker installed and a Docker image 
     ```
   You should be able to see the jar file (OddNumbers.jar) and the Java version (Java 17) used in your Docker container in the log file output.
 
-    ![image of java logs](/../images/java-logs.png)
+    ![image of java logs](images/java-logs.png)
 
   > **Note:** You should only use this configuration with trusted containers or where you do not require isolation between the host and the container, or between containers.
 
 2. You may now check your Fleet in OCI console to see if your Docker container was detected. You should be able to see the OddNumbers.jar under **Applications**.
-  ![image of fleet details page showing jar file in container](/../images/fleets-details-docker.png)
+  ![image of fleet details page showing jar file in container](images/fleets-details-docker.png)
 
 You may now **proceed to the next lab.**
 
