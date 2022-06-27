@@ -242,6 +242,13 @@ You may now **proceed to the next lab.**
     </copy>
     ```
 
+**For Task 3**
+
+* If you encounter an error similar to the following:
+    ```
+    No match for argument: jdk1.8.x86_64
+    ```
+  Please use a new instance with AMD or Intel shape.
 
 ## Learn More
 
