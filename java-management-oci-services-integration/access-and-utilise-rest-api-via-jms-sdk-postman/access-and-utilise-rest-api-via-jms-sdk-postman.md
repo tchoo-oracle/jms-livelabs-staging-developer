@@ -124,12 +124,12 @@ In this lab, you will:
 
 4. Paste the sample API code in `GetFleetExample` Project. Add the Fleet OCID at **fleet_OCID** placeholder. Refer to [Lab 1 Task 3](?lab=access-and-utilise-rest-api-via-oci-cli#Task3:AccessRESTAPIviaOCICLI) to check how to find the fleet OCID.
 
-    ![image of java sdk example code](/../images/java-sdk-own.png)
+    ![image of java sdk example code](images/java-sdk-own.png)
 
 
 5. Run the program. You should see the response in output.
 
-     ![image of java sdk output](/../images/java-sdk-response.png)
+     ![image of java sdk output](images/java-sdk-response.png)
 
 
 ### Access Python SDK for JMS
@@ -167,23 +167,23 @@ In this lab, you will:
 
 2. Download the [SDK](https://github.com/oracle/oci-python-sdk/releases) and extract it. Delete the 'venv' folder and copy the rest of the contents to the `testpy` directory created in step 1.
 
-    ![image of python sdk ](/../images/python-sdk-contents.png)
+    ![image of python sdk ](images/python-sdk-contents.png)
 
 3. 'testpy' directory should contain the following:
 
-    ![image of python sdk example code](/../images/folder-structure.png)
+    ![image of python sdk example code](images/folder-structure.png)
 
 
 4. Access the sample [API](https://docs.oracle.com/en-us/iaas/api/#/en/jms/20210610/Fleet/GetFleet) lab.
-    ![image of python sdk example code](/../images/python-sample-code.png)
+    ![image of python sdk example code](images/python-sample-code.png)
 
 5. Create a `get_fleet_example.py` file in the SDK downloaded and copy the example SDK code into it.
 
-    ![image of python sdk example code](/../images/get-fleet.png)
+    ![image of python sdk example code](images/get-fleet.png)
 
 6. Ensure the file path for the newly created file adheres to the sample SDK code.
 
-    ![image of python sdk example code](/../images/python-sdk-response.png)
+    ![image of python sdk example code](images/python-sdk-response.png)
 
 7. Run it in the virtual environment created.
 
@@ -193,7 +193,7 @@ In this lab, you will:
     </copy>
     ```
 
-    ![image of python sdk example code](/../images/python-sdk-success.png)
+    ![image of python sdk example code](images/python-sdk-success.png)
 
 ### Download SDKs
 
@@ -211,27 +211,27 @@ The steps above can be applied for the Typescript, .NET, Ruby and GO SDKs.
 
 2. Download [JSON Set Up Files](https://github.com/ashishksingh/postman_collection_for_oci_rest).
 
-    ![image of postman github](/../images/github-postman.png)
+    ![image of postman github](images/github-postman.png)
 
 3. Login to Postman and Click **Import** to import JSON Set up files.
 
-    ![image of Postman import](/../images/postman-import-json.png)
+    ![image of Postman import](images/postman-import-json.png)
 
 4. Select JSON Files after unzipping download.
 
-    ![image of Postman import](/../images/json-import.png)
+    ![image of Postman import](images/json-import.png)
 
 5. Click **Import**.
 
-    ![image of Postman import files](/../images/import-github-json-postman.png)
+    ![image of Postman import files](images/import-github-json-postman.png)
 
 6. Click **Environments** and **OCI_Environment**.
 
-    ![image of environment Variable](/../images/env-click.png)
+    ![image of environment Variable](images/env-click.png)
 
 7. Input the **tenancyId, authUserID, keyFingerprint** from the ~/.oci/config file created in Lab 5 and fill in **Initial Value** and **Current Value** Columns.
 
-    ![image of environment config file](/../images/env-configfile.png)
+    ![image of environment config file](images/env-configfile.png)
 
 8. Fill in the **privateKey** from the private key file downloaded in Lab 5. Type the following command to extract the private key.
     ```
@@ -241,28 +241,28 @@ The steps above can be applied for the Typescript, .NET, Ruby and GO SDKs.
     ```
 9. Click **Save** once done.
 
-    ![image of configure OCI environment](/../images/env-config.png)
+    ![image of configure OCI environment](images/env-config.png)
 
 
 ### Initialise Environment
 
 1. Click **Collections** and then **`ONE_TIME_INITIALIZATION_CALL`**. Select **OCI_Environment** as saved previously.
 
-    ![image of initialisation script](/../images/initialise-postman.png)
+    ![image of initialisation script](images/initialise-postman.png)
 
 2. Click **Send**.
 
-    ![image of initialisation script](/../images/initialise-post.png)
+    ![image of initialisation script](images/initialise-post.png)
 
 3. A 200 response will appear.
 
-    ![image of initialisation confirmation](/../images/initialise-confirmation.png)
+    ![image of initialisation confirmation](images/initialise-confirmation.png)
 
 ### Send a Get Fleet Request
 
 1. Add a request under **`OCI_REST_COLLECTION`**.
 
-    ![image of add request](/../images/add-request.png)
+    ![image of add request](images/add-request.png)
 
 2. Input the desired GET request in the desired format with the tenancy region and fleet ocid.
     ```
@@ -271,23 +271,23 @@ The steps above can be applied for the Typescript, .NET, Ruby and GO SDKs.
     </copy>
     ```
 
-    ![image of get fleet](/../images/get-fleet-postman.png)
+    ![image of get fleet](images/get-fleet-postman.png)
 
 3. Fleet information will be retrieved and a 200 response reported.
 
-    ![image of get fleet response](/../images/get-fleet-200.png)
+    ![image of get fleet response](images/get-fleet-200.png)
 
 ## Troubleshoot Postman Issues
 
 **For Task 2**
 * If you encounter a Pre-request Script error similar to the following:
 
-  ![image of postman pre-request script error](/../images/postman-pre-request-script-error.png)
+  ![image of postman pre-request script error](images/postman-pre-request-script-error.png)
 
   Check that the Pre-request script for the Get Fleet request is empty:
-  ![image of postman empty pre-request script](/../images/postman-pre-request-script-empty.png)
+  ![image of postman empty pre-request script](images/postman-pre-request-script-empty.png)
   If the problem still persists, check the Pre-request Script in `OCI_REST_COLLECTION` and ensure that line 90 is commented:
-  ![image of postman pre-request script commented](/../images/postman-pre-request-script-code-comment.png)
+  ![image of postman pre-request script commented](images/postman-pre-request-script-code-comment.png)
 
 
 ## Learn More

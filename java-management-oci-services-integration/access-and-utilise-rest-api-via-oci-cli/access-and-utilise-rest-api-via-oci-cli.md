@@ -27,35 +27,35 @@ In this lab, you will:
 
 2. Open the Profile menu, click the **Profile icon** and click User Settings.
 
-  ![image of profile menu](/../images/user-profile.png)
+  ![image of profile menu](images/user-profile.png)
 
-  ![image of user settings](/../images/user-settings.png)
+  ![image of user settings](images/user-settings.png)
 
 3. Click **API Keys**.
 
-  ![image of create api key](/../images/api-key.png)
+  ![image of create api key](images/api-key.png)
 
 4. Click **Add API Key**.
 
-  ![image of add api key](/../images/add-api-key.png)
+  ![image of add api key](images/add-api-key.png)
 
 5. Download private and public key. Click **Add**.
 
-  ![image of download api key](/../images/api-key-download.png)
+  ![image of download api key](images/api-key-download.png)
 
 6. The key is added and the **Configuration File Preview** is displayed. Click **Copy** to copy the file snippets and paste it into a text file. Save the file as **config**.
 
 7. The file snippet includes required parameters and values you'll need to create your configuration file. Refer to the [SDK and CLI Configuration File](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm) to see an example of the configuration file and `key_file` entry.
 
-  ![image of configuration file](/../images/config-file-preview.png)
+  ![image of configuration file](images/config-file-preview.png)
 
 8. Create a folder called **.oci** in the Home directory and save the **config file** and **private key** there.
 
-  ![image of configuration file in .oci folder](/../images/config-file-oci-location.png)
+  ![image of configuration file in .oci folder](images/config-file-oci-location.png)
 
 9. Set the root user to have **Read-only** permissions for the config file. No other user should have permissions.
 
-  ![image of configuration file permissions](/../images/config-file-permissions.png)
+  ![image of configuration file permissions](images/config-file-permissions.png)
 
   Alternatively, you may use the Terminal to change the permissions.
 
@@ -67,7 +67,7 @@ In this lab, you will:
 
 10. An API Key is successfully created.
 
-  ![image of successful api key creation](/../images/api-key-created.png)
+  ![image of successful api key creation](images/api-key-created.png)
 
 
 ## Task 2: Install OCI Command Line Interface (CLI)
@@ -168,15 +168,15 @@ If successful, the following will be returned, with xx as your unique namespace.
 
   * In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
 
-  ![image of console navigation to java management service](/../images/console-navigation-jms.png)
+  ![image of console navigation to java management service](images/console-navigation-jms.png)
 
   * Select the compartment and then the fleet. Refer to Workshop 1 if you have not setup a Fleet yet.
 
-  ![image of fleet page](/../images/check-fleet-ocid-page.png)
+  ![image of fleet page](images/check-fleet-ocid-page.png)
 
   * Copy the fleet OCID.
 
-  ![image of fleet ocid](/../images/check-fleet-ocid.png)
+  ![image of fleet ocid](images/check-fleet-ocid.png)
 <!--  -->
 
 2. Open a Terminal or Command Prompt window.
@@ -213,13 +213,13 @@ If successful, the following will be returned, with xx as your unique namespace.
 
  2. Click the Cloud Shell icon in the Console header. This icon is accessible from mostly all the OCI Console pages.
 
-  ![image of location of Cloud Shell icon](/../images/oci-cloud-shell-navigate.png)
+  ![image of location of Cloud Shell icon](images/oci-cloud-shell-navigate.png)
 
   The Cloud Shell will open and may look something like this.
-  ![image of Cloud Shell terminal](/../images/oci-cloud-shell-console.png)
+  ![image of Cloud Shell terminal](images/oci-cloud-shell-console.png)
 
   You can use the icons in the upper right corner of the Cloud Shell window to minimize, maximize, and close your Cloud Shell session. 
-  ![image of buttons on Cloud Shell](/../images/oci-cloud-shell-buttons.png)
+  ![image of buttons on Cloud Shell](images/oci-cloud-shell-buttons.png)
 
 
  3. In Cloud Shell add the following to get the fleet details. You should have access to fleet_OCID from the last task.
@@ -228,12 +228,12 @@ If successful, the following will be returned, with xx as your unique namespace.
     oci jms fleet get --fleet-id "<fleet_OCID>"
     </copy>
     ```
-    ![image of entering a command in Cloud Shell](/../images/oci-cloud-shell-command.png)
+    ![image of entering a command in Cloud Shell](images/oci-cloud-shell-command.png)
 
  
 
 4. You should be able to see the response something like this.
-  ![image of command response in Cloud Shell](/../images/oci-cloud-shell-command-response.png)
+  ![image of command response in Cloud Shell](images/oci-cloud-shell-command-response.png)
 
 
 5. Similarly, you can try a few more REST API commands
