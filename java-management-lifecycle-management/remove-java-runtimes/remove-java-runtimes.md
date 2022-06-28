@@ -23,37 +23,37 @@ In this lab, you will:
 ## Task 1: Submit Delete Java Runtime Work Request
 
 1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
- ![image of console navigation to java management service](/../images/console-navigation-jms.png)
+ ![image of console navigation to java management service](images/console-navigation-jms.png)
 
 2. Under **Resources**, select **Java Runtimes**. You should see a list of the Java Runtimes that are currently in your Fleet.
- ![image of fleet details page](/../images/fleet-details-page.png)
+ ![image of fleet details page](images/fleet-details-page.png)
 
 3. Select the Runtime that you would like to remove from your fleet and click **Delete**. Note that OpenJDKs are unable to be removed through Lifecycle Management at the moment.
 
-  ![image of select runtime to delete](/../images/select-java-runtime-to-delete.png)
+  ![image of select runtime to delete](images/select-java-runtime-to-delete.png)
 
 4. The Delete Java Runtimes summary window will open. You will see a message with an archives link to the Oracle Java Runtime Download. You will also see a Summary table that lists the affected resources, including **Applications, Runtime versions, Managed Instances** and **Installations**. By default, the Summary table is sorted by applications, so the runtimes are presented in the order of least invoked to most invoked in the timeframe selected. You may also click the link under Runtime version to open its details page in a new window.
 
   Click **Delete** to confirm the deletion and submit a request for removal. This request is termed as a **Work Request**.
 
-  ![image of delete runtime popup window](/../images/delete-runtime-popup-window.png)
+  ![image of delete runtime popup window](images/delete-runtime-popup-window.png)
 
   If your request is submitted successfully, you should receive a notification in green as seen below:
-  ![image of submitted delete java runtime work request](/../images/delete-java-runtime-work-request-submitted.png)
+  ![image of submitted delete java runtime work request](images/delete-java-runtime-work-request-submitted.png)
 
 ## Task 2: Cancel Delete Work Request
 1. In the same **Java Management** page, under **Resources**, select **Work Requests**. You should see the Delete Java Runtime Work Request you submitted in Task 1. Click on the Work Request to view its details.
- ![image of work request summary page](/../images/work-request-summary-page.png)
+ ![image of work request summary page](images/work-request-summary-page.png)
 
 
 2. If your Work Request is still in progress and you would like to cancel it, click **Cancel Work Request**.
-  ![image of work request details page](/../images/delete-work-request-details-page.png)
+  ![image of work request details page](images/delete-work-request-details-page.png)
 
 3. Click **Cancel work request** again to confirm.
-  ![image of cancel delete work request](/../images/cancel-delete-work-request.png)
+  ![image of cancel delete work request](images/cancel-delete-work-request.png)
 
 4. If your request has been canceled successfully, you should see that the **Status** of the request is marked as **Canceled**.
-  ![image of cancelled delete work request](/../images/canceled-delete-work-request.png)
+  ![image of cancelled delete work request](images/canceled-delete-work-request.png)
 
 
  You may now **proceed to the next lab.**

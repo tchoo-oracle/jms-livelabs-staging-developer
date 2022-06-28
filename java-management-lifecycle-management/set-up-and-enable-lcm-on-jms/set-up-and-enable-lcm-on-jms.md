@@ -33,22 +33,22 @@ If you are using an OCI compute instance and it already has the Management Agent
   **Using OCI Console:** 
     * In the Oracle Cloud console, click **Instances** under **Compute**, and select the instance that you are interested in.
 
-     ![image of navigate from OCI console menu to computer instances](/../images/navigate-to-computer-instance.png)
+     ![image of navigate from OCI console menu to computer instances](images/navigate-to-computer-instance.png)
 
     * Click the **Oracle Cloud Agent** tab. The list of plugins is displayed. Verify that the **Oracle Java Management Service** OCA plugin is enabled. If it is disabled, toggle the switch for the Oracle Java Management Service plugin and ensure that the status is set to **Running**. This may take 5 to 10 minutes. This will enable the LCM operations for the chosen OCI Compute Instance.
 
-      ![image of disabled oracle java management service oca plugin](/../images/oracle-jms-oca-plugin-disabled.png)
+      ![image of disabled oracle java management service oca plugin](images/oracle-jms-oca-plugin-disabled.png)
 
   **Using Cloud Shell:**
     * Alternatively, you can use Cloud Shell to verify and enable `Oracle Java Management Service` plugin. Click the Cloud Shell icon in the Console header. This icon is accessible from mostly all the OCI Console pages.
 
-      ![image of location of Cloud Shell icon](/../images/oci-cloud-shell-navigate.png)
+      ![image of location of Cloud Shell icon](images/oci-cloud-shell-navigate.png)
 
       The Cloud Shell will open and may look something like this.
-      ![image of Cloud Shell terminal](/../images/oci-cloud-shell-console.png)
+      ![image of Cloud Shell terminal](images/oci-cloud-shell-console.png)
 
       You can use the icons in the upper right corner of the Cloud Shell window to minimize, maximize, and close your Cloud Shell session. 
-      ![image of buttons on Cloud Shell](/../images/oci-cloud-shell-buttons.png)
+      ![image of buttons on Cloud Shell](images/oci-cloud-shell-buttons.png)
 
 
     * In Cloud Shell add the following to get the Instance details. You can copy the Instance OCID from Instance detail page.
@@ -60,7 +60,7 @@ If you are using an OCI compute instance and it already has the Management Agent
 
         The response may look like this.
 
-        ![image of entering a command in Cloud Shell](/../images/oci-cloud-shell-command.png)
+        ![image of entering a command in Cloud Shell](images/oci-cloud-shell-command.png)
 
     * JMS Agent plugin is controlled through this JSON tag.
         ```
@@ -145,18 +145,18 @@ If you are using an OCI compute instance and it already has the Management Agent
 
       If you see the response like this, the `Oracle Java Management Service` plugin has been enabled. Else in case of any error, please refer to this link [Using CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliusing.htm).
 
-        ![image of entering a command in Cloud Shell](/../images/oci-cloud-shell-update-instance-command.png)
+        ![image of entering a command in Cloud Shell](images/oci-cloud-shell-update-instance-command.png)
 
 
 2. Next, in the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and under **Management Agent**, click **Agents**. Select the agent you are interested in.
 
-  ![image of console navigation to access management agent overview](/../images/management-agent-overview.png)
+  ![image of console navigation to access management agent overview](images/management-agent-overview.png)
 
   In your agent, click **Deploy plug-ins**.
-  ![image of agent with deploy plug-ins button](/../images/agent-deploy-plugins.png)
+  ![image of agent with deploy plug-ins button](images/agent-deploy-plugins.png)
 
   Ensure that the **Java Usage Tracking** box is checked.
-  ![image of checking java usage tracking box](/../images/agent-check-java-usage-tracking.png)
+  ![image of checking java usage tracking box](images/agent-check-java-usage-tracking.png)
 
   If you have verified that both the **Oracle Java Management Service OCA plugin** and **Java Usage Tracker service plugin** have been deployed, proceed to verify the OCA installation package version and update it.
 
@@ -169,7 +169,7 @@ If you are using an OCI compute instance and it already has the Management Agent
     </copy>
     ```
   If current version of the OCA installation package is the latest one, then no further steps are required. Else you should see output something like this:
-    ![image of terminal showing how to check for available oca packages](/../images/oca-version-checking-console.png)
+    ![image of terminal showing how to check for available oca packages](images/oca-version-checking-console.png)
 
 5. Update the OCA Installation Package.
     ```
@@ -209,25 +209,25 @@ If you are using a non-OCI host and it has the Management Agent installed follow
 3. Login to OCI Console.
 
 4. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Agents** under **Management Agent**.
-  ![image of console navigation to access management agent overview](/../images/management-agent-overview.png)
+  ![image of console navigation to access management agent overview](images/management-agent-overview.png)
 
 5. From the Agents list, select for the agent that was recently installed.
-   ![image of agents main page](/../images/agents-main-page.png)
+   ![image of agents main page](images/agents-main-page.png)
 
 6. In order to enable LCM operations `Java Management Service` Plug-in is required to be enabled. Take note of `Service Plug-ins` field. If `Java Management Service` plug-in missing then follow the next steps, else if `Java Management Service` and `Java Usage Tracker` both plug-ins are available then you can move to the next Task.
 
-  ![image of agent detail page](/../images/check-deploy-plug-ins.png)
+  ![image of agent detail page](images/check-deploy-plug-ins.png)
 
 
 7. To enable `Java Management Service` plug-in, click on **Deploy plug-ins** button.
 
-  ![image of click on deploy plug-in button](/../images/deploy-plug-in-button.png)
+  ![image of click on deploy plug-in button](images/deploy-plug-in-button.png)
 
 8. Check `Java Management Service` option and click on Update button.
-  ![image of updating the plug-in](/../images/deploy-jms-plug-in.png)
+  ![image of updating the plug-in](images/deploy-jms-plug-in.png)
 
 9. After 5-10 minutes, you should see the `Java Management Service` plug-in enabled under `Service Plug-ins` field.
-  ![image of updated plug-in](/../images/deploy-jms-plug-in-done.png)
+  ![image of updated plug-in](images/deploy-jms-plug-in-done.png)
 
 
 

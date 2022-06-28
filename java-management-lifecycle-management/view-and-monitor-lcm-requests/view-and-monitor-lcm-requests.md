@@ -22,10 +22,10 @@ In this lab, you will:
 
 ## Task 1: Overview of Work Request detailed views
 1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
- ![image of console navigation to java management service](/../images/console-navigation-jms.png)
+ ![image of console navigation to java management service](images/console-navigation-jms.png)
 
 2. Under **Resources**, select **Work Requests**. You should see a list of the Work Requests that you have created. Select a **Work Request** that you are interested to view in detail.
- ![image of fleet details page](/../images/fleet-details-page.png)
+ ![image of fleet details page](images/fleet-details-page.png)
 
 3. The detailed view of a Work Request is divided into two sections:
     * Information about the Work Request, including:
@@ -37,7 +37,7 @@ In this lab, you will:
         * Log Messages
         * Error Messages
 
-  ![image of detailed view of work request page](/../images/work-request-detailed-view.png)
+  ![image of detailed view of work request page](images/work-request-detailed-view.png)
 
 
 4. For the list of resources which include **Associated Resources**, **Log Messages** and **Error Messages**, each list displays **50** rows at a time. You may click the header of a column to sort the list based on the title of the column, or use the text field to search the contents of the table.
@@ -48,35 +48,35 @@ In this lab, you will:
    * **Status**: Status of the operation at the associated resource.
    * **Last updated**: Date and time when the status for this associated resource was last updated.
 
-  ![image of work request associated resources view](/../images/work-request-associated-resources.png)
+  ![image of work request associated resources view](images/work-request-associated-resources.png)
 
 
   For the list of **Log Messages**, you may find the following information:
   * **Message**: Log message reported by the agent while carrying out the Work Request.
   * **Timestamp**: Date and time when the message was generated.
 
-  ![image of work request log messages view](/../images/work-request-log-messages.png)
+  ![image of work request log messages view](images/work-request-log-messages.png)
 
 
   For the list of **Error Messages**, you may find the following information. Note that error messages can be observed if your Work Request was not successful.
   * **Message**: Error message reported by the agent while carrying out the Work Request.
   * **Timestamp**: Date and time when the message was generated.
 
-  ![image of work request error messages view](/../images/work-request-error-messages.png)
+  ![image of work request error messages view](images/work-request-error-messages.png)
 
 
 ## Task 2: View status and logs related to Delete Work Request
 1. In the **Fleet** page, under **Resources**, select **Work Requests**. Click on the Delete Work Request you are interested in to view its details.
- ![image of work request summary page](/../images/work-request-summary-page.png)
+ ![image of work request summary page](images/work-request-summary-page.png)
 
 2. If your request was successful, you should see that the **Status** of the request is marked as **Succeeded** and **Completed without errors**.
- ![image of successful delete work request](/../images/delete-java-runtime-succeeded.png)
+ ![image of successful delete work request](images/delete-java-runtime-succeeded.png)
 
 3. If you would like to view the log messages for the Delete Java Runtime Work Request, select **Log Messages** under **Resources**. You should see the log messages in detail.
- ![image of delete work request log messages](/../images/delete-work-request-log-messages.png)
+ ![image of delete work request log messages](images/delete-work-request-log-messages.png)
 
 4. If your Work Request was unsuccessful, you may view the error messages by selecting **Error Messages** under **Resources**. You should see the status as **Failed** and the corresponding error messages.
-  ![image of delete work request failed error messages](/../images/delete-work-request-failed-error-message.png)
+  ![image of delete work request failed error messages](images/delete-work-request-failed-error-message.png)
 
 
 
