@@ -29,7 +29,9 @@ In this lab, you will:
 
   ![image of profile menu](images/user-profile.png)
 
-  ![image of user settings](images/user-settings.png)
+    > **Note:** If **User Settings** is not indicated under Profile, Click **My Profile**.
+
+    ![image of user settings](images/user-settings.png)
 
 3. Click **API Keys**.
 
