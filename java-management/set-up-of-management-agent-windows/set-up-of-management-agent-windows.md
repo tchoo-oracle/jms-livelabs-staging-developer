@@ -296,7 +296,7 @@ Install Management Agent (If your host is Linux, skip to Lab 5: Install Manageme
 
   ![image of agents details page](images/tagged-mgmt-agent.png)
 
-8. JMS has been linked to the management agent and will collect information on your Java runtimes. The scanning frequency was set in [Lab 2: Set Up a Fleet](?lab=setup-a-fleet).
+8. The management agent has been associated to your fleet in JMS. It will now collect information on your Java runtimes and Java Usage based on the scanning frequency defined in [Lab 2: Set Up a Fleet](?lab=setup-a-fleet).
 
 ## Task 6: Verify detection of Java applications and runtimes
 For the logging of applications to be visible, Java applications must be run again after the installation of the Management Agent. Now that the Management Agent has been set up in your compute instance, it will be able to detect new Java applications that have been executed. This can be observed in the Oracle Cloud Console.

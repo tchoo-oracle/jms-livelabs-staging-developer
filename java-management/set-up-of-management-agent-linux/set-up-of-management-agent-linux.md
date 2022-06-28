@@ -210,7 +210,7 @@ Install Management Agent (If your host is Windows, skip to Lab 6: Install Manage
 
   ![image of agents details page](images/tagged-mgmt-agent.png)
 
-8. JMS has been linked to the management agent and will collect information on your Java runtimes. The scanning frequency was set in [Lab 2: Set Up a Fleet](?lab=setup-a-fleet).
+8. The management agent has been associated to your fleet in JMS. It will now collect information on your Java runtimes and Java Usage based on the scanning frequency defined in [Lab 2: Set Up a Fleet](?lab=setup-a-fleet).
 
 ## Task 6: Verify detection of Java applications and runtimes
 
