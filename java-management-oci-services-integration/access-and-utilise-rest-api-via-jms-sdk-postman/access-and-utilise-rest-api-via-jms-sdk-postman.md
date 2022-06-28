@@ -49,9 +49,9 @@ In this lab, you will:
                 <dependency>
                     <groupId>com.oracle.oci.sdk</groupId>
                     <artifactId>oci-java-sdk-bom</artifactId>
-                    <!-- Version 2.21.0 is the latest version at the time of writing-->
+                    <!-- Version 2.33.0 is the latest version at the time of writing-->
                     <!-- Obtain the latest sdk version from https://github.com/oracle/oci-java-sdk/releases-->
-                    <version>2.21.0</version>
+                    <version>2.33.0</version>
                     <type>pom</type>
                     <scope>import</scope>
                 </dependency>
