@@ -282,6 +282,12 @@ The steps above can be applied for the Typescript, .NET, Ruby and GO SDKs.
 
 **For Task 2**
 * If you encounter a Pre-request Script error similar to the following:
+  
+  ![image of postman pre-request script error](images/postman-pre-request-script-error-2.png)
+
+  Check if your configuration information in **OCI_Environment** is correct.
+  
+* If you encounter a Pre-request Script error similar to the following:
 
   ![image of postman pre-request script error](images/postman-pre-request-script-error.png)
 
