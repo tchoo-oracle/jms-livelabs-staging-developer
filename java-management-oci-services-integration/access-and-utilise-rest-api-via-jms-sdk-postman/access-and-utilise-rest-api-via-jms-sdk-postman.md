@@ -230,11 +230,11 @@ The steps above can be applied for the Typescript, .NET, Ruby and GO SDKs.
 
     ![image of environment Variable](images/env-click.png)
 
-7. Input the **tenancyId, authUserID, keyFingerprint** from the ~/.oci/config file created in Lab 5 and fill in **Initial Value** and **Current Value** Columns.
+7. Input the **tenancyId, authUserID, keyFingerprint** from the ~/.oci/config file created in Lab 1 and fill in **Initial Value** and **Current Value** Columns.
 
     ![image of environment config file](images/env-configfile.png)
 
-8. Fill in the **privateKey** from the private key file downloaded in Lab 5. Type the following command to extract the private key.
+8. Fill in the **privateKey** from the private key file downloaded in Lab 1. Type the following command to extract the private key.
     ```
     <copy>
     sudo cat <full_path_of_private_key_file>
