@@ -165,14 +165,15 @@ In this lab, you will:
       </copy>
       ```   
 
-2. Download the [SDK](https://github.com/oracle/oci-python-sdk/releases) and extract it. Delete the 'venv' folder and copy the rest of the contents to the `testpy` directory created in step 1.
+2. Download the [SDK](https://github.com/oracle/oci-python-sdk/releases) **oci-python-sdk** and extract it. Copy the contents to the `testpy` directory created in step 1. The directory should contain the following:
 
-    ![image of python sdk ](images/python-sdk-contents.png)
+    ![image of python sdk ](images/folder-structure.png)
 
-3. 'testpy' directory should contain the following:
+3. Install `oci` package with:
 
-    ![image of python sdk example code](images/folder-structure.png)
-
+    ```
+    pip install oci
+    ```
 
 4. Access the sample [API](https://docs.oracle.com/en-us/iaas/api/#/en/jms/20210610/Fleet/GetFleet) lab.
     ![image of python sdk example code](images/python-sample-code.png)
@@ -181,9 +182,9 @@ In this lab, you will:
 
     ![image of python sdk example code](images/get-fleet.png)
 
-6. Ensure the file path for the newly created file adheres to the sample SDK code.
+6. Replace the sample `fleet_id`. Refer to [Lab 1 Task 3](?lab=access-and-utilise-rest-api-via-oci-cli#Task3:AccessRESTAPIviaOCICLI) to check how to find the fleet OCID. Comment or delete the `opc_request_id` line.
 
-    ![image of python sdk example code](images/python-sdk-response.png)
+    ![image of python sdk example code](images/python-sdk-change.png)
 
 7. Run it in the virtual environment created.
 
