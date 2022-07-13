@@ -390,17 +390,23 @@ On your on-premises network you need to install Libreswan as a CPE ( Customer-Pr
     net.ipv4.conf.eth0.accept_redirects = 0
     </copy>
     ```  
-    If you're using an interface other than **eth0**, change **eth0** in the following example to your interface (lines 5 and 7). You can perform the following command and select the interface that has private IP address for the network
+    
+    In the above example, our network interface is the Ethernet network interface **eth0**. If you're using an interface other than **eth0**, change **eth0** in lines 5 and 7 to the correct network interface for your machine. 
+    
+    You can obtain your network interface details from your network engineer or use the following command.
 
     ```
     <copy>
-    ifconfig
+    ip link show
     </copy>
     ```  
 
     The private IP address should look like 192.168.XXX.XXX.
 
     To save the file, type CTRL+x. Before exiting, nano will ask you if you wish to save the file: Type y to save and exit, type n to abandon your changes and exit.
+
+    The file may look like this:
+    ![image of sysctl configuration file](/images/sysctl-demo-screen.png)
 
 4. Apply the updates with:
     ```
@@ -467,6 +473,10 @@ conn oracle-tunnel-2
 
     To save the file, type CTRL+x. Before exiting, nano will ask you if you wish to save the file: Type y to save and exit, type n to abandon your changes and exit.
 
+    The file may look like this:
+    ![image of ipsec configuration file](/images/ipsec-conf-demo.png)
+
+
 
 7. Now, in the Terminal window, edit the `/etc/ipsec.d/oci-ipsec.secrets` by entereing this command:
     ```
@@ -484,6 +494,8 @@ conn oracle-tunnel-2
 
     To save the file, type CTRL+x. Before exiting, nano will ask you if you wish to save the file: Type y to save and exit, type n to abandon your changes and exit.
 
+    The file may look like this:
+    ![image of ipsec secrets file](/images/ipsec-secrets-demo.png)
 
 8. Restart Libreswan service.
 
@@ -505,14 +517,99 @@ conn oracle-tunnel-2
 
 
 
-10. Use the following `ip` command to create static routes that send traffic to your OSN through the IPSec tunnels.The full IP address ranges are defined [here](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json).
+10. In order to reach the full range of services on Oracle Service Network through the tunnel, you need to add to the routing table, all the CIDR for the region where the tenancy resides. The full IP ranges are defined [here](https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json). Follow the steps to automatically set the CIDRs.
+
+* Open terminal and create a shell script file.
+    ```
+    <copy>
+    sudo nano json-parser.sh
+    </copy>
+    ```  
+* Add the following code in the file.
 
     ```
     <copy>
-    sudo ip route add ${OSNCidrBlock} nexthop dev ${vti1} nexthop dev ${vti2}
-    ip route show
+    #!/bin/bash
+
+wget https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
+
+read -p "Enter region identifier name: " VAR
+read -p "Enter tunnel 1 interface name: " vti1
+read -p "Enter tunnel 2 interface name: " vti2
+VAR1=$(echo "$VAR" | sed 's/$/"/' | sed 's/./"&/')
+TAG=$(echo "OSN" | sed 's/$/"/' | sed 's/./"&/')
+
+REGION=$(jq '.regions[1].region' public_ip_ranges.json)
+
+for (( i = 0; i <= 50; i++ ))      ### Outer for loop ###
+do
+    REGION=$(jq '.regions['$i'].region' public_ip_ranges.json)
+
+    if [[ "$REGION" == "$VAR1" ]]; then
+      echo "$REGION"
+
+      for (( j = 0; j <= 100; j++ ))      ### inner for loop ###
+            do
+                VALUES=$(jq '.regions['$i'].cidrs['$j'].tags[0]' public_ip_ranges.json)
+                 if [[ "$VALUES" == "$TAG" ]]; then
+                      IP=$(jq '.regions['$i'].cidrs['$j'].cidr' public_ip_ranges.json)
+
+                      OSNCidrBlock=$( echo "$IP" | sed 's/^.//;s/.$//')
+                      echo "$OSNCidrBlock"
+                      TMP=$( sudo ip route add "$OSNCidrBlock" nexthop dev "$vti1" nexthop dev "$vti2")
+
+                 else
+                		    echo ""
+                 fi
+      done
+  else
+      echo ""
+    fi
+
+done
     </copy>
     ```  
+
+* Change the permission of shell script file.
+    ```
+    <copy>
+    sudo chmod 777 json-parser.sh
+    </copy>
+    ``` 
+
+* Run the script.
+    ```
+    <copy>
+    ./json-parser.sh
+    </copy>
+    ``` 
+
+    The script will prompt up for three parameters. 
+    * **Region Identifer:** Input the Region Identifer for the Region Name.
+    
+        * Please check your Home region from OCI Console Top bar. 
+        ![image of region identifier page](/images/region-identifier.png)
+
+        * Then go to [Region Idenifiers](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm) page to check the correct Region Identifier name for your region.
+        ![image of region identifier page details](/images/region-identifier-details.png)
+
+
+
+        For example the Region identifier for `US East (Ashburn)` is `us-ashburn-1`.
+    * **Tunnel 1 interface name:** Value of ${vti1} you set in step 7. 
+    * **Tunnel 2 interface name:** Value of ${vti2} you set in step 7.
+
+
+* Once the script has run successfully, please execute the following command to check the newly added ip routes for Oracle Service Network.
+    ```
+    <copy>
+    ip route show
+    </copy>
+    ``` 
+
+    Output might look like this.
+    ![image of ip route table](/images/ip-route-table.png)
+
 
      > **Note:** Manual addition to IP route table does not persist on restart. 
 
