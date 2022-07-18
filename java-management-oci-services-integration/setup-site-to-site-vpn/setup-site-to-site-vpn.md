@@ -12,7 +12,7 @@ The set up image is given for your reference.
 
 Typically the following types of personnel are involved in setting up Site-to-Site VPN with Oracle Cloud Infrastructure: 
 
-* **Dev Ops team member** (or similar function) who uses the Oracle Cloud InfrastructureConsole to set up the cloud components required for the virtual network and Site-to-Site VPN.
+* **Dev Ops team member** (or similar function) who uses the Oracle Cloud Infrastructure Console to set up the cloud components required for the virtual network and Site-to-Site VPN.
 
 * **Network engineer** (or similar function) who configures the customer-premises equipment (CPE) device with information provided by the Dev Ops team member.
 
@@ -43,48 +43,48 @@ In this lab, you will:
 ## Task 1: Gather information
 
 
-Before getting started with set up of Site-to-Site VPN, you can learn about Networking and IPSec concepts at these links:
- *  [Networking Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
- *  [Site-to-Site VPN Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/overviewIPsec.htm)
+1. Before getting started with set up of Site-to-Site VPN, you can learn about Networking and IPSec concepts at these links:
+    *  [Networking Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
+    *  [Site-to-Site VPN Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/overviewIPsec.htm)
 
-Moving forward, you must gather the following information:
+2. Moving forward, you must gather the following information:
 
-* IPv4 CIDR block for the OCI VCN.
+    * IPv4 CIDR block for the OCI VCN.
 
-    * In this lab example, we will create a new VCN in Task 2 with the IPv4 CIDR block of **20.0.0.0/16**. 
+        * In this lab example, we will create a new VCN in Task 2 with the IPv4 CIDR block of **20.0.0.0/16**. 
 
-* IP address range of the private network (in CIDR notation) that you wish to connect to OCI through Site-to-Site VPN.
+    * IP address range of the private network (in CIDR notation) that you wish to connect to OCI through Site-to-Site VPN.
 
-    * Get the private IP address of your host using the following command.
-      ```
-    <copy>
-    ifconfig
-    </copy>
-    ```  
-    For example, imagine that your host has a IP address of 192.168.11.22 (obtained using `ifconfig`).
-
-
-    * If you only want this host in the private network to communicate with OCI using Site-to-Site VPN, then the IP address range is: 192.168.11.22 to 192.168.11.22 →  192.168.11.22/32 (In CIDR notation).
-
-    * If you want a range of IP address (eg. 192.168.11.0 to 192.168.11.255) to communicate with OCI using Site-to-Site VPN, then the IP address range is 192.168.11.0 to 192.168.11.255 → 192.168.11.0/24 (In CIDR notation).
-
-* Local IP address of your CPE.
-
-    * Get the local private IP address of your host using the following command.
+        * Get the private IP address of your host using the following command.
         ```
         <copy>
         ifconfig
         </copy>
-        ``` 
+        ```  
+        For example, imagine that your host has a IP address of 192.168.11.22 (obtained using `ifconfig`).
 
-* Public IP address of your CPE.
 
-    * Get the public IP address of your host using the following command.
-        ```
-        <copy>
-        curl ifconfig.me
-        </copy>
-        ``` 
+        * If you only want this host in the private network to communicate with OCI using Site-to-Site VPN, then the IP address range is: 192.168.11.22 to 192.168.11.22 →  192.168.11.22/32 (In CIDR notation).
+
+        * If you want a range of IP address (eg. 192.168.11.0 to 192.168.11.255) to communicate with OCI using Site-to-Site VPN, then the IP address range is 192.168.11.0 to 192.168.11.255 → 192.168.11.0/24 (In CIDR notation).
+
+    * Local IP address of your CPE.
+
+        * Get the local private IP address of your host using the following command.
+            ```
+            <copy>
+            ifconfig
+            </copy>
+            ``` 
+
+    * Public IP address of your CPE.
+
+        * Get the public IP address of your host using the following command.
+            ```
+            <copy>
+            curl ifconfig.me
+            </copy>
+            ``` 
 
 > **Note:** Your public IP address may change over time depending on your setup with your Internet Service Provider (ISP). Do validate your public IP address again when performing this step. 
 
@@ -116,7 +116,7 @@ Take note of these details. These details will be used in upcoming tasks. You ca
      ![image of saving a new VCN](images/save-new-vcn.png)
 
 
-## Task 3: Create Dynamic Routing Gateway (DRG) and attach to your VCN
+## Task 3: Create Dynamic Routing Gateway (DRG) and attach it to your VCN
 
 1. Create the Dynamic Routing Gateway (DRG)
     * Open the navigation menu and click **Networking**. Under **Customer Connectivity**, click **Dynamic Routing Gateway**.
@@ -129,7 +129,7 @@ Take note of these details. These details will be used in upcoming tasks. You ca
         * **Create in Compartment**: Leave as is (the VCN's compartment).
         * **Name**: A descriptive name for the DRG.
 
-        ![image of details for new VDRGCN](images/details-for-new-drg.png) 
+        ![image of details for new DRG](images/details-for-new-drg.png) 
         
     * Click **Create Dynamic Routing Gateway**.
     ![image of saving a new DRG](images/save-new-drg.png)
@@ -199,10 +199,10 @@ SGW provides a path for private network traffic between your VCN and supported s
             * **Target**: The service gateway that you have created.
             * **Description**: An optional description of the rule.
 
-        ![image of creating new Route Table](images/route-table-for-sgw.png)
+        ![image of creating new Route Table for SGW](images/route-table-for-sgw.png)
                 
     * Click Create Route Table.
-    ![image of saving new Route Table](images/save-changes-route-table-for-sgw.png)
+    ![image of saving new Route Table for SGW](images/save-changes-route-table-for-sgw.png)
 
 2. Create a Route Table and Route Rule for DRG
 
@@ -217,7 +217,7 @@ SGW provides a path for private network traffic between your VCN and supported s
             * **Destination CIDR Block**: The CIDR for your on-premises network (see the list of information gathered in Task 1).
             * **Description**: An optional description of the rule.
         
-        ![image of details of new Route Table](images/route-table-for-drg.png)
+        ![image of details of new Route Table for DRG](images/route-table-for-drg.png)
         
     * Click **Create**.
    
@@ -249,7 +249,7 @@ SGW provides a path for private network traffic between your VCN and supported s
     ![image of configuring DRG](images/select-route-rule.png)
 
     * Click **Save Changes**.
-    ![image of saving the configuring of DRG](images/save-new-route-rule.png)
+    ![image of saving the configuration of DRG](images/save-new-route-rule.png)
 
 
 4. Add DRG Route Rule in SGW
@@ -354,7 +354,7 @@ In this task, you will create the CPE object and IPSec tunnels and configure the
         ![image of Create Content in Configuration Helper](images/ipsec-cpe-config-helper.png)
 
         * Download the configuration file.
-        ![image of Downloading the config file](images/ipsec-config-output.png)
+        ![image of Downloading the configuration file](images/ipsec-config-output.png)
 
         * The **Configuration File** will be used in Task 7 to Configure the CPE.
 
@@ -426,7 +426,7 @@ On your on-premises network you need to install Libreswan as a CPE ( Customer-Pr
     * **${sharedSecret1}**: The pre-shared key for the first tunnel obtained from the **Configuration File**. 
     * **${sharedSecret2}**: The pre-shared key for the second tunnel obtained from the **Configuration File**. 
 
-        The information in configuration file may look like this (highlighed Oracle public IP endpoints and pre-shared keys):
+        The information in configuration file may look like this (highlighted Oracle public IP endpoints and pre-shared keys):
         ![image of downloaded configuraion file](images/downloaded-config-file.png)
 
 
