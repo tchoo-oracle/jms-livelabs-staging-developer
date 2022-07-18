@@ -68,6 +68,14 @@ Moving forward, you must gather the following information:
 
     * If you want a range of IP address (eg. 192.168.11.0 to 192.168.11.255) to communicate with OCI using Site-to-Site VPN, then the IP address range is 192.168.11.0 to 192.168.11.255 → 192.168.11.0/24 (In CIDR notation).
 
+* Local IP address of your CPE.
+
+    * Get the local private IP address of your host using the following command.
+        ```
+        <copy>
+        ifconfig
+        </copy>
+        ``` 
 
 * Public IP address of your CPE.
 
@@ -629,8 +637,8 @@ done
 
 
         For example the Region identifier for `US East (Ashburn)` is `us-ashburn-1`.
-    * **Tunnel 1 interface name:** Value of ${vti1} you set in step 7. 
-    * **Tunnel 2 interface name:** Value of ${vti2} you set in step 7.
+    * **Tunnel 1 interface name:** Value of ${vti1}, you set in step 6. 
+    * **Tunnel 2 interface name:** Value of ${vti2}, you set in step 6.
 
 
 * Once the script has run successfully, please execute the following command to check the newly added ip routes for Oracle Service Network.
@@ -712,7 +720,6 @@ Once you have finishing setting up Site-to-Site VPN, you can install and configu
 
 
 
-You may now **proceed to the next lab.**
 
 
 ## Learn More
