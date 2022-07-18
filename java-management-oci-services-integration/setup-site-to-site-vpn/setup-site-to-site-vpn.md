@@ -570,17 +570,18 @@ conn oracle-tunnel-2
 
     ```
     <copy>
-    #!/bin/bash
+#!/bin/bash
 
 wget https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
 
-read -p "Enter region identifier name: " VAR
+read -p "Enter region name: " VAR
 read -p "Enter tunnel 1 interface name: " vti1
 read -p "Enter tunnel 2 interface name: " vti2
 VAR1=$(echo "$VAR" | sed 's/$/"/' | sed 's/./"&/')
 TAG=$(echo "OSN" | sed 's/$/"/' | sed 's/./"&/')
 
 REGION=$(jq '.regions[1].region' public_ip_ranges.json)
+FLAG="FALSE"
 
 for (( i = 0; i <= 50; i++ ))      ### Outer for loop ###
 do
@@ -599,15 +600,27 @@ do
                       echo "$OSNCidrBlock"
                       TMP=$( sudo ip route add "$OSNCidrBlock" nexthop dev "$vti1" nexthop dev "$vti2")
 
+                      FLAG="TRUE"
+
                  else
-                		    echo -ne "" 
+                	echo -ne ""
                  fi
       done
+
   else
-      echo -ne "" 
+      echo  -ne ""
     fi
 
 done
+
+if [[ "$FLAG" == "FALSE" ]]; then
+      echo "Wrong Region Identifier!"
+      echo "Please refer to https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm and find the correct Region Identifier."
+ 
+ else
+        echo -ne ""
+ fi
+
     </copy>
     ```  
 
@@ -637,6 +650,27 @@ done
 
 
         For example the Region identifier for `US East (Ashburn)` is `us-ashburn-1`.
+
+        If the Region identifier name is wrong, the script will prompt up the message:
+
+        ```
+        <copy>
+        Wrong Region Identifier!
+        Please refer to https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm and find the correct Region Identifier.
+
+        </copy>
+        ``` 
+        
+         If the tunnel interfaces are not valid, the script output will have the below given line:
+
+        ```
+        <copy>
+        Cannot find device "<user input tunnel interface name>"
+        Error: cannot parse nexthop
+        </copy>
+        ``` 
+
+
     * **Tunnel 1 interface name:** Value of ${vti1}, you set in step 6. 
     * **Tunnel 2 interface name:** Value of ${vti2}, you set in step 6.
 
