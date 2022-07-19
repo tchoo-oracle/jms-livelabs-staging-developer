@@ -651,6 +651,12 @@ if [[ "$FLAG" == "FALSE" ]]; then
 
         For example the Region identifier for `US East (Ashburn)` is `us-ashburn-1`.
 
+        
+
+
+    * **Tunnel 1 interface name:** Value of ${vti1}, you set in step 6. 
+    * **Tunnel 2 interface name:** Value of ${vti2}, you set in step 6.
+
         If the Region identifier name is wrong, the script will prompt up the message:
 
         ```
@@ -669,10 +675,6 @@ if [[ "$FLAG" == "FALSE" ]]; then
         Error: cannot parse nexthop
         </copy>
         ``` 
-
-
-    * **Tunnel 1 interface name:** Value of ${vti1}, you set in step 6. 
-    * **Tunnel 2 interface name:** Value of ${vti2}, you set in step 6.
 
 
 * Once the script has run successfully, please execute the following command to check the newly added ip routes for Oracle Service Network.
