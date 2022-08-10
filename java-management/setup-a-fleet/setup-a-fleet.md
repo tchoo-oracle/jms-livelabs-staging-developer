@@ -30,41 +30,29 @@ In this lab, you will:
 
 3. In the Create Fleet dialog box, enter a name for the Fleet Name (for example, `fleet_1`), and a description.
 
-4. Select **Create New Management Agent Configuration**.
-
-5. Click **Show Advanced Options**.
+4. Select **Enable advanced features**. This is to enable advanced Lifecycle Management (LCM) operations. You can still edit it after the fleet is created.
 
   ![image of create fleet options page](images/create-fleet.png)
 
-6. Under **Advanced Options**:
+5. Click **Next**.You are prompted to review the fleet information and management agent configuration. If you wish to modify your choices, click **Previous**.
 
-  ![image of fleet advanced options](images/create-fleet-advanced-configuration.png)
-
-  If you would like to keep the default name of the Install key, no changes are needed, or else deselect **Use Fleet Name** for Install Key Name and enter an alternative name for the management agent install key, for this example, enter "management-agent-install-key-fleet-1".
-
-  In the **Maximum Installations** field, specify a number that indicates the maximum number of installations that can be associated with the key. For this example enter **10**.
-
-  In the **Valid For** field, specify a number that indicates the period for which the key is valid. The default value is 1 Year.
-
-7. Click **Next**.You are prompted to review the fleet information and management agent configuration. If you wish to modify your choices, click **Previous**.
-
-8. Click **Create**. This creates a new fleet and a new management agent install key using the information you provided.
+6. Click **Create**. This creates a new fleet and its configuration.
 
   ![image of create fleet confirm creation](images/create-fleet-create.png)
 
-9. Click **Download Install Key** to download the install key. The install key is issued against your identity domain and validates the authenticity of the installation.
+7. Click **Download Install Key** to download the install key. The install key is issued against your identity domain and validates the authenticity of the installation.
 
   ![image of page to download management agent software](images/download-management-agent-software-new.png)
 
   Click **Done** once the download is complete. The downloaded file will be used in [Lab 5: Install Management Agent on non-OCI Hosts - Linux](?lab=set-up-of-management-agent-linux) to install the Management Agent.
 
-10. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
+8. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
 
-11. Click the fleet. In the detail page, click on **Modify Agent Settings**.
+9. Click the fleet. In the detail page, click on **Modify Agent Settings**.
 
   ![image of fleet details page](images/fleet-details-page-new.png)
 
-12. Change the **Java Runtime Discovery** and **Java Runtime Usage** to the desired value. For this example, change **Java Runtime Discovery** to **3 hours**, and **Java Runtime Usage** to **5 minutes**.
+10. Change the **Java Runtime Discovery** and **Java Runtime Usage** to the desired value. For this example, change **Java Runtime Discovery** to **3 hours**, and **Java Runtime Usage** to **5 minutes**.
 
   ![image of modify agent settings page](images/fleet-modify-agent-settings-new.png)
 
