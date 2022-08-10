@@ -57,29 +57,37 @@ In this lab, you will:
 
 2. From the Agents list, look for the agent that was recently installed. This agent should be in the compartment created in [Lab 1](?lab=set-up-oci-for-jms).
 
-   ![image of agents main page](images/agents-main-page-new.png)
+  ![image of agents main page](images/agents-main-page-new.png)
 
-## Task 4: Configure Java Usage Tracker
+## Task 3: Verify Plug-in Deployment
 
-1. Execute the following commands:
+**On non-OCI hosts:**
 
-     ```
-     <copy>
-     VERSION=$(sudo ls /opt/oracle/mgmt_agent/agent_inst/config/destinations/OCI/services/jms/)
-     </copy>
-     ```
+1. In your agent, click **Deploy plug-ins**.
 
-     ```
-     <copy>
-     sudo bash /opt/oracle/mgmt_agent/agent_inst/config/destinations/OCI/services/jms/"${VERSION}"/scripts/setup.sh --force
-     </copy>
-     ```
+  ![image of agent detail page](images/agent-non-oci.png)
 
-2. This script creates the file `/etc/oracle/java/usagetracker.properties` with appropriate permissions. By default, the file contains the following lines:
-     ```
-     com.oracle.usagetracker.logToFile = /var/log/java/usagetracker.log
-     com.oracle.usagetracker.additionalProperties = java.runtime.name
-     ```
+2. The **Java Management Service** and **Java Usage Tracking** plug-ins should be checked.
+
+  ![image of plug-in detail page](images/verify-plugin-non-oci.png)
+
+**On OCI hosts:**
+
+1. For **Java Usage Tracking** plug-in, it should be in the same page as non-OCI hosts.
+
+  ![image of oca plug-in detail page](images/jut-plugin-oci.png)
+
+2. For **Java Management Service** plug-in, go to compute instance page.
+
+  ![image of navigation to instance](images/nav-compute-instance.png)
+
+3. Select your instance, click the **Oracle Cloud Agent** tab.
+
+  ![image of instance details](images/instance-detail.png)
+
+4. The status of **Oracle Java Management Service** plug-in should be **Running**.
+
+  ![image of JMS plugin on OCI instance](images/jms-plugin-oci.png)
 
 ## Task 5: Check that management agent is tagged with the Fleet OCID
 
