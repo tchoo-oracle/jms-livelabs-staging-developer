@@ -10,15 +10,15 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Install a management agent on a Linux host
-- Verify management agent and plug-ins
+- Install a Management Agent on a Linux host
+- Verify Management Agent and Plug-ins
 - Tag Management Agent and Compute Instance
 - Monitor the Java runtime(s) and Java application(s) in JMS
 
 ### Prerequisites
 
 - You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-- You are using an Oracle Linux image on your host machine or compute instance for this workshop.
+- You are using an Oracle Linux image on your host machine or compute instance for this lab.
 - Access to the cloud environment and resources configured in [Lab 2](?lab=setup-a-fleet).
 
 ## Task 1: Install Management Agent
