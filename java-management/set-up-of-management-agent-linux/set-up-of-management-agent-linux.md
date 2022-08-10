@@ -89,7 +89,7 @@ In this lab, you will:
 
   ![image of JMS plugin on OCI instance](images/jms-plugin-oci.png)
 
-## Task 5: Check that management agent is tagged with the Fleet OCID
+## Task 4: Check that management agent is tagged with the Fleet OCID
 
 1. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
 
@@ -117,7 +117,7 @@ In this lab, you will:
 
 8. The management agent has been associated to your fleet in JMS. It will now collect information on your Java runtimes and Java Usage based on the scanning frequency defined in [Lab 2: Set Up a Fleet](?lab=setup-a-fleet).
 
-## Task 6: Verify detection of Java applications and runtimes
+## Task 5: Verify detection of Java applications and runtimes
 
 For the logging of applications to be visible, Java applications must be run again after the installation of the Management Agent. Now that the Management Agent has been set up in your compute instance, it will be able to detect new Java applications that have been executed. This can be observed in the Oracle Cloud Console.
 
@@ -161,39 +161,11 @@ You may now **proceed to the next lab.**
 
 **For Task 1**
 
-- If you are unable to download the management agent software using `wget`, you may download the software from the Oracle Cloud Console to your local machine and transfer it over to your compute using Secure Copy Protocol (SCP).
+- If you encounter an error similar to the following:
 
-- First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you have created.
-  ![image of console navigation to java management service](images/console-navigation-jms.png)
+  ![image of installation script unable to find error](images/installation-script-unable-to-find-error.png)
 
-- Click **Set Up Management Agent**.
-  ![image of fleet details page](images/fleet-details-page.png)
-- Click **Download management agent software**.
-  ![image of set up management agent page](images/fleet-set-up-management-agent.png)
-- Open up a **Terminal** window in the local machine where the management agent software file is saved.
-- Enter the following command to transfer the management agent software file via scp into the remote host compute instance.
-
-    ```
-    <copy>
-    scp <full_path_of_file_to_be_transferred_on_local_host> opc@<public_IP_Address>:<full_path_of_remote_directory_transferred_to>
-    </copy>
-    ```
-
-  - In your compute instance, verify that the file transfer is successful by entering the following. You should see your management agent software file.
-    ```
-    <copy>
-    ls
-    </copy>
-    ```
-
-**For Task 2**
-
-- Ensure that /usr/share folder has write permissions.
-- Uninstall and reinstall the management agent after permissions for the /usr/share folder have been updated.
-
-**For Task 3**
-
-- Transfer the response file to /tmp folder where read permissions are allowed.
+- Please manually download and install Oracle JDK 1.8 from [official Oracle page](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html).
 
 ## Learn More
 
