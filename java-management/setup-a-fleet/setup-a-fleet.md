@@ -30,9 +30,13 @@ In this lab, you will:
 
 3. In the Create Fleet dialog box, enter a name for the Fleet Name (for example, `fleet_1`), and a description.
 
-4. Select **Enable advanced features**. This is to enable advanced Lifecycle Management (LCM) operations. You can still edit it after the fleet is created.
+4. Select **Enable advanced features**.
 
   ![image of create fleet options page](images/create-fleet.png)
+
+  Click **Agree**. This is to enable advanced Lifecycle Management (LCM) operations. You can still edit it after the fleet is created.
+
+  ![image of agree advanced features](images/select-advanced-agree.png)
 
 5. Click **Next**.You are prompted to review the fleet information and management agent configuration. If you wish to modify your choices, click **Previous**.
 
@@ -40,11 +44,15 @@ In this lab, you will:
 
   ![image of create fleet confirm creation](images/create-fleet-create.png)
 
-7. Click **Download Install Key** to download the install key. The install key is issued against your identity domain and validates the authenticity of the installation.
+7. Click **Download installation script**.
 
-  ![image of page to download management agent software](images/download-management-agent-software-new.png)
+  ![image of page to download installation script](images/download-installation-script.png)
 
-  Click **Done** once the download is complete. The downloaded file will be used in [Lab 5: Install Management Agent on non-OCI Hosts - Linux](?lab=set-up-of-management-agent-linux) to install the Management Agent.
+  Select an appropriate version of the installation script according to the operating system on the host(s) you want to manage.
+
+  ![image of page to select installation script os](images/download-installation-script-os.png)
+
+  Click **Close** and **Done** once the download is complete. The downloaded file will be used in [Lab 5: Install Management Agent on Linux Hosts](?lab=set-up-of-management-agent-linux) and [Lab 6: Install Management Agent on Windows Hosts](?lab=set-up-of-management-agent-windows) to install the Management Agent.
 
 8. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
 
