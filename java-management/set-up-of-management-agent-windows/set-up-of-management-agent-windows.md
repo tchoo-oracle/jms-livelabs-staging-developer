@@ -71,60 +71,17 @@ Install Management Agent (If your host is Linux, skip to [Lab 5: Install Managem
       ![image of agents main page](images/agents-main-page-new.png)
 
 
-## Task 4: Configure Java Usage Tracker
+## Task 4: Verify Plug-in Deployment
+
+1. In your agent, click **Deploy plug-ins**.
+
+  ![image of agent detail page](images/windows-agent-details.png)
+
+2. The **Java Management Service** and **Java Usage Tracking** plug-ins should be checked.
+
+  ![image of plug-in detail page](images/windows-plugin.png)
 
 
-1. Open a command prompt as an **Administrator**, and create the following script for configuring the usage tracker.
-
-    ```
-    <copy>
-    notepad jms-configure.bat
-    </copy>
-    ```
-
-    In the file, paste the following text:
-
-    ```
-    <copy>
-    @ECHO off
-
-    REM CONFIGURE JMS USAGE TRACKER
-    REM Temporary prefix path variable with system32 to prefer system commands
-    setlocal EnableDelayedExpansion
-    PATH=C:\Windows\system32;%PATH%
-    IF exist C:\Oracle\mgmt_agent\agent_inst\config\destinations\OCI\services\jms (
-    	ECHO Setting JMS configuration
-    	DIR /b C:\Oracle\mgmt_agent\agent_inst\config\destinations\OCI\services\jms >%TEMP%\version.txt
-    	SET /p VERSION=<%TEMP%\version.txt
-    	POWERSHELL -ep Bypass C:\Oracle\mgmt_agent\agent_inst\config\destinations\OCI\services\jms\!VERSION!\scripts\setup.ps1 --force
-    ) ELSE (
-    	ECHO JMS Plugin Folder does not exist, please install management agent and try running it again.
-    )
-    </copy>
-    ```
-    Go to the File option and click the Save button to save the file. Close the notepad window.
-
-2. Move to the command prompt window again and run the script that you just created to configure the usage tracker.
-    ```
-    <copy>
-    jms-configure.bat
-    </copy>
-    ```
-
-
-3. This script creates the file `C:\Program Files\Java\conf\usagetracker.properties` with appropriate permissions. By default, the file contains the following lines:
-
-    ```
-    com.oracle.usagetracker.logToFile = C:\ProgramData\Oracle\Java\usagetracker.log
-    com.oracle.usagetracker.additionalProperties = java.runtime.name
-    ```
-4. If successful, you should see a message similar to:
-    ```
-    [C:\ProgramData\Oracle\Java\] folder has been created.
-    [C:\ProgramData\Oracle\Java\usagetracker.log] file has been created.
-    [C:\ProgramData\Oracle\Java\usagetracker.log] permissions has been set.
-    [C:\Program Files\Java\conf\] folder has been created.
-    ```
 ## Task 5: Check that management agent is tagged with the Fleet OCID
 
 1. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
