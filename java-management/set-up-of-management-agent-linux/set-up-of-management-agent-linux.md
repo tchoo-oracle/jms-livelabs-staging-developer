@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps to install a management agent on your host and set up tags for the agent and compute instance to allow Java usage tracking by the Java Management Service (JMS).
+This lab walks you through the steps to install a management agent and deploy plug-ins on your host to allow Java usage tracking by the Java Management Service (JMS).
 
 Estimated Time: 15 minutes
 
@@ -11,7 +11,7 @@ Estimated Time: 15 minutes
 In this lab, you will:
 
 - Install a management agent on a Linux host
-- Verify management agent
+- Verify management agent and plug-ins
 - Tag Management Agent and Compute Instance
 - Monitor the Java runtime(s) and Java application(s) in JMS
 
