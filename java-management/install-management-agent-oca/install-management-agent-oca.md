@@ -36,11 +36,16 @@ In this lab, you will:
 Do not disturb the setup in this time and only proceed after the status of the Management Agent plugin is set to **Running**.
   ![image of management agent plugin with running status](images/management-agent-plugin-running.png)
 
-5. We will need to verify that our agent is enabled successfully. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and under **Management Agent**, click **Agents**.
+  You may observe that the Java Management Service service plugin, which is responsible for enabling advanced Lifecycle Management (LCM) operations, is not enabled at this time. You can only enable it if you are interested in LCM operations.
+  ![image of unchecked java management service service plugin box](images/oracle-java-management-service-oca-plugin.png)
+
+  If you would like to learn more about Lifecycle Management, you may refer to the set up instructions for OCI hosts at the [Java Lifecycle Management with Java Management Service](../../java-management-lifecycle-management/workshops/freetier/index.html?lab=set-up-and-enable-lcm-on-jms) workshop.
+
+4. We will need to verify that our agent is enabled successfully. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and under **Management Agent**, click **Agents**.
 
   ![image of console navigation to access management agent overview](images/management-agent-overview.png)
 
-6. Ensure that your agent is in the list of agents. The name of the Agent should be of the form of  `Agent(<YOUR-INSTANCE-NAME>)`. This Agent should also be in the compartment created in [Lab 1](?lab=set-up-oci-for-jms).
+5. Ensure that your agent is in the list of agents. The name of the Agent should be of the form of  `Agent(<YOUR-INSTANCE-NAME>)`. This Agent should also be in the compartment created in [Lab 1](?lab=set-up-oci-for-jms).
 
   ![image of agent in agent overview list](images/agent-overview-list.png)
 
@@ -51,16 +56,6 @@ Do not disturb the setup in this time and only proceed after the status of the M
 
 2. Check the **Java Usage Tracking** box and click **Update**. This will deploy the Java Usage Tracking service plugin.
   ![image of checking java usage tracking box](images/agent-check-java-usage-tracking.png)
-
-  You may observe that the Java Management Service service plugin, which is reponsible for enabling advanced Lifecycle Management (LCM) operations, is not deployed here.
-  ![image of unchecked java management service service plugin box](images/agent-unchecked-java-management-service.png)
-
-
-  It is important to note that it is not necessary to deploy the JMS service plugin here as users who are interested in enabling LCM operations using OCA can do so using the Oracle Java Management Service plugin in OCA:
-  ![image of oracle java management service oca plugin on oca](images/oracle-java-management-service-oca-plugin.png)
-
-
-  If you would like to learn more about Lifecycle Management, you may refer to the set up instructions for OCI hosts at the [Java Lifecycle Management with Java Management Service](../../java-management-lifecycle-management/workshops/freetier/index.html?lab=set-up-and-enable-lcm-on-jms) workshop.
 
 
 ## Task 3: Associate the management agent with your fleet
