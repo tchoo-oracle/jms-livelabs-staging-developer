@@ -37,7 +37,13 @@ Before the set up of the Management Agent, it is important to understand the con
   **On OCI hosts:**
   ![image of JMS plugin on OCI hosts](images/jms-plugin-oci.png)
 
-- **Installation Script**: The script has been automatically generated for you in [Lab 2](?lab=setup-a-fleet). It downloads necessary software packages and configures Management Agent, Java Usage Tracking plugin and Java Management Service plugin.
+- **Installation Script**: JMS provides an installation script that you can use to set up management agents using a single command. The script has been automatically generated for you in [Lab 2](?lab=setup-a-fleet). 
+  
+  The script does the following functions:
+    - Install the Management Agent software.
+    - Configure the agent with the specific key for the fleet.
+    - Install JMS plugins for Java runtime discovery and usage reporting and Lifecycle management operations.
+    - Configure the usage tracker.
 
   ![image of Installation script](images/download-installation-script-os.png)
 
