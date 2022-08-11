@@ -1,4 +1,4 @@
-# Install Management Agent on Linux hosts
+# Install Management Agent on your hosts
 
 ## Introduction
 
@@ -10,7 +10,7 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Install a Management Agent on a Linux host
+- Install a Management Agent on a Linux or Windows host
 - Verify Management Agent and Plug-ins
 - Tag Management Agent and Compute Instance
 - Monitor the Java runtime(s) and Java application(s) in JMS
@@ -18,16 +18,18 @@ In this lab, you will:
 ### Prerequisites
 
 - You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-- You are using an Oracle Linux image on your host machine or compute instance for this lab.
+- You are using an Oracle Linux image or Windows OS on your host machine or compute instance for this lab.
 - Access to the cloud environment and resources configured in [Lab 2](?lab=setup-a-fleet).
 
 ## Task 1: Install Management Agent
+
+**On Linux**
 
 1. Download the installation script on your host, or enter the following command to transfer the installation script for Linux downloaded in [Lab 2](?lab=setup-a-fleet) to the remote host compute instance.
 
     ```
     <copy>
-    scp -i <your-private-key-file> <path-to-installation-script> <username>@<x.x.x.x>:<copy-to-path> 
+    scp -i <your-private-key-file> <path-to-installation-script> <username>@<x.x.x.x>:<copy-to-path>
     </copy>
     ```
 
@@ -49,6 +51,36 @@ In this lab, you will:
      </copy>
      ```
 
+**On Windows**
+
+1. On your Windows host, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you have created.
+  ![image of console navigation to java management service](images/console-navigation-jms.png)
+
+2. Click **Set Up Management Agent**.
+  ![image of fleet details page](images/fleet-details-page.png)
+
+3. Click **Download installation script** and select the script for Windows.
+  ![image of set up management agent page](images/download-installation-script.png)
+  ![image of set up management agent page](images/download-installation-script-os.png)
+
+4. Run Windows Powershell as administrator.
+
+5. Enter the following command to unblock the installation script.
+
+    ```
+    <copy>
+    Unblock-File -Path <path-to-installation-script>
+    </copy>
+    ```
+
+6. Enter the following command to run the installation script. The installation may take some time to complete.
+
+    ```
+    <copy>
+    & <path-to-installation-script>
+    </copy>
+    ```
+
 ## Task 2: Verify Management Agent Installation
 
 1. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Agents** under **Management Agent**.
@@ -61,7 +93,7 @@ In this lab, you will:
 
 ## Task 3: Verify Plug-in Deployment
 
-**On non-OCI hosts:**
+**On non-OCI Linux hosts:**
 
 1. In your agent, click **Deploy plug-ins**.
 
@@ -71,7 +103,7 @@ In this lab, you will:
 
   ![image of plug-in detail page](images/verify-plugin-non-oci.png)
 
-**On OCI hosts:**
+**On OCI Linux hosts:**
 
 1. For **Java Usage Tracking** plug-in, it should be in the same page as non-OCI hosts.
 
@@ -88,6 +120,16 @@ In this lab, you will:
 4. The status of **Oracle Java Management Service** plug-in should be **Running**.
 
   ![image of JMS plugin on OCI instance](images/jms-plugin-oci.png)
+
+**On Windows hosts:**
+
+1. In your agent, click **Deploy plug-ins**.
+
+  ![image of agent detail page](images/windows-agent-details.png)
+
+2. The **Java Management Service** and **Java Usage Tracking** plug-ins should be checked.
+
+  ![image of plug-in detail page](images/windows-plugin.png)
 
 ## Task 4: Check that management agent is tagged with the Fleet OCID
 

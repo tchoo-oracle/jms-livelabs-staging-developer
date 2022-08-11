@@ -30,19 +30,15 @@
             "filename": "../../understand-concepts-related-to-management-agent/understand-concepts-related-to-management-agent.md"
         },
         {
-            "title": "Lab 5: Install Management Agent on Linux hosts ",
-            "filename": "../../set-up-of-management-agent-linux/set-up-of-management-agent-linux.md"
+            "title": "Lab 5: Install Management Agent on your hosts ",
+            "filename": "../../set-up-of-management-agent/set-up-of-management-agent.md"
         },
         {
-            "title": "Lab 6: Install Management Agent on Windows hosts ",
-            "filename": "../../set-up-of-management-agent-windows/set-up-of-management-agent-windows.md"
-        },
-        {
-            "title": "Lab 7: Set up multiple Managed Instances and Management Gateway",
+            "title": "Lab 6: Set up multiple Managed Instances and Management Gateway",
             "filename": "../../multiple-managed-instances/multiple-managed-instances.md"
         },
         {
-            "title": "Lab 8: Track Java Usage in a Container",
+            "title": "Lab 7: Track Java Usage in a Container",
             "filename": "../../track-java-usage-in-a-container/track-java-usage-in-a-container.md"
         },
         {

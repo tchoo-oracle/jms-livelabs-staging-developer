@@ -52,7 +52,7 @@ In this lab, you will:
 
   ![image of page to select installation script os](images/download-installation-script-os.png)
 
-  Click **Close** and **Done** once the download is complete. The downloaded file will be used in [Lab 5: Install Management Agent on Linux Hosts](?lab=set-up-of-management-agent-linux) and [Lab 6: Install Management Agent on Windows Hosts](?lab=set-up-of-management-agent-windows) to install the Management Agent.
+  Click **Close** and **Done** once the download is complete. The downloaded file will be used in [Lab 5: Install Management Agent on your Hosts](?lab=set-up-of-management-agent) to install the Management Agent.
 
 8. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
 
