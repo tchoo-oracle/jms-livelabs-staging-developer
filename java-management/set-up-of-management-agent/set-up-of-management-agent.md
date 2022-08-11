@@ -25,7 +25,7 @@ In this lab, you will:
 
 **On Linux**
 
-1. Download the installation script on your host, or enter the following command to transfer the installation script for Linux downloaded in [Lab 2](?lab=setup-a-fleet) to the remote host compute instance.
+1. Prepare the installation script for Linux downloaded in [Lab 2](?lab=setup-a-fleet). Enter the following command to transfer to the remote host compute instance.
 
     ```
     <copy>
@@ -53,19 +53,11 @@ In this lab, you will:
 
 **On Windows**
 
-1. On your Windows host, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you have created.
-  ![image of console navigation to java management service](images/console-navigation-jms.png)
+1. Prepare the installation script for Windows downloaded in [Lab 2](?lab=setup-a-fleet).
 
-2. Click **Set Up Management Agent**.
-  ![image of fleet details page](images/fleet-details-page.png)
+2. Run Windows Powershell as administrator.
 
-3. Click **Download installation script** and select the script for Windows.
-  ![image of set up management agent page](images/download-installation-script.png)
-  ![image of set up management agent page](images/download-installation-script-os.png)
-
-4. Run Windows Powershell as administrator.
-
-5. Enter the following command to unblock the installation script.
+3. Enter the following command to unblock the installation script.
 
     ```
     <copy>
@@ -73,7 +65,7 @@ In this lab, you will:
     </copy>
     ```
 
-6. Enter the following command to run the installation script. The installation may take some time to complete.
+4. Enter the following command to run the installation script. The installation may take some time to complete.
 
     ```
     <copy>
