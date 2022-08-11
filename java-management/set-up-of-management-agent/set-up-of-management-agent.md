@@ -25,7 +25,7 @@ In this lab, you will:
 
 **On Linux**
 
-1. Prepare the installation script for Linux downloaded in [Lab 2](?lab=setup-a-fleet). Enter the following command to transfer to the remote host compute instance.
+1. Prepare the installation script for Linux downloaded in [Lab 2](?lab=setup-a-fleet). Enter the following command to transfer the script to the remote host compute instance.
 
     ```
     <copy>
