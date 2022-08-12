@@ -199,7 +199,19 @@ You may now **proceed to the next lab.**
 
   ![image of installation script unable to find error](images/installation-script-unable-to-find-error.png)
 
-- Please manually download and install Oracle JDK 1.8 from [official Oracle page](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html).
+  Please manually download and install Oracle JDK 1.8 from [official Oracle page](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html).
+
+- If you encounter an error similar to the following:
+
+  ![image of installation script no directory](images/installation-script-no-directory.png)
+
+  Please enter the following command to delete management agent and run installation script again:
+
+    ```
+     <copy>
+     sudo rpm -e oracle.mgmt_agent
+     </copy>
+     ```
 
 ## Learn More
 
