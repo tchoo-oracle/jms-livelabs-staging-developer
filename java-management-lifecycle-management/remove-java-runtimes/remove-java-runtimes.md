@@ -17,7 +17,7 @@ In this lab, you will:
 ### Prerequisites
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-* You are using an Oracle Linux image on your host machine or compute instance for this workshop.
+* You are using an Oracle Linux image or Windows OS on your host machine or compute instance for this workshop.
 * Access to the cloud environment and resources configured in Lab 1.
 
 ## Task 1: Submit Delete Java Runtime Work Request

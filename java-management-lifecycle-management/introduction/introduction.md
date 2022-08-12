@@ -22,6 +22,7 @@ _Estimated Time:_ 60 minutes
 * Configuring and Verifying the host for LCM
 * View and Identify the Java Runtimes
 * Understand LCM Operations
+* Install Java Runtimes
 * Remove Java Runtimes
 * View and Monitor LCM Work Requests
 
@@ -29,7 +30,7 @@ _Estimated Time:_ 60 minutes
 ### Prerequisites
 
   * This workshop requires an Oracle Cloud account. You may use your existing account or create one in the following lab.
-  * You are using an Oracle Linux image on your host machine or compute instance for this workshop.
+  * You are using an Oracle Linux image or Windows OS on your host machine or compute instance for this workshop.
   * Access to the cloud environment and resources configured in the workshop [Manage Java Runtimes, Applications and Managed Instances Inventory with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=912).
 
 ## Learn More
