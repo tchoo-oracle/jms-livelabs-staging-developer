@@ -47,8 +47,8 @@ In this lab, you will:
  ![image of work request summary page](images/work-request-summary-page.png)
 
 
-2. Your request will take some time to complete, under **Resources**, click **Log Messages** to view log data.
-  ![image of view log data](images/view-log-data.png)
+2. If your request has been accepted, the status will change to **In Progress**. It will take some time to complete.
+  ![image of pending work request](images/pending-work-request.png)
 
 3. If your request has completed successfully, the status will change to **Completed without Errors**.
   ![image of install completed without errors](images/install-complete-without-errors.png)
