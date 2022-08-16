@@ -17,7 +17,7 @@ In this lab, you will:
 ### Prerequisites
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-* You are using an Oracle Linux image or Windows OS on your host machine or compute instance for this workshop.
+* You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
 * Access to the cloud environment and resources configured in Lab 1.
 
 ## Task 1: Submit Install Java Runtime Work Request
@@ -53,7 +53,7 @@ In this lab, you will:
 3. If your request has completed successfully, the status will change to **Completed without Errors**.
   ![image of install completed without errors](images/install-complete-without-errors.png)
 
-4. Return to your fleet page, under **Java Runtimes**, the installed java runtime should be indicated after next scanning. You can also check the installation manually on your host.
+4. Return to your fleet page, under **Java Runtimes**, the installed java runtime should be indicated after next scanning. You can also check the installation manually on your Managed Instance.
   ![image of verify java runtime installation](images/verify-java-runtime-installation.png)
 
 

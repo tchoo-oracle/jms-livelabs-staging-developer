@@ -11,12 +11,11 @@ Estimated Time: 5 minutes
 In this lab, you will:
 
 * Set up a Fleet using the Java Management Service user interface
-* Create and configure an install key for installing Management Agents on your host machine
 
 ### Prerequisites
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-* You are using an Oracle Linux image on your host machine or compute instance for this workshop.
+* You are using an Oracle Linux image on your Managed Instance for this workshop.
 
 ## Task 1: Set Up Java Management Service Fleet
 
@@ -50,11 +49,11 @@ In this lab, you will:
 
   ![image of page to download installation script](images/download-installation-script.png)
 
-  Select an appropriate version of the installation script according to the operating system on the host(s) you want to manage.
+  Select an appropriate version of the installation script according to the operating system on your Managed Instance(s).
 
   ![image of page to select installation script os](images/download-installation-script-os.png)
 
-  Click **Close** and **Done** once the download is complete. The downloaded file will be used in [Lab 5: Install Management Agent on your Hosts](?lab=set-up-of-management-agent) to install the Management Agent. You can still download the installation script after the fleet is created.
+  Click **Close** and **Done** once the download is complete. The downloaded file will be used in [Lab 5: Install Management Agent on your Managed Instances](?lab=set-up-of-management-agent) to install the Management Agent. You can still download the installation script after the fleet is created.
 
 8. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
 

@@ -1,8 +1,8 @@
-# Install Management Agent on your hosts
+# Install Management Agent on your Managed Instances
 
 ## Introduction
 
-This lab walks you through the steps to install a management agent and deploy plug-ins on your host to allow Java usage tracking by the Java Management Service (JMS).
+This lab walks you through the steps to install a management agent and deploy plug-ins on your Managed Instance to allow Java usage tracking by the Java Management Service (JMS).
 
 Estimated Time: 15 minutes
 
@@ -10,7 +10,7 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Install a Management Agent on a Linux or Windows host
+- Install a Management Agent on a Linux or Windows Managed Instance
 - Verify Management Agent and Plug-ins
 - Tag Management Agent and Compute Instance
 - Monitor the Java runtime(s) and Java application(s) in JMS
@@ -18,14 +18,14 @@ In this lab, you will:
 ### Prerequisites
 
 - You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-- You are using an Oracle Linux image or Windows OS on your host machine or compute instance for this lab.
+- You are using an Oracle Linux image or Windows OS on your Managed Instance for this lab.
 - Access to the cloud environment and resources configured in [Lab 2](?lab=setup-a-fleet).
 
 ## Task 1: Install Management Agent
 
 **On Linux**
 
-1. Prepare the installation script for Linux downloaded in [Lab 2](?lab=setup-a-fleet). Enter the following command to transfer the script to the remote host compute instance.
+1. Prepare the installation script for Linux downloaded in [Lab 2](?lab=setup-a-fleet). Or enter the following command to transfer the script to the remote Managed Instance.
 
     ```
     <copy>
@@ -85,7 +85,7 @@ In this lab, you will:
 
 ## Task 3: Verify Plug-in Deployment
 
-**On non-OCI Linux hosts:**
+**On non-OCI Linux Managed Instances:**
 
 1. In your agent, click **Deploy plug-ins**.
 
@@ -95,9 +95,9 @@ In this lab, you will:
 
   ![image of plug-in detail page](images/verify-plugin-non-oci.png)
 
-**On OCI Linux hosts:**
+**On OCI Linux Managed Instances:**
 
-1. For **Java Usage Tracking** plug-in, it should be in the same page as non-OCI hosts.
+1. For **Java Usage Tracking** plug-in, it should be in the same page as non-OCI Managed Instances.
 
   ![image of oca plug-in detail page](images/jut-plugin-oci.png)
 
@@ -113,7 +113,7 @@ In this lab, you will:
 
   ![image of JMS plugin on OCI instance](images/jms-plugin-oci.png)
 
-**On Windows hosts:**
+**On Windows Managed Instances:**
 
 1. In your agent, click **Deploy plug-ins**.
 
