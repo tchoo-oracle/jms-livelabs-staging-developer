@@ -45,7 +45,15 @@ Before the set up of the Management Agent, it is important to understand the con
     - Install JMS plugins for Java runtime discovery and usage reporting and Lifecycle management operations.
     - Configure the usage tracker.
 
+  Download when creating a fleet:
+
   ![image of Installation script](images/download-installation-script-os.png)
+
+  Download in the fleet details page:
+
+  ![image of edit fleet properties](images/fleet-edit-properties.png)
+
+  ![image of edit fleet properties detail](images/fleet-edit-properties-detail.png)
 
   You may now **proceed to the next lab.**
 
