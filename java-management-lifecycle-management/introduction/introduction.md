@@ -36,7 +36,7 @@ _Estimated Time:_ 60 minutes
 
 ## Learn More
 
-* [Java Runtime Lifecycle Management](https://docs.oracle.com/en-us/iaas/jms/doc/java-runtime-lifecycle-management.html)
+* [Java Runtime Lifecycle Management](https://docs.oracle.com/en-us/iaas/jms/doc/advanced-features.html)
 
 ## Acknowledgements
 * **Author** - Bhuvesh Kumar, Java Management Service
