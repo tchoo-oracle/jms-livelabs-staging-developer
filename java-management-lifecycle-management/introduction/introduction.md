@@ -30,7 +30,7 @@ _Estimated Time:_ 60 minutes
 
 ### Prerequisites
 
-  * This workshop requires an Oracle Cloud account. You may use your existing account or create one in the following lab.
+  * This workshop requires an Oracle Cloud account. You may use your **own cloud account** or you can get a **Free Trial** account as described in *Getting Started*.
   * You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
   * Access to the cloud environment and resources configured in the workshop [Manage Java Runtimes, Applications and Managed Instances Inventory with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=912).
 

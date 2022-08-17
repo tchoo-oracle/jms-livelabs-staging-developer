@@ -44,7 +44,7 @@ As the stewards of Java, Oracle can provide answers to these questions. Oracle u
 
 ### Prerequisites
 
-* This workshop requires an Oracle Cloud account. You may use your existing account or create one in the following lab.
+* This workshop requires an Oracle Cloud account. You may use your **own cloud account** or you can get a **Free Trial** account as described in *Getting Started*.
 * A host(desktop/laptop/server/virtual machine) with Linux/Windows Operating System
 
 ## Extension Workshops
