@@ -11,6 +11,7 @@ Estimated Time: 5 minutes
 In this lab, you will:
 
 * Set up a Fleet using the Java Management Service user interface
+* Download installation script to be used in [Lab 5: Install Management Agent on your Managed Instances](?lab=set-up-of-management-agent)
 
 ### Prerequisites
 
