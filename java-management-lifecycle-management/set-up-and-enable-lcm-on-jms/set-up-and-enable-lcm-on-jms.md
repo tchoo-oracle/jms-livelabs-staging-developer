@@ -195,7 +195,7 @@ If you are using an OCI compute instance and it already has the Management Agent
     sudo yum update oracle-cloud-agent -y
     </copy>
     ```
-    
+
 ## Task 3: Configure a non-OCI Managed Instance to enable LCM operations
 
 > **Note:** Please refer to this task if the **installation script was not used** to install the management agent. The management agent should have been installed using the management agent software or enabled using the Management Agent plugin on your OCI compute instance's Oracle Cloud Agent)
