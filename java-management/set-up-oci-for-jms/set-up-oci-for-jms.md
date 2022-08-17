@@ -30,8 +30,8 @@ The Onboarding Wizard helps to create the necessary resources automatically. We 
 1. Sign in to the Oracle Cloud Console as an administrator using the credentials provided by Oracle, as described in [Signing into the Console](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/signingin.htm). See [Using the Console](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/console.htm) for more information.
 &nbsp;
 
-2. In the Oracle Cloud Console, open the navigation menu and click **Observability & Management**. Click **Java Management**.
-    ![image of console navigation to java management](images/console-navigation-java-management.png)
+2. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
+    ![image of console navigation to java management](images/console-navigation-jms.png)
     &nbsp;
 3. Select the root compartment under which the Onboarding Wizard will create a new compartment for JMS fleets.
     &nbsp;

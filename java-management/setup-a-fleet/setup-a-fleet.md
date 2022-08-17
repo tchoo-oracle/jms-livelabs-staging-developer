@@ -38,9 +38,9 @@ In this lab, you will:
 
   ![image of agree advanced features](images/select-advanced-agree.png)
 
-  LCM is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE runtimes (on-premises or in the Cloud) by performing LCM operations such as installing or removing Java Runtimes. If you would like to learn more about the Lifecycle Management feature, you may refer to the [Perform Java Lifecycle Management with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202).
+  LCM is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE runtimes (on-premises or in the Cloud) by performing LCM operations such as installing or removing Java Runtimes. If you would like to learn more about the Lifecycle Management feature, you may refer to [Perform Java Lifecycle Management with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202).
 
-5. Click **Next**.You are prompted to review the fleet information and management agent configuration. If you wish to modify your choices, click **Previous**.
+5. Click **Next**. You are prompted to review the fleet information and management agent configuration. If you wish to modify your choices, click **Previous**.
 
 6. Click **Create**. This creates a new fleet and its configuration.
 
