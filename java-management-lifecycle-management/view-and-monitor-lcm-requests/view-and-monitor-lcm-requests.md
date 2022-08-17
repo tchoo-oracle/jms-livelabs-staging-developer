@@ -11,7 +11,8 @@ Estimated Time: 20 minutes
 In this lab, you will:
 
 * Understand the different components of a Work Request view
-* View and monitor the status of Delete Java Runtime Work Requests created using the Java Management Service user interface
+* View and monitor the status of Work Requests created using the Java Management Service user interface
+* Cancel a Work Request using the the Java Management Service user interface
 
 
 ### Prerequisites
@@ -65,18 +66,34 @@ In this lab, you will:
   ![image of work request error messages view](images/work-request-error-messages.png)
 
 
-## Task 2: View status and logs related to Delete Work Request
-1. In the **Fleet** page, under **Resources**, select **Work Requests**. Click on the Delete Work Request you are interested in to view its details.
+## Task 2: View status and logs of a Work Request
+1. In the **Fleet** page, under **Resources**, select **Work Requests**. Click on the Work Request you are interested in to view its details.
  ![image of work request summary page](images/work-request-summary-page.png)
 
 2. If your request was successful, you should see that the **Status** of the request is marked as **Succeeded** and **Completed without errors**.
- ![image of successful delete work request](images/delete-java-runtime-succeeded.png)
+ ![image of successful work request](images/delete-java-runtime-succeeded.png)
 
-3. If you would like to view the log messages for the Delete Java Runtime Work Request, select **Log Messages** under **Resources**. You should see the log messages in detail.
- ![image of delete work request log messages](images/delete-work-request-log-messages.png)
+3. If you would like to view the log messages for the Work Request, select **Log Messages** under **Resources**. You should see the log messages in detail.
+ ![image of work request log messages](images/delete-work-request-log-messages.png)
 
 4. If your Work Request was unsuccessful, you may view the error messages by selecting **Error Messages** under **Resources**. You should see the status as **Failed** and the corresponding error messages.
-  ![image of delete work request failed error messages](images/delete-work-request-failed-error-message.png)
+  ![image of work request failed error messages](images/delete-work-request-failed-error-message.png)
+
+
+## Task 3: Cancel a Work Request
+1. In the **Fleet** page, under **Resources**, select **Work Requests**. You should see the Work Requests you submitted. Click on the Work Request to view its details.
+ ![image of work request summary page](images/work-request-summary-page.png)
+
+
+2. If your Work Request is still in progress and you would like to cancel it, click **Cancel Work Request**.
+  ![image of work request details page](images/delete-work-request-details-page.png)
+
+3. Click **Cancel work request** again to confirm.
+  ![image of cancel work request](images/cancel-delete-work-request.png)
+
+4. If your request has been canceled successfully, you should see that the **Status** of the request is marked as **Canceled**.
+  ![image of cancelled work request](images/canceled-delete-work-request.png)
+
 
 
 

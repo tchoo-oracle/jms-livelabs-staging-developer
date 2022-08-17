@@ -11,7 +11,7 @@ Estimated Time: 15 minutes
 In this lab, you will:
 
 * Create a Delete Java Runtime Work Request using the Java Management Service user interface
-* Cancel a Delete Java Runtime Work Request using the same user interface
+* Verify Java Runtime deletion
 
 
 ### Prerequisites
@@ -41,19 +41,19 @@ In this lab, you will:
   If your request is submitted successfully, you should receive a notification in green as seen below:
   ![image of submitted delete java runtime work request](images/delete-java-runtime-work-request-submitted.png)
 
-## Task 2: Cancel Delete Work Request
-1. In the same **Java Management** page, under **Resources**, select **Work Requests**. You should see the Delete Java Runtime Work Request you submitted in Task 1. Click on the Work Request to view its details.
+## Task 2: Verify Java Runtime Deletion
+
+1. In the same **Java Management** page, under **Resources**, select **Work Requests**. You should see the Remove Java Runtime Work Request you submitted in Task 1. Click on the Work Request to view its details.
  ![image of work request summary page](images/work-request-summary-page.png)
 
+2. If your request has been accepted, the status will change to **In Progress**. It will take some time to complete.
+  ![image of pending work request](images/pending-work-request.png)
 
-2. If your Work Request is still in progress and you would like to cancel it, click **Cancel Work Request**.
-  ![image of work request details page](images/delete-work-request-details-page.png)
+3. If your request has completed successfully, the status will change to **Completed without Errors**.
+  ![image of install completed without errors](images/delete-complete-without-errors.png)
 
-3. Click **Cancel work request** again to confirm.
-  ![image of cancel delete work request](images/cancel-delete-work-request.png)
-
-4. If your request has been canceled successfully, you should see that the **Status** of the request is marked as **Canceled**.
-  ![image of cancelled delete work request](images/canceled-delete-work-request.png)
+4. Return to your fleet page, under **Java Runtimes**, the deleted java runtime should not be reported after next scanning. You can also check the installation manually on your Managed Instance.
+  ![image of verify java runtime installation](images/verify-java-runtime-deletion.png)
 
 
  You may now **proceed to the next lab.**
