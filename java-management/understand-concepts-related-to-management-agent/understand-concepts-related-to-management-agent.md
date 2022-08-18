@@ -53,9 +53,9 @@ Before the set up of the Management Agent, it is important to understand the con
 
   Download in the fleet details page:
 
-  ![image of edit fleet properties](images/fleet-edit-properties.png)
+  ![image of download installation script](images/fleet-details-download-script.png)
 
-  ![image of edit fleet properties detail](images/fleet-edit-properties-detail.png)
+  ![image of download installation script detail](images/fleet-details-download-script-detail.png)
 
   You may now **proceed to the next lab.**
 
