@@ -83,7 +83,7 @@ In this lab, you will:
   A sample response file is included for reference, modify AgentDisplayName and GatewayPort parameters accordingly.
   ![image of final response file](images/terminal-edit-install-key.png)
 
-  To save the file, type CTRL+x. Before exiting, nano will ask you if you wish to save the file: Type y to save and exit, type n to abandon your changes and exit.
+  To save the file, type CTRL+x. Before exiting, nano will ask you if you wish to save the file: Type y to save and exit.
 
 
 
@@ -254,28 +254,27 @@ Gateway Proxy started successfully
     ![image of Management Gateway logs](images/management-gateway-status-logs.png)
 
 
-
 ## Task 4:  Configure Management Agents after Management Gateway installation
 
 
 After installing the Management Gateway, you will need to configure each Management Agent to use the Management Gateway **during the initial agent installation process**.
 
-
 * A fleet, `fleet_1`, has already been setup during [Lab 2](?lab=setup-a-fleet) and you should have access to the downloaded install key file.
 
+* To install Management Agent, follow [Task 1 of Lab 5](?lab=set-up-of-management-agent).
 
-* To prepare agent software and response file for Management Agent installation, follow [Task 1 of Lab 5](?lab=set-up-of-management-agent-linux) for Linux OS and [Task 1 of Lab 6](?lab=set-up-of-management-agent-windows) for Windows OS.
-
-* While preparing the response file you must add value for these additional parameters to configure the proxy:
+* While running the installation script you must change these parameters to configure the proxy:
     * **ProxyHost**: The IP address of host that is running Management Gateway
     * **ProxyPort**: 4479 
- 
-  A sample response file is included for reference.
-  ![image of final response file](images/response-file-parameters.png)
 
-* Follow [Task 2 - 6 to  of Lab 5](?lab=set-up-of-management-agent-linux) to Install, configure and verify Management Agent installation on Linux OS and [Task 2 - 6 of Lab 6](?lab=set-up-of-management-agent-windows) for Windows OS.
+  Enter the following command to run the installation script with parameters:
+    ```
+     <copy>
+     sudo <copy-to-path>/<installation-script-name>.sh --proxy-host="<host-IP-address>" --proxy-port="4479"
+     </copy>
+     ```
 
-
+* Follow [Task 2 - 5 to  of Lab 5](?lab=set-up-of-management-agent) to verify Management Agent installation.
 
 
 ## Task 5: Verify detection of Managed Instance
