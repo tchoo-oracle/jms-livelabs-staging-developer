@@ -195,17 +195,23 @@ You may now **proceed to the next lab.**
 
 **For Task 1**
 
+- If you are using a free-tier tenancy and encounter an error similar to the following:
+
+  ![image of connection closed](images/troubleshoot-connection-closed-by-remote.png)
+
+  Please reconnect to your instance and rerun the installation script.
+
 - If you encounter an error similar to the following:
 
-  ![image of installation script unable to find error](images/installation-script-unable-to-find-error.png)
+  ![image of installation script unable to find error](images/troubleshoot-unable-to-find-jdk.png)
 
   Please manually download and install Oracle JDK 1.8 from [official Oracle page](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html).
 
 - If you encounter an error similar to the following:
 
-  ![image of installation script no directory](images/installation-script-no-directory.png)
+  ![image of installation script no directory](images/troubleshoot-no-directory.png)
 
-  Please enter the following command to delete management agent and run installation script again:
+  Please enter the following command to delete management agent and run the installation script again:
 
     ```
      <copy>
