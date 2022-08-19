@@ -27,14 +27,14 @@ As the stewards of Java, Oracle can provide answers to these questions. Oracle u
 
 ## About this Workshop
 
- This workshop will walk you through the process of setting up and using Java Management Service (JMS) on Oracle Cloud Infrastructure (OCI). It will first walk you through how to set up the environment and create the necessary OCI resources such as Tagging, User Groups, Dynamic Groups and Policies in order to start using JMS. It will then guide you through the process of creating a fleet, which is the primary collection with which you interact when using JMS and contains Managed Instances that share a common management approach, followed by the process of deploying a simple Java Application in an OCI compute instance and Windows OS. Next, you will learn how to set up the Management Agent on your host machine (also known as a Managed Instance in JMS) to monitor your Java application and view it inside a fleet in JMS. Later, you will learn how to install and configure Management Gateway on an on-premises host and have another on-premises host proxy through it to communicate with OCI network and JMS. Finally, you will see a simple example of setting up a Java Application in a Docker container and monitoring it using JMS.
+ This workshop will walk you through the process of setting up and using Java Management Service (JMS) on Oracle Cloud Infrastructure (OCI). It will first walk you through how to set up the environment and create the necessary OCI resources such as Tagging, User Groups, Dynamic Groups and Policies in order to start using JMS. It will then guide you through the process of creating a fleet, which is the primary collection with which you interact when using JMS and contains Managed Instances that share a common management approach, followed by the process of deploying a simple Java Application in an OCI compute instance or Windows OS. Next, you will learn how to set up the Management Agent on your host machine (also known as a Managed Instance in JMS) to monitor your Java application and view it inside a fleet in JMS. Later, you will learn how to install and configure Management Gateway on an on-premises host and have another on-premises host proxy through it to communicate with OCI network and JMS. Finally, you will see a simple example of setting up a Java Application in a Docker container and monitoring it using JMS.
 
-*Estimated Time:* 100 minutes
+*Estimated Time:* 140 minutes
 
 ### Objectives
 
 * Set Up Oracle Cloud Infrastructure for JMS
-* Create a Fleet
+* Set up a Fleet
 * Deploy Java application and view usage in JMS
 * Understand vital concepts related to Management Agent installation
 * Install Management Agent on Managed Instances
@@ -44,7 +44,7 @@ As the stewards of Java, Oracle can provide answers to these questions. Oracle u
 
 ### Prerequisites
 
-* This workshop requires an Oracle Cloud account. You may use your **own cloud account** or you can get a **Free Trial** account as described in *Getting Started*.
+* This workshop requires an Oracle Cloud account. You may use your **own cloud account** or you can get a **Free Trial** account as described in *Get Started*.
 * A host(desktop/laptop/server/virtual machine) with Linux/Windows Operating System
 
 ## Extension Workshops
@@ -62,4 +62,4 @@ If you would like to learn more about using JMS together with other OCI services
 ## Acknowledgements
 
 * **Author** - Alvin Lam, Java Management Service
-* **Last Updated By/Date** - Xin Yi Tay, March 2022
+* **Last Updated By/Date** - Yixin Wei, August 2022

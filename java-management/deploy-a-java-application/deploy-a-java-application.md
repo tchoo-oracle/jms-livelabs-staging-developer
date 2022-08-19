@@ -22,7 +22,7 @@ In this workshop, you will:
 
 ## Task 1: Create a Compute Instance
 
-1. Sign in to the Oracle Cloud Console as an administrator using the credentials provided by Oracle, as described in [Signing into the Console](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/signingin.htm).
+1. Sign in to the Oracle Cloud Console as an administrator using the credentials provided by Oracle, as described in [Sign In for the First Time](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/signingin.htm).
 &nbsp;
 
 2. Use the **Create a VM Instance** wizard to create a new compute instance. The wizard does several things when installing the instance.
@@ -246,4 +246,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 
 * **Author** - Esther Neoh, Java Management Service
-* **Last Updated By** - Yixin Wei, June 2022
+* **Last Updated By** - Yixin Wei, August 2022

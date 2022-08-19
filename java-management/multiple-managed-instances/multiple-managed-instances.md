@@ -31,7 +31,7 @@ In this lab, you will:
 
 ## Task 1: Prepare gateway software and response file for Management Gateway installation
 
-1. Sign in to the Oracle Cloud Console as an administrator using the credentials provided by Oracle, as described in [Signing into the Console](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/signingin.htm).
+1. Sign in to the Oracle Cloud Console as an administrator using the credentials provided by Oracle, as described in [Sign In for the First Time](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/signingin.htm).
 &nbsp;
 
 2. Open navigation menu, click **Observability & Management**, and then click **Downloads and Keys** under **Management Agent**.  
@@ -261,11 +261,11 @@ After installing the Management Gateway, you will need to configure each Managem
 
 * A fleet, `fleet_1`, has already been setup during [Lab 2](?lab=setup-a-fleet) and you should have access to the install key file embedded in the downloaded installation script.
 
-* To install Management Agent, follow [Task 1 of Lab 5](?lab=set-up-of-management-agent).
+* To install Management Agent, follow [Task 1 of Lab 5](?lab=set-up-of-management-agent#Task1:InstallManagementAgent).
 
 * Before running the installation script take note of the flags to configure the proxy:
     * **ProxyHost**: The IP address of host that is running Management Gateway
-    * **ProxyPort**: 4479 
+    * **ProxyPort**: 4479
 
   Enter the following command to pass flags to the installation script:
     ```
@@ -310,4 +310,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 
 * **Author** - Bhuvesh Kumar, Java Management Service
-* **Last Updated By** - Bhuvesh Kumar, June 2022
+* **Last Updated By** - Yixin Wei, August 2022

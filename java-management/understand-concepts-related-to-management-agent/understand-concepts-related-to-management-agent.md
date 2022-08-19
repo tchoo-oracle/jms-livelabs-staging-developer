@@ -1,4 +1,4 @@
-# Understand Concepts related to Management Agent installation
+# Understand concepts related to Management Agent installation
 
 ## Introduction
 
@@ -14,7 +14,7 @@ In this lab, you will:
 
 ### Prerequisites
 - You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-- You are using an Oracle Linux image or Windows OS on your Managed Instance machine or compute instance for this workshop.
+- You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
 - Access to the cloud environment and resources configured in [Lab 2](?lab=setup-a-fleet).
 
 ## Task 1: Understand Concepts related to Management Agent installation
@@ -62,8 +62,7 @@ Before the set up of the Management Agent, it is important to understand the con
 ## Learn More
 
 * Refer to the [Management Agent Concepts](https://docs.oracle.com/en-us/iaas/management-agents/doc/you-begin.html),
-  [Configuring a Management Agent on an OCI Compute Instance](https://docs.oracle.com/en-us/iaas/jms/doc/agent-management.html), [Installation of Management Agents](https://docs.oracle.com/en-us/iaas/management-agents/doc/install-management-agent-chapter.html) and
-  [JMS Plugin for Management Agents](https://docs.oracle.com/en-us/iaas/jms/doc/installing-management-agent-java-management-service.html) sections of the JMS documentation for more details.
+  [Configuring a Management Agent on an OCI Compute Instance](https://docs.oracle.com/en-us/iaas/jms/doc/agent-management.html) and [Installation of Management Agents](https://docs.oracle.com/en-us/iaas/management-agents/doc/install-management-agent-chapter.html) sections of the JMS documentation for more details.
 
 * Use the [Troubleshooting](https://docs.oracle.com/en-us/iaas/jms/doc/troubleshooting.html#GUID-2D613C72-10F3-4905-A306-4F2673FB1CD3) chapter for explanations on how to diagnose and resolve common problems encountered when installing or using Java Management Service.
 
@@ -72,4 +71,4 @@ Before the set up of the Management Agent, it is important to understand the con
 ## Acknowledgements
 
 - **Author** - Xin Yi Tay, Java Management Service
-- **Last Updated By** - Xin Yi Tay, April 2022
+- **Last Updated By** - Yixin Wei, August 2022

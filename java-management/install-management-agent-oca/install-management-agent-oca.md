@@ -4,7 +4,7 @@
 
 This lab walks you through the steps to set up a management agent on your OCI Managed Instance using the Oracle Cloud Agent to allow Java usage tracking by the Java Management Service (JMS).
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -155,4 +155,4 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
 ## Acknowledgements
 
 * **Author** - Xin Yi Tay, Java Management Service
-* **Last Updated By** - Yixin Wei, June 2022
+* **Last Updated By** - Yixin Wei, August 2022
