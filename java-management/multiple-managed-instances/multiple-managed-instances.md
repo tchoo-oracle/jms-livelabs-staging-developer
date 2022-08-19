@@ -270,7 +270,7 @@ After installing the Management Gateway, you will need to configure each Managem
   Enter the following command to run the installation script with parameters:
     ```
      <copy>
-     sudo <copy-to-path>/<installation-script-name>.sh --proxy-host="<host-IP-address>" --proxy-port="4479"
+     sudo <path-to-installation-script>/<installation-script-name>.sh --proxy-host="<host-IP-address>" --proxy-port="4479"
      </copy>
      ```
 
