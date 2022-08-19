@@ -99,14 +99,22 @@ In this workshop, you will:
 3. From the **Instance Details** page look under the **Instance Access** section. Write down the public IP address the system created for you. You use this IP address to connect to your Instance.
 
 4. Open a **Terminal** or **Command Prompt** window.
-  Change into the directory where you stored the ssh encryption keys you created.
-  Connect to your instance with this SSH command
+  Change into the directory where you stored the SSH encryption keys you created.
+  To use SSH command, you need to change the read and write permissions to your key with this command
+    ```
+    <copy>
+    chmod 400 ./<your-private-key-file>
+    </copy>
+    ```
+
+5. Connect to your instance with this SSH command
     ```
     <copy>
     ssh -i <your-private-key-file> opc@<x.x.x.x>
     </copy>
-    ```    
-5. Since you identified your public key when you created the instance, this command logs you into your Instance.
+    ```
+
+6. Since you identified your public key when you created the instance, this command logs you into your Instance.
 
 ## Task 3: Install Java 8 and create a simple Java application
 
@@ -220,22 +228,6 @@ In this workshop, you will:
 You may now **proceed to the next lab.**
 
 ## Troubleshoot Java application deployment issues
-
-**For Task 2**
-
-* If you encounter a permissions error similar to the following:
-    ```
-    Permissions 0644 for '<your-keyfile-name>.key' are too open.
-
-    It is required that your private key files are NOT accessible by others.
-    ```
-  You will need to assign read and write permissions to your key. Enter the following:
-
-    ```
-    <copy>
-    chmod 400 ./<your-private-key-file>
-    </copy>
-    ```
 
 **For Task 3**
 
