@@ -20,7 +20,7 @@ In this lab, you will:
  * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
  * You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
  * You have successfully completed the installation of the Management Agent on your OCI or non-OCI Managed Instances following steps in [Manage Java Runtimes, Applications and Managed Instances Inventory with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=912).
- * **Proceed to Task 2 and 3 if the management agent was installed manually (i.e. using the management agent software or enabled using the Management Agent plugin on your OCI compute instance's Oracle Cloud Agent) and not using the installation script**
+ * **Proceed to Task 2 and 3 if the management agent was installed manually (i.e. using the management agent software or enabled using the Management Agent plugin on your OCI compute instance's Oracle Cloud Agent) and not using the installation script.**
 
 ## Task 1: Configure a fleet to enable LCM operations
 
@@ -252,12 +252,12 @@ You may now **proceed to the next lab.**
 
 ## Learn More
 
-* Refer to the [Managing Plugins with Oracle Cloud Agent ](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/manage-plugins.htm#console)
-* Refer to the [Installation of Management Agents ](https://docs.oracle.com/en-us/iaas/management-agents/doc/install-management-agent-chapter.htm). It has details of installation of Management Agent on various Operating Systems.
+* Refer to the [Managing Plugins with Oracle Cloud Agent](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/manage-plugins.htm#console).
+* Refer to the [Installing a Management Agent](https://docs.oracle.com/en-us/iaas/jms/doc/management-agent-chapter.html#GUID-FFC4FD17-B48A-46F2-A77F-7367CF6458F0). It has details of installation of Management Agent on various Operating Systems.
 * Refer to the [Viewing a Java Runtime](https://docs.oracle.com/en-us/iaas/jms/doc/fleet-views.html#GUID-F57179D9-C736-4058-B381-9ECAC776895F) for details of all the field shown in Java Runtime table.
 
 
 ## Acknowledgements
 
 * **Author** - Bhuvesh Kumar, Java Management Service
-* **Last Updated By** - Bhuvesh Kumar, April 2022
+* **Last Updated By** - Yixin Wei, August 2022
