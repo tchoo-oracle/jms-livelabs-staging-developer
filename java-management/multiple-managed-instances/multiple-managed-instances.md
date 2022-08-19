@@ -259,7 +259,7 @@ Gateway Proxy started successfully
 
 After installing the Management Gateway, you will need to configure each Management Agent to use the Management Gateway **during the initial agent installation process**.
 
-* A fleet, `fleet_1`, has already been setup during [Lab 2](?lab=setup-a-fleet) and you should have access to the downloaded install key file.
+* A fleet, `fleet_1`, has already been setup during [Lab 2](?lab=setup-a-fleet) and you should have access to the install key file embedded in the downloaded installation script.
 
 * To install Management Agent, follow [Task 1 of Lab 5](?lab=set-up-of-management-agent).
 
