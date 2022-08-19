@@ -10,7 +10,7 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-* Create a Delete Java Runtime Work Request using the Java Management Service user interface
+* Create a Delete Java Runtime Work Request using the Java Management Service console interface
 * Verify Java Runtime deletion
 
 

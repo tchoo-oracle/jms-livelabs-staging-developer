@@ -11,8 +11,8 @@ Estimated Time: 20 minutes
 In this lab, you will:
 
 * Understand the different components of a Work Request view
-* View and monitor the status of Work Requests created using the Java Management Service user interface
-* Cancel a Work Request using the the Java Management Service user interface
+* View and monitor the status of Work Requests created using the Java Management Service console interface
+* Cancel a Work Request using the the Java Management Service console interface
 
 
 ### Prerequisites
