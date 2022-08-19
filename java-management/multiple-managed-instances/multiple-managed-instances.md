@@ -263,11 +263,11 @@ After installing the Management Gateway, you will need to configure each Managem
 
 * To install Management Agent, follow [Task 1 of Lab 5](?lab=set-up-of-management-agent).
 
-* While running the installation script you must change these parameters to configure the proxy:
+* Before running the installation script take note of the flags to configure the proxy:
     * **ProxyHost**: The IP address of host that is running Management Gateway
     * **ProxyPort**: 4479 
 
-  Enter the following command to run the installation script with parameters:
+  Enter the following command to pass flags to the installation script:
     ```
      <copy>
      sudo <path-to-installation-script>/<installation-script-name>.sh --proxy-host="<host-IP-address>" --proxy-port="4479"
