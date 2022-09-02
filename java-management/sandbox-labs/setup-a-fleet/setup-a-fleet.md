@@ -40,7 +40,7 @@ In this lab, you will:
 
   ![image of agree advanced features](images/select-advanced-agree.png)
 
-  LCM is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE runtimes (on-premises or in the Cloud) by performing LCM operations such as installing or removing Java Runtimes. If you would like to learn more about the Lifecycle Management feature, you may refer to [Perform Java Lifecycle Management with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202).
+  LCM is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE Runtimes (on-premises or in the Cloud) by performing LCM operations such as installing or removing Java Runtimes. If you would like to learn more about the Lifecycle Management feature, you may refer to [Perform Java Lifecycle Management with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202).
 
 5. Click **Next**. You are prompted to review the fleet information and management agent configuration. If you wish to modify your choices, click **Previous**.
 
@@ -58,7 +58,7 @@ In this lab, you will:
 
   Click **Close** and **Done** once the download is complete. The downloaded file will be used in [Lab 2: Install Management Agent on your Managed Instances using Cloud Shell](?lab=install-management-agent-script) to install the Management Agent. You can still download the installation script after the fleet is created.
 
-8. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
+8. After JMS is linked to the management agent, it will collect information on your Java Runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
 
 9. Click the fleet. In the detail page, click on **Modify Agent Settings**.
 

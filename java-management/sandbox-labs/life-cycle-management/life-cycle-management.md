@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Lifecycle Management (LCM) is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE runtimes (on-premises or in the Cloud) by performing LCM operations such installing or removing Java Runtimes.
+Lifecycle Management (LCM) is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE Runtimes (on-premises or in the Cloud) by performing LCM operations such as Installing or Removing Java Runtimes.
 
 As a customer, you can:
   * View and identify the Java Runtimes.
@@ -63,7 +63,7 @@ In this lab, you will:
 3. If your request has completed successfully, the status will change to **Completed without Errors**.
   ![image of install completed without errors](images/delete-complete-without-errors.png)
 
-4. Return to your fleet page, under **Java Runtimes**, the deleted java runtime should not be reported after next scanning.
+4. Return to your fleet page, under **Java Runtimes**, the deleted Java Runtime should not be reported after next scanning.
   ![image of verify java runtime installation](images/verify-java-runtime-deletion.png)
 
 5. Alternatively, you may use SSH command to connect to the compute instance and enter the following command to check the deletion manually.
@@ -90,7 +90,7 @@ In this lab, you will:
 
   ![image of install java runtime](images/install-java-runtime.png)
 
-4. You will see an Install Java runtime window with current and archive releases of the Oracle Java Runtimes. You will also see a Summary table that lists the metadata, including **Runtime versions**, **Security State**, **Release date**, **End of service life** and **Release notes**. You may click the link under Release notes to open the details page in a new window.
+4. You will see an Install Java Runtime window with current and archive releases of the Oracle Java Runtimes. You will also see a Summary table that lists the metadata, including **Runtime versions**, **Security State**, **Release date**, **End of service life** and **Release notes**. You may click the link under Release notes to open the details page in a new window.
 
   Select the Java Runtime version you want to install, click **Install** to confirm the installation and submit a request for installation. This request is termed as a **Work Request**.
 
@@ -113,7 +113,7 @@ In this lab, you will:
 3. If your request has completed successfully, the status will change to **Completed without Errors**.
   ![image of install completed without errors](images/install-complete-without-errors.png)
 
-4. Return to your fleet page, under **Java Runtimes**, the installed java runtime should be indicated after next scanning. The installed Java Runtime may take up to 180 minutes to show up in the console.
+4. Return to your fleet page, under **Java Runtimes**, the installed Java Runtime should be indicated after next scanning. The installed Java Runtime may take up to 180 minutes to show up in the console.
   ![image of verify java runtime installation](images/verify-java-runtime-installation.png)
 
 5. Alternatively, you may use SSH command to connect to the compute instance and enter the following command to check the installation manually.
@@ -150,7 +150,7 @@ In this lab, you will:
 
   For the list of **Associated Resources**, you may find the following information:
    * **Managed instance**: Name of the managed instance affected by the Work Request.
-   * **Path**: The Java runtime installation path in the managed instance affected by the operation.
+   * **Path**: The Java Runtime installation path in the managed instance affected by the operation.
    * **Status**: Status of the operation at the associated resource.
    * **Last updated**: Date and time when the status for this associated resource was last updated.
 

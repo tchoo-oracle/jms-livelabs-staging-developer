@@ -2,7 +2,7 @@
 
 ## About Java Management Service
 
-Java Management Service (JMS) is a reporting and management infrastructure integrated with Oracle Cloud Infrastructure (OCI) Platform services to observe and manage your use of Java SE (on-premises or in the Cloud). Lifecycle Management (LCM) is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE runtimes (on-premises or in the Cloud) by performing LCM operations such as Removing Java Runtimes.
+Java Management Service (JMS) is a reporting and management infrastructure integrated with Oracle Cloud Infrastructure (OCI) Platform services to observe and manage your use of Java SE (on-premises or in the Cloud). Lifecycle Management (LCM) is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE Runtimes (on-premises or in the Cloud) by performing LCM operations such as Installing and Removing Java Runtimes.
 
 Watch the video below for an introduction to Java Management Service and a brief demo.
 
@@ -12,9 +12,9 @@ Watch the video below for an introduction to Java Management Service and a brief
 
 As a customer, you can:
 
-* Use insights from JMS to optimize your workloads across your enterprise (desktop, server, cloud); and
+* Use insights from JMS to optimize your workloads across your enterprise (desktop, server, cloud).
 * Protect your Java SE investments by identifying outdated Java installations and unauthorized applications.
-* View and identify the Java Runtimes.
+* View and identify Java Runtimes.
 * Install and remove Java Runtimes.
 * View and understand various status and logs related to LCM work requests.
 
@@ -30,13 +30,13 @@ As the stewards of Java, Oracle can provide answers to these questions. Oracle u
 
 ## About this Workshop
 
- This workshop will walk you through the process of setting up and using Java Management Service (JMS) on Oracle Cloud Infrastructure (OCI). It will first walk you through the process of creating a fleet, which is the primary collection with which you interact when using JMS and contains Managed Instances that share a common management approach. It will then guide you through the process of setting up the Management Agent on a host machine (also known as a Managed Instance in JMS) to monitor Java applications and view them inside a fleet in JMS. Next, you will learn how to install and remove a Java Runtime using OCI console. You will also get to view status and logs related to delete work requests. Finally, the workshop will show you how to view and monitor Lifecycle Management requests.
+ This workshop will walk you through the process of setting up and using Java Management Service (JMS) on Oracle Cloud Infrastructure (OCI). It will first walk you through the process of creating a fleet, which is the primary collection with which you interact when using JMS and contains Managed Instances that share a common management approach. It will then guide you through the process of setting up the Management Agent on a host machine (also known as a Managed Instance in JMS) to monitor Java applications and view them inside a fleet in JMS. Next, you will learn how to install and remove a Java Runtime using OCI console. You will also get to view status and logs of the work requests. Finally, the workshop will show you how to view and monitor Lifecycle Management requests.
 
- In this workshop, we have created an Oracle Linux compute instance with preloaded Java untimes and running Java applications. You can view this compute instance by going to the navigation menu, click **Compute**, and then click **Instances**.
+ In this workshop, we have created an Oracle Linux compute instance with preloaded Java Runtimes and running Java applications. You can view this compute instance by going to the navigation menu, click **Compute**, and then click **Instances**.
 
 ![image of console navigation to compute instances](images/console-navigation-instance-short.png)
 
- We will then setup JMS and install management agent on this compute in the following labs to observe and manage the Java Runtimes and Java applications in this compute instance.
+ You will then setup JMS and install management agent on this compute instance in the following labs to observe and manage the Java Runtimes and Java applications.
 
 *Estimated Time:* 60 minutes
 

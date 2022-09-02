@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps to set up Java Management Service and Management Agent plugins on your OCI compute instance host using the Oracle Cloud Agent to allow Java Usage Tracking and Lifecycle Management by the Java Management Service (JMS) using Cloud Shell.
+This lab walks you through the steps to set up Java Management Service and Management Agent plugins on your OCI compute instance host using the installation script to allow Java Usage Tracking and Lifecycle Management by the Java Management Service (JMS).
 
 Estimated Time: 15 minutes
 
@@ -22,7 +22,7 @@ In this lab, you will:
 
 > **Note:** The following tasks make use of OCI Cloud Shell to SSH into the compute instance. You can also use your own preferred command line interface to perform the same tasks, however we recommend using OCI Cloud Shell instead if your local machine has network restrictions and proxies preventing SSH connections. 
 
-1. Click the Cloud Shell icon in the Console header.
+1. Click the Cloud Shell icon in the console header.
 
   ![image of location of Cloud Shell icon](images/oci-cloud-shell-navigate.png)
 
@@ -107,7 +107,7 @@ In this lab, you will:
      </copy>
      ```
 
-## Task 3: Verify detection of Java applications and runtimes
+## Task 3: Verify detection of Java Runtimes and applications
 
 Now that the Management Agent has been set up in your compute instance, it will be able to detect the Java applications that have been executed in the compute instance. This can be observed in the Oracle Cloud Console.
 
@@ -121,11 +121,11 @@ Now that the Management Agent has been set up in your compute instance, it will 
 
   ![image of successful installation instance](images/successful-installation-instance.png)
 
-4. Click **Java Runtimes** under **Resources**. You should see a list of Java Runtimes from Java 8 to Java 18, these Java Runtimes are pre-installed in the compute instance in Task 1.
+4. Click **Java Runtimes** under **Resources**. You should see a list of Java Runtimes from Java 8 to Java 18, these Java Runtimes are preloaded in the compute instance in Task 1.
 
   ![image of successful installation](images/successful-installation.png)
 
-5. Click **Applications** under **Resources**. You should now see four applications. The first three are examples of DropWizard, SpringBoot and Micronaut, these applications are pre-installed and running in the compute instance in Task 1. The fourth is the Oracle Java Management Service plugin.
+5. Click **Applications** under **Resources**. You should now see four applications. The first three are examples of DropWizard, SpringBoot and Micronaut, these applications are preloaded and running in the compute instance in Task 1. The fourth is the Oracle Java Management Service plugin.
 
   ![image of applications after successful installation](images/successful-installation-applications.png)
 
