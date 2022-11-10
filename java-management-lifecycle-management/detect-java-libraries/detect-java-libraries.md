@@ -104,61 +104,94 @@ public class App
 ```
 * Replace the content as following.
 ```xml
-    <copy>
-    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    
+<copy>
+	<project
+		xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.sample</groupId>
-  <artifactId>GreetingApp </artifactId>
-  <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>AppTest</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.9.0</version>
-    </dependency>
-  </dependencies>
-  <build>
-  <plugins>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-assembly-plugin</artifactId>
-    <executions>
-        <execution>
-            <phase>package</phase>
-            <goals>
-                <goal>single</goal>
-            </goals>
-            <configuration>
-                <archive>
-                <manifest>
-                    <mainClass>com.sample.App</mainClass>
-                </manifest>
-                </archive>
-                <descriptorRefs>
-                    <descriptorRef>jar-with-dependencies</descriptorRef>
-                </descriptorRefs>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
-</plugins>
-</build>
-</project>
+		<modelVersion>4.0.0</modelVersion>
+		<groupId>com.sample</groupId>
+		<artifactId>GreetingApp </artifactId>
+		<packaging>jar</packaging>
+		<version>1.0-SNAPSHOT</version>
+		<name>AppTest</name>
+		<url>http://maven.apache.org</url>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>3.8.1</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.9.0</version>
+			</dependency>
+		</dependencies>
+		<build>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<goals>
+								<goal>single</goal>
+							</goals>
+							<configuration>
+								<archive>
+									<manifest>
+										<mainClass>com.sample.App</mainClass>
+									</manifest>
+								</archive>
+								<descriptorRefs>
+									<descriptorRef>jar-with-dependencies</descriptorRef>
+								</descriptorRefs>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</build>
+	</project>
+</copy>
+```
+3. Build Java SE Application as executable jar file by running.
+```
+    <copy>
+        mvn clean package
     </copy>
 ```
+* ou should able to see the output similar as following after successfully build.
+![image of install java runtime](images/build-java-se-app.png)
+4. Run Java SE application by running.
+```
+    <copy>
+        sudo java -jar ./target/GreetingApp-1.0-SNAPSHOT-jar-with-dependencies.jar
+    </copy>
+```
+![image of install java runtime](images/run-java-se-app.png)
+## Task 3: Detect Java libraries for running Java SE Application.
+
+1. Follow Task 1, step 2-3 to initialize Java libraries scan.
+
+2. In the same **Java Management** page, under **Resource**, select **Java libraries**,  you should be able to see extra Java libraries named Gson that we included in sample GreetingApp are added to result now.
+![image of install java runtime](images/java-library-gson.png)
+
+3. Click the Gson library , you should able to see details of sample Java SE application that we deployed in the previous step
+
+![image of install java runtime](images/build-java-se-app.png)
+ 
+4. You can stop the Java SE application by pressing **ctrl + c**.  
 
 
  You may now **proceed to the next lab.**
+
+
+
 
 ## Learn More
 * Refer to the [Java Runtime Lifecycle Management](https://docs.oracle.com/en-us/iaas/jms/doc/advanced-features.html#GUID-08673CB1-D87D-4BC5-A61D-E59DCC879ABB), [Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/getting-started-java-management-service.html#GUID-47C63464-BC0C-4059-B552-ED9F33E77ED3) and [Viewing a Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/fleet-views.html#GUID-F649F0E5-DD54-4DEC-A0F1-942FE3552C93) sections of the JMS documentation for more details.
