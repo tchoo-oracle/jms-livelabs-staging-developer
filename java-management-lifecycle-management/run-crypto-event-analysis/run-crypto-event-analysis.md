@@ -50,9 +50,9 @@ In this lab, you will:
   <br><br>
   ![image of fleet bucket](images/fleet-bucket.png)
   <br><br>
-  > **Note:** You can also access it from the **Fleet** details page by clicking the **Object storage bucket** name under **Object storage**
-  >
-  >![image of crypto event run settings](images/fleet-bucket-link.png)
+    > **Note:** You can also access it from the **Fleet** details page by clicking the **Object storage bucket** name under **Object storage**
+    >
+    >![image of crypto event run settings](images/fleet-bucket-link.png)
 
 6. Your **Crypto event analysis** report's raw copy is stored in the folder **JMS** > **ANALYSIS** > **CRYPTO** > **RESULTS** > **fleet-ocid** > **instance-ocid** > **CryptoAnalysisResult** json file(s). 
   <br><br>
