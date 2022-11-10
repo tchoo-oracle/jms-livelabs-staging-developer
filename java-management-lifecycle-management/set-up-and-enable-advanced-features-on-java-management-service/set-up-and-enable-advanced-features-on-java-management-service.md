@@ -1,9 +1,8 @@
-# Set up and enable Lifecycle Management operations on Java Management Service
+# Set up and enable advanced features on Java Management Service
 
 ## Introduction
 
 Before you can start using Lifecycle Management operations, you must ensure that your Oracle Cloud Infrastructure environment is set up correctly by following the workshop [Manage Java Runtimes, Applications and Managed Instances Inventory with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=912). These OCI Resources allow the communication between all the required components and cloud services.
-
 
 Estimated Time: 30 minutes
 
@@ -11,9 +10,9 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-  *  Configure a fleet to enable LCM operations.
-  *  Configure an OCI Managed Instance to enable LCM operations.
-  *  Configure a non-OCI Managed Instance to enable LCM operations.
+  *  Configure a fleet to enable advanced features.
+  *  Configure an OCI Managed Instance to enable advanced features.
+  *  Configure a non-OCI Managed Instance to enable advanced features.
 
 ### Prerequisites
 
@@ -27,13 +26,23 @@ In this lab, you will:
 1. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
   ![image of console navigation to access fleet](images/console-navigation-jms.png)
 
-2. Click **Edit Properties**.
+2. Click **Edit Properties**. A separate edit fleet properties window should appear
 
   ![image of edit fleet properties](images/fleet-edit-properties.png)
 
-3. Ensure that the **Enable advanced features** box is checked.
+3. The advanced features section should display the 4 different advanced features available:
+   - Lifecycle management
+   - Advanced usage tracking
+   - Crypto event analysis
+   - Java Flight Recorder (JFR)
+
+4. Ensure that the **Select all advanced features** box is checked. This should also check the boxes of all the individual features.
 
   ![image of edit fleet properties detail](images/fleet-edit-properties-detail.png)
+
+  If the **Select all advanced features** is not checked, check the box. Click on the **Save changes** button to confirm the modification. This will enable all the advanced features.
+
+  > **Note:** If only certain advanced features are required, check the box corresponding to the respective advanced features and save any modifications made. Only advanced features which has been enabled can be used.
 
 ## Task 2: Configure an OCI Managed Instance to enable LCM operations
 
@@ -48,9 +57,7 @@ If you are using an OCI compute instance and it already has the Management Agent
 
   **Using OCI Console:**
     * In the Oracle Cloud console, click **Instances** under **Compute**, and select the instance that you are interested in.
-
      ![image of navigate from OCI console menu to computer instances](images/navigate-to-computer-instance.png)
-
     * Click the **Oracle Cloud Agent** tab. The list of plugins is displayed. Verify that the **Oracle Java Management Service** OCA plugin is enabled. If it is disabled, toggle the switch for the Oracle Java Management Service plugin and ensure that the status is set to **Running**. This may take 5 to 10 minutes. This will enable the LCM operations for the chosen OCI Compute Instance.
 
       ![image of disabled oracle java management service oca plugin](images/oracle-jms-oca-plugin-disabled.png)
@@ -212,6 +219,7 @@ If you are using a non-OCI Managed Instance and it has the Management Agent inst
     ```
 
   Add the following lines to the end of the file:
+
     ```
     <copy>
     #To change ownership of the Java Management Service plugin to root
