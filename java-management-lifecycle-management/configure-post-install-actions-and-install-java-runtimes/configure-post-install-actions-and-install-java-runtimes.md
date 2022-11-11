@@ -52,7 +52,6 @@ In this lab, you will:
    |Replace JDK root certificates with default operating system certificates|      |
    | | |
 
-   >**NOTE:** By default, TLS 1.0 and TLS 1.1 are disabled on the latest oracle jdk. 
 
 6. This lab will simulate the setting up of 2 different installation actions. 
    * Minimum key length for RSA > 2048 bits (e.g. for signed jars)
@@ -106,12 +105,16 @@ In this lab, you will:
 
    ![image of install java runtime select post install action](images/install-java-runtime-select-post-install-action.png)
 
+   >**Note:** If no post-installation action is selected, no post-install action will be executed after the java installation
+
 5. Click **Install Java runtime** to confirm the installation and submit a request for installation. This request is termed as a **Work Request**.
 
    ![image of install java runtime confirm](images/install-java-runtime-confirm.png)
 
-  If your request is submitted successfully, you should receive a notification in green as seen below:
-  ![image of submitted install java runtime work request](images/install-java-runtime-work-request-submitted.png)
+   If your request is submitted successfully, you should receive a notification in green as seen below:
+   ![image of submitted install java runtime work request](images/install-java-runtime-work-request-submitted.png)
+
+
 
 ## Task 3: Verify Java Runtime Installation and Post Java Installation Action
 
@@ -121,6 +124,8 @@ In this lab, you will:
 
 2. If your request has been accepted, the status will change to **In Progress**. It will take some time to complete.
   ![image of pending work request](images/pending-work-request.png)
+
+   >**Note:** Install Java runtime work request will take around 15-30 minutes to complete
 
 3. If your request has completed successfully, the status will change to **Completed without Errors**.
   ![image of install completed without errors](images/install-complete-without-errors.png)
