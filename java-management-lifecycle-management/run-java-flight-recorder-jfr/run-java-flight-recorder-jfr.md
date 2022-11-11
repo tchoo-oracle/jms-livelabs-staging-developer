@@ -40,21 +40,15 @@ In this lab, you will:
   <br><br>
   For **Max recording duration** lower it to **5 mins** and keep **Max recording size** as is at **500MB**. Click **Start** to begin the JFR recording.
   <br><br>
-  ![image of work requets](images/jfr-config-start.png)
+  ![image of jfr configs before starting](images/jfr-config-start.png)
 
 5. Scroll down and under **Resources**, select **Work requests**. You should see a list of the Work Requests that are currently in your Fleet. **Java Flight Recorder** that was started should be at the top of the list.
   <br><br>
-  ![image of work requets](images/jfr-work-request.png)
+  ![image of work request](images/jfr-work-request.png)
 
-6. Once the work request shows as complete, open the navigation menu again, click **Storage**, and then click **Buckets** under **Object Storage & Archive Storage**.
-  <br><br>
-  ![image of console navigation to bucket](images/console-navigation-bucket.png)
-  <br><br>
-  Select the bucket that starts with **jms_** followed by the **OCID** of your fleet that you are interested in.
-  <br><br>
-  ![image of fleet bucket](images/fleet-bucket.png)
-  <br><br>
-  > **Note:** You can also access it from the **Fleet** details page by clicking the **Object storage bucket** name under **Object storage**
+    >**Note:** If you have set the **Max recording duration** to 5 mins It will take approximately 10 mins for the request to be completed.
+
+6. Once the work request shows as complete, from the **Fleet** details page by clicking the **Object storage bucket** name under **Object storage**
   >
   >![image of crypto event run settings](images/fleet-bucket-link.png)
 

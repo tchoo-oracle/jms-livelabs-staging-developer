@@ -41,7 +41,9 @@ In this lab, you will:
 
 4. Scroll down and under **Resources**, select **Work requests**. You should see a list of the Work Requests that are currently in your Fleet. **Crypto event analysis** that was started should be at the top of the list.
   <br><br>
-  ![image of work requets](images/crypto-work-request.png)
+  ![image of work requests](images/crypto-work-request.png)
+
+    >**Note:** It will take approximately 1 hour for the request to be completed.
 
 5. Once the work request shows as complete, scroll down and under **Resources**, select **Analysis reports**. You should see a list of the Crypto analysis reports that have been conducted in your Fleet. **Crypto event analysis** that has completed should be on top of the list.
   <br><br>
@@ -74,7 +76,7 @@ In this lab, you will:
         events: [
           {
             eventType: string,
-            occurences: int32,
+            occurrences: int32,
             fields: [
               {
                 key: string,
@@ -109,7 +111,7 @@ In this lab, you will:
           command: string,
           events: [{
             eventType: string,
-            occurences: int32,
+            occurrences: int32,
             fields: [{
               key: string,
               value: string
