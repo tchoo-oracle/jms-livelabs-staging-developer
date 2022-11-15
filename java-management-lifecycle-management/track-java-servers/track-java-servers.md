@@ -12,7 +12,7 @@ Estimated Time: 40 minutes
 
 In this lab, you will:
 
-* Install WebLogic server in a managed instance.
+* Configure WebLogic server in a managed instance.
 * Deploy a sample Java Web Application in WebLogic server.
 * Scan running Java server with deployed Java Web Application in a managed instance.
 * Verify Java server scanning result.
@@ -21,59 +21,76 @@ In this lab, you will:
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
 * You are using an Oracle Linux image on your Managed Instance for this workshop.
-* Access to the cloud environment and resources configured in the previous labs.
+* Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
 * Familiarity with configuration of WebLogic server.
 
 ## Task 1: Ensure WebLogic Server is installed and configured. 
 
-1. If you do not have WebLogic server installed and configured in your managed instance, please refer to following steps:
+1. If you do not have WebLogic server installed and configured in your managed instance, please refer to following steps.
 * [Download WebLogic Server](https://www.oracle.com/middleware/technologies/weblogic-server-installers-downloads.html)
 * [Install WebLogic Server](https://docs.oracle.com/en/middleware/standalone/weblogic-server/14.1.1.0/wlsig/installing-oracle-weblogic-server-and-coherence-software.html#GUID-E4241C14-42D3-4053-8F83-C748E059607A)
 * [Create and Configure WebLogic Domain](https://docs.oracle.com/en/middleware/standalone/weblogic-server/14.1.1.0/wlsig/creating-and-configuring-weblogic-domain.html#GUID-4AECC00D-782D-4E77-85DF-F74DD61391B4)
 
-2. Take note of the **path of the created domain**  for installed WebLogic server which will be used for deployment of Java Web Application in following **Task 3**.
+2. When configuring the WebLogic server, please take note of the **absolute path to the domain directory created**. This path will be required for the subsequent task of deployment of Java Web Application.  
+For example: **/home/opc/Oracle/Middleware/Oracle_Home/user_projects/domains/<domain_name>**
 
-## Task 2: Create Sample Java Web Application
+## Task 2: Create a Sample Java Web Application
 
-1. Install Maven by running. 
+1. Connect to your instance with SSH if you are using OCI Compute Instance.
+* Open a Terminal or Command Prompt window. Change into the directory where you stored the SSH encryption keys you created. To use SSH command, you need to change the read and write permissions to your key with this command.
+```
+  <copy>
+    chmod 400 ./<your-private-key-file>
+  </copy>
+```
+* Connect to your instance with this SSH command
+```
+  <copy>
+    ssh -i <your-private-key-file> opc@<x.x.x.x>
+  </copy>
+```
+2. Install Maven with following command.
 ```
     <copy>
     sudo yum install maven
     </copy>
 ```  
-2. Verify the installation by checking the Maven version.
+3. Verify the installation by checking the Maven version with following command.
 ```
     <copy>
     mvn –v
     </copy>
-```  
-3. Create sample Java Web Application by running.
-* If you are not already in the home directory of your compute instance, navigate there by running.
+```
+* The Maven version should be displayed if it was successfully installed.
+
+4. Create a sample Java Web Application.
+* If you are not already in the home directory of your compute instance, navigate there with the following command:
 ```
     <copy>
     cd ~
     </copy>
 ```
-* Create sample Java Web Application named **webSampleApp** by running.
+* Create sample Java Web Application named **webSampleApp** with the following command:
 ```
     <copy>
     mvn archetype:generate -DgroupId=com.sample -DartifactId=webSampleApp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
     </copy>
 ```
+* Navigate to the directory of the created application with the following command:
 ```
     <copy>
     cd ./webSampleApp
     </copy>
 ```
 
-3. Edit configuration files by running.
-* Edit pom.xml file by running.
+5. Edit pom.xml configuration file.
+* Open the pom.xml file with the following command:
 ```
     <copy>
     nano pom.xml
     </copy>
 ```
-* Replace the content of pom.xml as following.
+* Replace the content of the pom.xml file as follows:
 ```xml
 <copy>
 	<project
@@ -113,13 +130,14 @@ In this lab, you will:
 ```
 * To save the file, type **CTRL+x**. Before exiting, nano will ask you if you wish to save the file: Type **y** and **Enter** to save and exit.
 
-* Edit web.xml file by running.
+6. Edit web.xml configuration file.
+* Open the web.xml file with the following command:
 ```
     <copy>
     nano src/main/webapp/WEB-INF/web.xml 
     </copy>
 ```
-* Replace the content of web.xml as following and save the file.
+* Replace the content of the web.xml file with the content below. Save the file.
 ```xml
 <copy>
 	<?xml version="1.0" encoding="ISO-8859-1"?>
@@ -141,13 +159,14 @@ In this lab, you will:
 </copy>
 ```
 
-4. Create sample Java servlet class by running.
+7. Create a sample Java servlet class.
+* Create and open the sample java servlet class file named **GreetingServlet.java** with command as following:
 ```
     <copy>
     sudo mkdir -p ./src/main/java/com/sample && sudo nano ./src/main/java/com/sample/GreetingServlet.java
     </copy>
 ```
-* Paste the following text in the Java file and save the file.
+* Copy and paste the following text into the Java file. Save the file.
 ```java
   <copy>
     package com.sample;
@@ -174,7 +193,7 @@ In this lab, you will:
   </copy>
 ```
 
-5. Build sample Java Web Application as war file by running.
+7. Build sample Java Web Application as war file using Maven.
 ```
   <copy>
     mvn package
@@ -184,47 +203,61 @@ In this lab, you will:
 ![image of build Java Web Application](images/build-java-web-app.png)
 
 
-## Task 3: Deploy Java Web Application in WebLogic Server.
+## Task 3: Deploy a Java Web Application with WebLogic Server.
 
-1. Deploy sample Java Web Application in WebLogic server by running.
+1. Deploy the sample Java Web Application in WebLogic server.
 ```
   <copy>
     cp ./target/webSampleApp.war  <path-to-created-domain>/autodeploy/
   </copy>
 ```  
-2. Start WebLogic Server by running.
+2. Start WebLogic Server.
 ```
   <copy>
     sudo <path-to-created-domain>/startWebLogic.sh
   </copy>
 ``` 
-* You should able to see the output similar as following after server started successfully.
+* You should see the output similar as following after server started successfully.
 ![image of build Java Web Application](images/start-weblogic-server.png)
+
+> **Note:** By default, WebLogic is set to development mode with the auto-deploy feature enabled. The sample Java Web Application in the autodeploy directory will not be deployed if the auto-deploy feature is not available.
 
 ## Task 4: Initialize a Java server scan.
 
-Now we have the running WebLogic server with deployed sample Java Web Application on the managed instance, let's initialize a Java server scan.
-1. In **Java Management** page, click **Scan for Java servers**.
-![image of scan java servers](images/scan-java-servers.png)
+Now that we have a running WebLogic server with the sample Java Web Application deployed on the managed instance, let's initialize a **Java Server scan**.
 
-2. In the same **Java Management** page, under **Resource**,select **Work Request**.You should see the Scan for Java servers Work Request you submitted in step 1.
+1. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.
+ ![image of scan java servers](images/console-navigation-fleet.png)
+
+2. On the fleet details page, click **Scan for Java servers**.
+![image of scan java servers](images/scan-java-servers.png)
+If your request is submitted successfully, you should receive a notification in green as seen below: 
+![image of scan java servers](images/work-request-of-servers-scan-created.png)
+
+3. Scroll down the fleet details page, under **Resource** menu, select **Work Request**.You should see the Scan for Java servers Work Request you submitted in step 1. Wait for the work request to complete.
 ![image of work request for java servers scan](images/work-request-of-servers-scan-in-progress.png)
 
-3. If your request is successful, you should see that the Status of the request is marked as Succeeded and Completed without errors.  
-It will take around 10 minutes for the request to be completed.
+4. If your request is successful, you should see that the Status of the request is marked as **Completed without errors**.  
+It will take approximately 10 minutes for the request to be completed.
 ![image of detected java servers](images/work-request-of-servers-scan-completed.png)
 
-4. In the same **Java Management** page, under **Resource**, select **Java servers** you should be able to see detected WebLogic server that you installed in the managed instance.
+5. In the same fleet details page, under **Resource** menu, select **Java servers**. You should be able to see all the Java servers present in the fleet.
 ![image of work request for java servers scan](images/java-server-detected.png)
 
-5. Click **WebLogic Server** under **Java servers**, You should be able to see the WebSampleApp that we deployed in the previous step with its type indicated.
+6. Click **WebLogic Server** under **Java servers**, You should be able to see the WebSampleApp that was deployed in Task 3 and its target type (clustered / non-clustered) under **Deployed applications**.
 ![image of detail of deployed java web application](images/sample-java-web-application-detected.png)
 
-## Task 5: (Optional)Try your own to track other Java servers with deployed Applications.
-* In the previous tasks . we have showed the process of how to track a running Java server with deployed Web Application using WebLogic server as an example. Not only WebLogic Java servers, tracking of Tomcat and JBoss servers are also supported for both standalone and cluster mode.
-![image of detail of deployed java web application](images/java-servers-other.png)
-![image of detail of deployed java web application](images/java-web-applications-other.png)
-* Setting up of Java application servers including configuring cluster mode is beyond the scope of this workshop. You may wish to deploy your own Java Applications using above mentioned Java servers on your own and scan it using our features.
+## Task 5: (Optional)Tracking other Java Servers with Deployed Applications
+* Task 1 to 4 highlights the process of tracking a running Java server with deployed Web Application using WebLogic server as an example. The Java server scan is able to detect the latest versions of a variety of Java Servers including:
+  * WebLogic
+  * Tomcat
+  * JBoss (JBoss EAP, JBoss AS/WildFly)
+
+  ![image of detail of deployed java web application](images/java-servers-other.png)
+  ![image of detail of deployed java web application](images/java-web-applications-other.png)
+
+* Additionally, the Java server scan is also able to detect applications that have been deployed in a standalone (non-clustered) or clustered mode.
+* Setting up of Java application servers including configuring cluster mode is beyond the scope of this workshop. You may wish to deploy the Java Applications using above mentioned Java servers on your own and scan it using our features.
 
 
  You may now **proceed to the next lab.**
