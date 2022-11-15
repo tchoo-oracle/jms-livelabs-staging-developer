@@ -18,14 +18,14 @@ In this lab, you will:
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
 * You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
-* Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-lcm-on-jms).
+* Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
 
 ## Task 1: Submit Delete Java Runtime Work Request
 
-1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
+1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet with the advanced feature, **Lifecycle management** enabled. Refer to  [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
  ![image of console navigation to java management service](images/console-navigation-jms.png)
 
-2. Under **Resources**, select **Java Runtimes**. You should see a list of the Java Runtimes that are currently in your Fleet.
+2. Under the **Resources** menu, select **Java Runtimes**. You should see a list of the Java Runtimes that are currently in your Fleet.
  ![image of fleet details page](images/fleet-details-page.png)
 
 3. Select the Runtime that you would like to remove from your fleet and click **Delete**.
