@@ -21,26 +21,29 @@ In this lab, you will:
 * You are using an Oracle Linux image on your Managed Instance for this workshop.
 * Access to the cloud environment and resources configured in [Lab 4](?lab=track-java-servers).
 
-## Task 1: Detect Java libraries for deployed Java Web Application.
+## Task 1: Detect Java libraries in deployed Java Web Application.
 
-1. In **lab 4**, we have set up the running WebLogic server with sample Java Web Application. Please ensure that WebLogic server is still running.
-* You may refer to **Lab 4, Task 3** to restart the WebLogic server if necessary.
+1. This task assumes a sample Java Web Application has been deployed on a running WebLogic server in a managed instance.
+
+* Refer to **Lab 4** to deploy a Java Web Application if none has been deployed.
+* Refer to **Lab 4, Task 3** to restart the WebLogic server if it has stopped.
+
 
 2. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.
- ![image of scan java servers](images/console-navigation-fleet.png)
-3. On the fleet details page, click **Scan for Java libraries**.
- ![image of fleet details page](images/scan-java-libraries.png)
+ ![image of navigation menu](images/console-navigation-fleet.png)
+3. On the Fleet details page, click **Scan for Java libraries**.
+ ![image of Fleet details page](images/scan-java-libraries.png)
 If your request is submitted successfully, you should receive a notification in green as seen below: 
-![image of scan java servers](images/work-request-of-libraries-scan-created.png)
+![image of created work request for java libraries](images/work-request-of-libraries-scan-created.png)
 
-4. Scroll down the fleet details page, under **Resource** menu, select **Work Request**. You should see the Scan for Java libraries Work Request you submitted in step 2. Wait for the work request to complete.
-![image of install java runtime](images/work-request-of-libraries-scan-in-progress.png)
+4. Scroll down the Fleet details page, under **Resource** menu, select **Work Request**. You should see the Scan for Java libraries Work Request you submitted in step 2. Wait for the work request to complete.
+![image of work request for java libraries in progress](images/work-request-of-libraries-scan-in-progress.png)
 
 5. If your request is successful, you should see that the Status of the request is marked as **Completed without errors**. It will take approximately 10 minutes for the request to be completed.
-![image of install java runtime](images/work-request-of-libraries-scan-completed.png)
+![image of work request for java libraries in progress completed](images/work-request-of-libraries-scan-completed.png)
 
-6. In the same fleet details page, under **Resource** menu, select **Java libraries** you should see Java libraries that we included in the configuration file for the deployed sample Java Web Application in lab 4.
-![image of install java runtime](images/java-libraries-web.png)
+6. In the same Fleet details page, under **Resource** menu, select **Java libraries** you should see Java libraries that we included in the configuration file for the deployed sample Java Web Application in lab 4.
+![image of detected java libraries](images/java-libraries-web.png)
 * The [CVSS](https://www.oracle.com/security-alerts/cvssscoringsystem.html) score is the indication of the security vulnerability associated with the Java library. The score **varies** over time and there might be new vulnerabilities affecting your application since JMS refreshes data from the National Vulnerability Database(NVD) on a weekly basis.
 * There will have **3** categories of CVSS score for Java libraries in the scan result based on availability in NVD as following:
   1. Both Java library is found in NVD and CVSS score is obtained.
@@ -50,10 +53,10 @@ If your request is submitted successfully, you should receive a notification in 
   3. Java libraries is not found in NVD.  
   The **N/A** will be shown under **Version** and **No matches found** will be shown under **CVSS score**. 
 
-  ![image of install java runtime](images/java-libraries-categories.png)
+  ![image of sample if detected java libraries](images/java-libraries-categories.png)
 
 7. You can stop the WebLogic server now by pressing **CTRL + c**.
-![image of install java runtime](images/stop-weblogic-server.png)
+![image of weblogic server stopped](images/stop-weblogic-server.png)
 
 ## Task 2: Create Sample Java SE Application.
 
@@ -180,32 +183,42 @@ public class App
         mvn clean package
     </copy>
 ```
-* You should be able to see the output similar as following after successful build.
-![image of install java runtime](images/build-java-se-app.png)
+* The console should show that the build is successful.
+![image of building jar file](images/build-java-se-app.png)
 4. Run Java SE application with following command.
 ```
     <copy>
         sudo java -jar ./target/GreetingApp-1.0-SNAPSHOT-jar-with-dependencies.jar
     </copy>
 ```
-* You should be able to see the output similar as following after Java SE application started successfully.
-![image of install java runtime](images/run-java-se-app.png)
+* A line containing a "Hello World" messages with the timestamp should appear every 20 seconds and you should be able to see the output similar as following after Java SE application started successfully.
+![image of output of GreetingApp](images/run-java-se-app.png)
 
 ## Task 3: Detect Java libraries for Java SE Application.
 
-1. Follow **Task 1, Step 2-5** to initialize Java libraries scan and it will take approximately 10 mins for the created work request to be completed.
+1. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.
+ ![image of navigation menu](images/console-navigation-fleet.png)
+2. On the Fleet details page, click **Scan for Java libraries**.
+ ![image of scan for java libraries](images/scan-java-libraries.png)
+If your request is submitted successfully, you should receive a notification in green as seen below: 
+![image of created work request for java libraries](images/work-request-of-libraries-scan-created.png)
+3. Scroll down the Fleet details page, under **Resource** menu, select **Work Request**. You should see the Scan for Java libraries Work Request you submitted in step 2. Wait for the work request to complete.
+![image of work request for java libraries in progress](images/work-request-of-libraries-scan-in-progress.png)
+4. If your request is successful, you should see that the Status of the request is marked as **Completed without errors**. It will take approximately 10 minutes for the request to be completed.
+![image of work request for java libraries completed](images/work-request-of-libraries-scan-completed.png)
 
-2. Scroll down the fleet details page, under **Resource** menu, select **Java libraries**,  you should be able to see that extra Java library named **gson** that we included in sample Java SE application are added to result now.
-![image of install java runtime](images/java-library-gson.png)
+5. On the Fleet details pages, scroll down to the **Resource** menu and select **Java libraries**. You should be able to see a list of libraries detected. An additional Java library named **gson**, which was included in the sample Java SE application, should also be present.
+![image of detected java libraries](images/java-library-gson.png)
 
-3. In the same fleet details page, Click the **gson** library, you should see details of selected library and list of applications that are using the selected library.
-![image of install java runtime](images/java-se-app-info.png)
+6. In the same Fleet details page, Click the **gson** library, you should see details of selected library and list of applications that was ran with selected library.
+![image of details of gson](images/java-se-app-info.png)
  
-4. In the same page, click **GreetingApp-1.0-SNAPSHOT-jar-with-dependencies.jar**, You should see the details of Java SE Application that we run in the previous steps.
-![image of install java runtime](images/java-se-app-detail.png)
+7. In the same page, click **GreetingApp-1.0-SNAPSHOT-jar-with-dependencies.jar**, You should see the details of Java SE Application that was run in the previous steps.
+![image of details of GreetingApp](images/java-se-app-detail.png)
+
 > **Note:** Tracking of Java Application that is running with **Non-Oracle JDKs** in the fleet is also supported.
 
-5. You can stop the Java SE application by pressing **CTRL + c**.  
+8. You can stop the Java SE application by pressing **CTRL + c**.  
 
 You may now **proceed to the next lab.**
 

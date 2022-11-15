@@ -218,7 +218,7 @@ For example: **/home/opc/Oracle/Middleware/Oracle_Home/user_projects/domains/<do
   </copy>
 ``` 
 * You should see the output similar as following after server started successfully.
-![image of build Java Web Application](images/start-weblogic-server.png)
+![image of Output of start WebLogic Server](images/start-weblogic-server.png)
 
 > **Note:** By default, WebLogic is set to development mode with the auto-deploy feature enabled. The sample Java Web Application in the autodeploy directory will not be deployed if the auto-deploy feature is not available.
 
@@ -227,22 +227,22 @@ For example: **/home/opc/Oracle/Middleware/Oracle_Home/user_projects/domains/<do
 Now that we have a running WebLogic server with the sample Java Web Application deployed on the managed instance, let's initialize a **Java Server scan**.
 
 1. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.
- ![image of scan java servers](images/console-navigation-fleet.png)
+ ![image of navigation menu](images/console-navigation-fleet.png)
 
-2. On the fleet details page, click **Scan for Java servers**.
+2. On the Fleet details page, click **Scan for Java servers**.
 ![image of scan java servers](images/scan-java-servers.png)
 If your request is submitted successfully, you should receive a notification in green as seen below: 
-![image of scan java servers](images/work-request-of-servers-scan-created.png)
+![image of work request created for scan java servers](images/work-request-of-servers-scan-created.png)
 
-3. Scroll down the fleet details page, under **Resource** menu, select **Work Request**.You should see the Scan for Java servers Work Request you submitted in step 1. Wait for the work request to complete.
-![image of work request for java servers scan](images/work-request-of-servers-scan-in-progress.png)
+3. Scroll down the Fleet details page, under **Resource** menu, select **Work Request**.You should see the Scan for Java servers Work Request you submitted in step 1. Wait for the work request to complete.
+![image of work request for java servers scan in progress](images/work-request-of-servers-scan-in-progress.png)
 
 4. If your request is successful, you should see that the Status of the request is marked as **Completed without errors**.  
 It will take approximately 10 minutes for the request to be completed.
-![image of detected java servers](images/work-request-of-servers-scan-completed.png)
+![image of work request for java servers scan completed](images/work-request-of-servers-scan-completed.png)
 
-5. In the same fleet details page, under **Resource** menu, select **Java servers**. You should be able to see all the Java servers present in the fleet.
-![image of work request for java servers scan](images/java-server-detected.png)
+5. In the same Fleet details page, under **Resource** menu, select **Java servers**. You should be able to see all the Java servers present in the fleet.
+![image of detected java servers](images/java-server-detected.png)
 
 6. Click **WebLogic Server** under **Java servers**, You should be able to see the WebSampleApp that was deployed in Task 3 and its target type (clustered / non-clustered) under **Deployed applications**.
 ![image of detail of deployed java web application](images/sample-java-web-application-detected.png)
@@ -253,8 +253,8 @@ It will take approximately 10 minutes for the request to be completed.
   * Tomcat
   * JBoss (JBoss EAP, JBoss AS/WildFly)
 
-  ![image of detail of deployed java web application](images/java-servers-other.png)
-  ![image of detail of deployed java web application](images/java-web-applications-other.png)
+  ![image of detected java servers](images/java-servers-other.png)
+  ![image of detected java web applications](images/java-web-applications-other.png)
 
 * Additionally, the Java server scan is also able to detect applications that have been deployed in a standalone (non-clustered) or clustered mode.
 * Setting up of Java application servers including configuring cluster mode is beyond the scope of this workshop. You may wish to deploy the Java Applications using above mentioned Java servers on your own and scan it using our features.
