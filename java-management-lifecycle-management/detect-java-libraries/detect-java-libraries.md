@@ -41,7 +41,7 @@ If your request is submitted successfully, you should receive a notification in 
 
 6. In the same fleet details page, under **Resource** menu, select **Java libraries** you should see Java libraries that we included in the configuration file for the deployed sample Java Web Application in lab 4.
 ![image of install java runtime](images/java-libraries-web.png)
-* The [CVSS](https://www.oracle.com/security-alerts/cvssscoringsystem.html)score is the indication of the security vulnerability associated with the Java library. The score **varies** over time and there might be new vulnerabilities affecting your application since JMS refreshes data from the National Vulnerability Database(NVD) on a weekly basis.
+* The [CVSS](https://www.oracle.com/security-alerts/cvssscoringsystem.html) score is the indication of the security vulnerability associated with the Java library. The score **varies** over time and there might be new vulnerabilities affecting your application since JMS refreshes data from the National Vulnerability Database(NVD) on a weekly basis.
 * There will have **3** categories of CVSS score for Java libraries in the scan result based on availability in NVD as following:
   1. Both Java library is found in NVD and CVSS score is obtained.
   The CVSS score will show normally with score value and severity status of Low(green color), Medium(yellow color), High(red color) as per the range of CVSS score.
