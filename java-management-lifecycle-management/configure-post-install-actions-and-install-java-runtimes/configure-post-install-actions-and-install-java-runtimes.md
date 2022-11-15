@@ -58,7 +58,7 @@ In this lab, you will:
 
    The post java installation actions can be configured differently based on different requirements.
   
-7. Select the  **Change minimum key length for RSA** option from the dropdown list. Another combo box will appear to its right. This contains the new minimum key length (in bits) that will be set for RSA signed jars.
+7. Select the  **Change minimum key length for RSA** option from the dropdown list. Another combo box will appear to the right. This contains the new minimum key length (in bits) that will be set for RSA signed jars.
 
    ![image of LCM minimimum-rsa-key-length](images/lcm-minimum-rsa-key-length.png)
 
@@ -82,13 +82,13 @@ In this lab, you will:
 
     ![image of LCM post install action save](images/lcm-post-install-action-save.png)
 
-11. Back on the ****Java Management** fleet** page, click on the tab **Lifecycle management settings**. The post java installation actions that had been defined earlier should be shown.
+11. Return to the fleet details page, click on the tab **Lifecycle management settings**. The post java installation actions that had been defined earlier should be shown.
 
    ![image of fleet page post install action view](images/fleet-page-post-install-action-view.png)
 
 ## Task 2: Submit Install Java Runtime Work Request
 
-1. Return to the **Java Management** fleet page. Click **Install Java Runtime**.
+1. On the fleet details page. Click **Install Java Runtime**.
 
   ![image of install java runtime](images/install-java-runtime.png)
 
@@ -126,7 +126,7 @@ In this lab, you will:
 
    >**Note:** Install Java runtime work request will take around 15-30 minutes to complete
 
-3. If your request has completed successfully, the status will change to **Completed without Errors**.
+3. If your request has completed successfully, the status will change to **Completed Without Errors**.
   ![image of install completed without errors](images/install-complete-without-errors.png)
 
 4. Click the **Log Message** under the **Resources** section. A series of logs will be displayed. Check that the java runtime has been installed.
@@ -137,13 +137,13 @@ In this lab, you will:
 
    ![image of install complete logs post install action](images/install-complete-logs-post-install-action.png)
 
-5. Return to the  **Java Management** fleet page. Under **Resources** menu, select **Java Runtimes**. This should display all the java runtimes found in the fleet. The installed java runtime should be indicated after next scanning. You can also check the installation manually on your Managed Instance.
+5. Return to the fleet details page. Under the **Resources** menu, select **Java Runtimes**. This should display all the java runtimes found in the fleet. The installed java runtime should be indicated after next scanning. You can also check the installation manually on your Managed Instance.
   ![image of verify java runtime installation](images/verify-java-runtime-installation.png)
 
 ## Task 4: (Optional) Modifying/Removing Post Java Installation Action
 1. This task is applicable if changes are to be made to the post java installation action.
 
-2. On the fleet page, click on **More actions** and select **Modify Java runtime lifecycle management setting**. 
+2. On the fleet details page, click on **More actions** and select **Modify Java runtime lifecycle management setting**. 
 
    ![image of fleet details post install action](images/fleet-details-page-lifecycle-management.png)
 
@@ -169,7 +169,7 @@ In this lab, you will:
 
 6. Once all the modifications are made, click on the **Save** button below to save all the changes
 
-7. Back on the fleet page, click on the tab **Lifecycle management settings** to view the updated post java installation actions.
+7. Return to the fleet details page, click on the tab **Lifecycle management settings** to view the updated post java installation actions.
 
  You may now **proceed to the next lab.**
 
