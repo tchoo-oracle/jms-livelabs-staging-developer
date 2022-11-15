@@ -44,8 +44,6 @@ In this lab, you will:
 
     Lower the **Max recording duration** to **5 mins** and keep **Max recording size** at **500MB**. Click **Start** to begin the JFR recording.
 
-    Select **Select from default profiles** for **Recording options** and from the dropdown box, choose **Default.jfc**.
-
     ![image of jfr configs before starting](images/jfr-config-start.png)
 
     ![image of work request](images/jfr-work-request-started-notification.png)

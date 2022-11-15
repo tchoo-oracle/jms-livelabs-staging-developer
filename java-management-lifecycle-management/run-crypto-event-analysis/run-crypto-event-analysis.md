@@ -47,13 +47,13 @@ In this lab, you will:
 
     >**Note:** If you have set the **Recording duration in hours** to 1 hours It will take approximately 1.5 hours for the request to be completed.
 
-6. Wait for the work request to be processed. If the work request has been completed successfully, the status will change to **Completed without Errors**.
+5. Wait for the work request to be processed. If the work request has been completed successfully, the status will change to **Completed without Errors**.
   
     ![image of work request completed](images/crypto-work-request-completed.png)
 
     >**Note:** It will take approximately 1 hour for the request to be completed.
 
-5. Once the work request status shows **Completed without Errors**, scroll down to the **Resource** menu and select **Analysis reports**. 
+6. Once the work request status shows **Completed without Errors**, scroll down to the **Resource** menu and select **Analysis reports**. 
 
     You should see a list of Crypto analysis reports that have been conducted in your Fleet. The latest **Crypto event analysis** that has been completed should be displayed at the top of the list.
   
