@@ -1,9 +1,8 @@
-# Set up and enable Lifecycle Management operations on Java Management Service
+# Set up and enable advanced features on Java Management Service
 
 ## Introduction
 
 Before you can start using Lifecycle Management operations, you must ensure that your Oracle Cloud Infrastructure environment is set up correctly by following the workshop [Manage Java Runtimes, Applications and Managed Instances Inventory with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=912). These OCI Resources allow the communication between all the required components and cloud services.
-
 
 Estimated Time: 30 minutes
 
@@ -11,9 +10,9 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-  *  Configure a fleet to enable LCM operations.
-  *  Configure an OCI Managed Instance to enable LCM operations.
-  *  Configure a non-OCI Managed Instance to enable LCM operations.
+  *  Configure a fleet to enable advanced features.
+  *  Configure an OCI Managed Instance to enable advanced features.
+  *  Configure a non-OCI Managed Instance to enable advanced features.
 
 ### Prerequisites
 
@@ -22,51 +21,56 @@ In this lab, you will:
  * You have successfully completed the installation of the Management Agent on your OCI or non-OCI Managed Instances following steps in [Manage Java Runtimes, Applications and Managed Instances Inventory with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=912).
  * **Proceed to Task 2 or 3 if the management agent was installed manually (i.e. using the management agent software or enabled using the Management Agent plugin on your OCI compute instance's Oracle Cloud Agent) and not using the installation script.**
 
-## Task 1: Configure a fleet to enable LCM operations
+## Task 1: Configure a fleet to enable advanced features
 
 1. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
-  ![image of console navigation to access fleet](images/console-navigation-jms.png)
+   ![image of console navigation to access fleet](images/console-navigation-jms.png)
 
-2. Click **Edit Properties**.
+2. Click **Edit Properties**. A separate edit fleet properties window should appear
+   ![image of edit fleet properties](images/fleet-edit-properties.png)
 
-  ![image of edit fleet properties](images/fleet-edit-properties.png)
+3. The advanced features section should display the 4 different advanced features available:
+   * Lifecycle management
+   * Advanced usage tracking
+   * Crypto event analysis
+   * Java Flight Recorder (JFR)
 
-3. Ensure that the **Enable advanced features** box is checked.
+4. Ensure that the **Select all advanced features** box is checked. This should also check the boxes of all the individual features.
+    
+    ![image of edit fleet properties detail](images/fleet-edit-properties-detail.png)
 
-  ![image of edit fleet properties detail](images/fleet-edit-properties-detail.png)
+    If the **Select all advanced features** is not checked, check the box. Click on the **Save changes** button to confirm the modification. This will enable all the advanced features.
 
-## Task 2: Configure an OCI Managed Instance to enable LCM operations
+    > **Note:** If only certain advanced features are required, check the box corresponding to the respective advanced features and save any modifications made. Only advanced features which has been enabled can be used.
+
+## Task 2: Configure an OCI Managed Instance to enable advanced features
 
 > **Note:** Please refer to this task if the **installation script was not used** to install the management agent. The management agent should have been enabled using the Management Agent plugin on your OCI compute instance's Oracle Cloud Agent (OCA).
 
-After you have installed the Management Agent, follow the steps below to verify required plugins and enable LCM operations.
+After you have installed the Management Agent, follow the steps below to verify required plugins and enable Java Management Service.
 
 ### **OCI Compute Instance Managed Instance**
 If you are using an OCI compute instance and it already has the Management Agent installed using OCA and `Java Usage Tracking` plugin deployed, then follow the steps to enable Oracle Java Management plugin and Verify the OCA installation package version.
 
 1. There are two ways to verify and enable `Oracle Java Management Service` plugin.
 
-  **Using OCI Console:**
-    * In the Oracle Cloud console, click **Instances** under **Compute**, and select the instance that you are interested in.
-
+   **Using OCI Console:**
+  
+   * In the Oracle Cloud console, click **Instances** under **Compute**, and select the instance that you are interested in.
      ![image of navigate from OCI console menu to computer instances](images/navigate-to-computer-instance.png)
 
-    * Click the **Oracle Cloud Agent** tab. The list of plugins is displayed. Verify that the **Oracle Java Management Service** OCA plugin is enabled. If it is disabled, toggle the switch for the Oracle Java Management Service plugin and ensure that the status is set to **Running**. This may take 5 to 10 minutes. This will enable the LCM operations for the chosen OCI Compute Instance.
+   * Click the **Oracle Cloud Agent** tab. The list of plugins is displayed. Verify that the **Oracle Java Management Service** OCA plugin is enabled. If it is disabled, toggle the switch for the Oracle Java Management Service plugin and ensure that the status is set to **Running**. This may take 5 to 10 minutes. This will enable the advanced features for the chosen OCI Compute Instance.
+    ![image of disabled oracle java management service oca plugin](images/oracle-jms-oca-plugin-disabled.png)
 
-      ![image of disabled oracle java management service oca plugin](images/oracle-jms-oca-plugin-disabled.png)
-
-  **Using Cloud Shell:**
+   **Using Cloud Shell:**
     * Alternatively, you can use Cloud Shell to verify and enable `Oracle Java Management Service` plugin. Click the Cloud Shell icon in the Console header. This icon is accessible from mostly all the OCI Console pages.
-
       ![image of location of Cloud Shell icon](images/oci-cloud-shell-navigate.png)
-
-      The Cloud Shell will open and may look something like this.
-      ![image of Cloud Shell terminal](images/oci-cloud-shell-console.png)
+    The Cloud Shell will open and may look something like this.
+     ![image of Cloud Shell terminal](images/oci-cloud-shell-console.png)
 
       You can use the icons in the upper right corner of the Cloud Shell window to minimize, maximize, and close your Cloud Shell session. 
       ![image of buttons on Cloud Shell](images/oci-cloud-shell-buttons.png)
-
-
+    
     * In Cloud Shell add the following to get the Instance details. You can copy the Instance OCID from Instance detail page.
         ```
         <copy>
@@ -74,9 +78,9 @@ If you are using an OCI compute instance and it already has the Management Agent
         </copy>
         ```
 
-        The response may look like this.
+      The response may look like this.
 
-        ![image of entering a command in Cloud Shell](images/oci-cloud-shell-command.png)
+      ![image of entering a command in Cloud Shell](images/oci-cloud-shell-command.png)
 
     * JMS Agent plugin is controlled through this JSON tag.
         ```
@@ -84,14 +88,15 @@ If you are using an OCI compute instance and it already has the Management Agent
         {
           "desired-state": "DISABLED",
           "name": "Oracle Java Management Service"
-        }        </copy>
+        }        
+        </copy>
         ```
 
         If the `desired-state` is `DISABLED` then proceed to next step to change the state to `ENABLED`, else you can skip to Step 2.
      
 
 
-     * Create a configuration json file and add the following json code in it.
+    * Create a configuration json file and add the following json code in it.
         ```
         <copy>
         nano config.json  
@@ -101,53 +106,52 @@ If you are using an OCI compute instance and it already has the Management Agent
         ```
         <copy>
         {
-      "are-all-plugins-disabled": false,
-      "is-management-disabled": false,
-      "is-monitoring-disabled": false,
-      "plugins-config": [
-        {
-          "desired-state": "DISABLED",
-          "name": "Vulnerability Scanning"
-        },
-        {
-          "desired-state": "ENABLED",
-          "name": "OS Management Service Agent"
-        },
-        {
-          "desired-state": "DISABLED",
-          "name": "Custom Logs Monitoring"
-        },
-        {
-          "desired-state": "ENABLED",
-          "name": "Compute Instance Run Command"
-        },
-        {
-          "desired-state": "ENABLED",
-          "name": "Compute Instance Monitoring"
-        },
-        {
-          "desired-state": "DISABLED",
-          "name": "Block Volume Management"
-        },
-        {
-          "desired-state": "DISABLED",
-          "name": "Bastion"
-        },
-        {
-          "desired-state": "ENABLED",
-          "name": "Management Agent"
-        },
-        {
-          "desired-state": "ENABLED",
-          "name": "Oracle Java Management Service"
+          "are-all-plugins-disabled": false,
+          "is-management-disabled": false,
+          "is-monitoring-disabled": false,
+          "plugins-config": [
+          {
+            "desired-state": "DISABLED",
+            "name": "Vulnerability Scanning"
+          },
+          {
+            "desired-state": "ENABLED",
+            "name": "OS Management Service Agent"
+          },
+          {
+            "desired-state": "DISABLED",
+            "name": "Custom Logs Monitoring"
+          },
+          {
+            "desired-state": "ENABLED",
+            "name": "Compute Instance Run Command"
+          },
+          {
+            "desired-state": "ENABLED",
+            "name": "Compute Instance Monitoring"
+          },
+          {
+            "desired-state": "DISABLED",
+            "name": "Block Volume Management"
+          },
+          {
+            "desired-state": "DISABLED",
+            "name": "Bastion"
+          },
+          {
+            "desired-state": "ENABLED",
+            "name": "Management Agent"
+          },
+          {
+            "desired-state": "ENABLED",
+            "name": "Oracle Java Management Service"
+          }
+          ]
         }
-      ]
-}
-
         </copy>
         ```
 
-        To save the file, press **CTRL+x**. Before exiting, nano will ask you if you wish to save the file: Type **y** to save and exit, type **n** to abandon your changes and exit.
+      To save the file, press **CTRL+x**. Before exiting, nano will ask you if you wish to save the file: Type **y** to save and exit, type **n** to abandon your changes and exit.
       
 
 
@@ -161,20 +165,20 @@ If you are using an OCI compute instance and it already has the Management Agent
 
       If you see the response like this, the `Oracle Java Management Service` plugin has been enabled. Else in case of any error, please refer to this link [Using CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliusing.htm).
 
-        ![image of entering a command in Cloud Shell](images/oci-cloud-shell-update-instance-command.png)
+      ![image of entering a command in Cloud Shell](images/oci-cloud-shell-update-instance-command.png)
 
 
 2. Next, in the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and under **Management Agent**, click **Agents**. Select the agent you are interested in.
 
-  ![image of console navigation to access management agent overview](images/management-agent-overview.png)
+   ![image of console navigation to access management agent overview](images/management-agent-overview.png)
 
-  In your agent, click **Deploy plug-ins**.
-  ![image of agent with deploy plug-ins button](images/agent-deploy-plugins.png)
+   In your agent, click **Deploy plug-ins**.
+   ![image of agent with deploy plug-ins button](images/agent-deploy-plugins.png)
 
-  Ensure that the **Java Usage Tracking** box is checked.
-  ![image of checking java usage tracking box](images/agent-check-java-usage-tracking.png)
+   Ensure that the **Java Usage Tracking** box is checked.
+   ![image of checking java usage tracking box](images/agent-check-java-usage-tracking.png)
 
-  If you have verified that both the **Oracle Java Management Service OCA plugin** and **Java Usage Tracker service plugin** have been deployed, proceed to verify the OCA installation package version and update it.
+   If you have verified that both the **Oracle Java Management Service OCA plugin** and **Java Usage Tracker service plugin** have been deployed, proceed to verify the OCA installation package version and update it.
 
 3. Access OCI Computer Instance via SSH.
 
@@ -184,7 +188,7 @@ If you are using an OCI compute instance and it already has the Management Agent
     yum info oracle-cloud-agent
     </copy>
     ```
-  If current version of the OCA installation package is the latest one, then no further steps are required. Else you should see output something like this:
+   If current version of the OCA installation package is the latest one, then no further steps are required. Else you should see output something like this:
     ![image of terminal showing how to check for available oca packages](images/oca-version-checking-console.png)
 
 5. Update the OCA Installation Package.
@@ -196,12 +200,12 @@ If you are using an OCI compute instance and it already has the Management Agent
     </copy>
     ```
 
-## Task 3: Configure a non-OCI Managed Instance to enable LCM operations
+## Task 3: Configure a non-OCI Managed Instance to enable advanced features
 
 > **Note:** Please refer to this task if the **installation script was not used** to install the management agent. The management agent should have been installed using the management agent software.
 
 ### **Non-OCI Managed Instance**
-If you are using a non-OCI Managed Instance and it has the Management Agent installed following the steps in the workshop [Manage Java Runtimes, Applications and Managed Instances Inventory with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=912), then you just need to make a few changes to start using LCM features.
+If you are using a non-OCI Managed Instance and it has the Management Agent installed following the steps in the workshop [Manage Java Runtimes, Applications and Managed Instances Inventory with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=912), then you just need to make a few changes to start using advanced features.
 
 
 1. Open the `/etc/sudoers` file.
@@ -211,7 +215,8 @@ If you are using a non-OCI Managed Instance and it has the Management Agent inst
     </copy>
     ```
 
-  Add the following lines to the end of the file:
+    Add the following lines to the end of the file:
+
     ```
     <copy>
     #To change ownership of the Java Management Service plugin to root
@@ -231,7 +236,7 @@ If you are using a non-OCI Managed Instance and it has the Management Agent inst
 5. From the Agents list, select for the agent that was recently installed.
    ![image of agents main page](images/agents-main-page.png)
 
-6. In order to enable LCM operations `Java Management Service` Plug-in is required to be enabled. Take note of `Service Plug-ins` field. If `Java Management Service` plug-in missing then follow the next steps, else if `Java Management Service` and `Java Usage Tracker` both plug-ins are available then you can move to the next Task.
+6. In order to enable advanced features `Java Management Service` Plug-in is required to be enabled. Take note of `Service Plug-ins` field. If `Java Management Service` plug-in missing then follow the next steps, else if `Java Management Service` and `Java Usage Tracker` both plug-ins are available then you can move to the next Task.
 
   ![image of agent detail page](images/check-deploy-plug-ins.png)
 
@@ -260,4 +265,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 
 * **Author** - Bhuvesh Kumar, Java Management Service
-* **Last Updated By** - Yixin Wei, September 2022
+* **Last Updated By** - Bao Jin Lee, November 2022
