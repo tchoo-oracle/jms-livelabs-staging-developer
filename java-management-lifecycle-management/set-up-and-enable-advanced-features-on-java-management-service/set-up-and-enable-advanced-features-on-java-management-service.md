@@ -24,7 +24,7 @@ In this lab, you will:
 ## Task 1: Configure a fleet to enable advanced features
 
 1. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
-  ![image of console navigation to access fleet](images/console-navigation-jms.png)
+   ![image of console navigation to access fleet](images/console-navigation-jms.png)
 
 2. Click **Edit Properties**. A separate edit fleet properties window should appear
    ![image of edit fleet properties](images/fleet-edit-properties.png)

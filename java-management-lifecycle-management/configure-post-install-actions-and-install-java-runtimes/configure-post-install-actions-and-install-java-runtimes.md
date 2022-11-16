@@ -117,7 +117,7 @@ In this lab, you will:
 
 ## Task 3: Verify Java Runtime Installation and Post Java Installation Action
 
-1. Return to the **Java Management** fleet page. Under the **Resources** menu, select **Work Requests**. You should see the Install Java Runtime Work Request you submitted in Task 2. Click on the Work Request to view its details.
+1. Return to the fleet details page. Scroll down to the **Resources** menu and select **Work Requests**. You should see the Install Java Runtime Work Request you submitted in Task 2. Click on the Work Request to view its details.
  ![image of work request summary page](images/work-request-summary-page.png)
 
 
