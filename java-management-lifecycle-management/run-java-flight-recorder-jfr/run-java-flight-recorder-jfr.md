@@ -82,5 +82,5 @@ In this lab, you will:
 
 ## Acknowledgements
 
-* **Author** - 
+* **Author** - Somik Khan, November 2022
 * **Last Updated By** - Somik Khan, November 2022

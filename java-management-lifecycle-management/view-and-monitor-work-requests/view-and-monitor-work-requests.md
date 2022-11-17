@@ -1,8 +1,8 @@
-# View and monitor Lifecycle Management requests
+# View and monitor Work Requests
 
 ## Introduction
 
-This lab walks you through the steps to view and understand the Lifecycle Management Work Requests you have created.
+This lab walks you through the steps to view and monitor the Work Requests you have created.
 
 Estimated Time: 20 minutes
 
@@ -108,4 +108,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Author** - Xin Yi Tay, Java Management Service
-* **Last Updated By** - Yixin Wei, September 2022
+* **Last Updated By** - Somik Khan, November 2022
