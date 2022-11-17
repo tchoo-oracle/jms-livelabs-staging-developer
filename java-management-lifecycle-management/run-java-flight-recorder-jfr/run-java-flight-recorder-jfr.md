@@ -21,6 +21,7 @@ In this lab, you will:
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
 * You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
 * Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-lcm-on-jms).
+* Have java applications running in your instance from [Lab 5: Track Java Servers](?lab=track-java-servers).
 
 ## Task 1: Submit Java Flight Recorder Work Request
 
