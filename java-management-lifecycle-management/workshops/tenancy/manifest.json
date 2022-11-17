@@ -18,8 +18,8 @@
             "filename": "../../set-up-and-enable-lcm-on-jms/set-up-and-enable-lcm-on-jms.md"
         },
         {
-            "title": "Lab 2: Install Java Runtimes",
-            "filename": "../../install-java-runtimes/install-java-runtimes.md"
+            "title": "Lab 2: Configure Post Install Actions and Install Java Runtimes",
+            "filename": "../../configure-post-install-actions-and-install-java-runtimes/configure-post-install-actions-and-install-java-runtimes.md"
         },
         {
             "title": "Lab 3: Remove Java Runtimes",
@@ -28,6 +28,22 @@
         {
             "title": "Lab 4: View and monitor Lifecycle Management requests",
             "filename": "../../view-and-monitor-lcm-requests/view-and-monitor-lcm-requests.md"
+        },
+        {
+            "title": "Lab 5: Track Java Servers",
+            "filename": "../../track-java-servers/track-java-servers.md"
+        },
+        {
+            "title": "Lab 6: Detect Java Libraries",
+            "filename": "../../detect-java-libraries/detect-java-libraries.md"
+        },
+        {
+            "title": "Lab 7: Run Crypto Event Analysis",
+            "filename": "../../run-crypto-event-analysis/run-crypto-event-analysis.md"
+        },
+        {
+            "title": "Lab 8: Run Java Flight Recorder",
+            "filename": "../../run-java-flight-recorder-jfr/run-java-flight-recorder-jfr.md"
         },
         {
             "title": "Need Help?",
