@@ -15,9 +15,15 @@ As a customer, you can:
 
 ## About this Workshop
 
-Java Management Service (JMS) is a reporting and management infrastructure integrated with Oracle Cloud Infrastructure Platform services to observe and manage your use of Java SE (on-premises or in the Cloud). Java Runtime can be viewed and identified in fleet after successful JMS setup on Managed Instances. Further, these Java Runtimes can be managed by performing various Lifecycle Management (LCM) operations.
+Java Management Service (JMS) is a reporting and management infrastructure integrated with Oracle Cloud Infrastructure Platform services to observe and manage your use of Java SE (on-premises or in the Cloud). Java Runtime can be viewed and identified in fleet after successful JMS setup on Managed Instances. 
 
-In order to perform these LCM operations almost no or minor configuration changes are required. This workshop will walk you through the steps to enable LCM operations in OCI and non-OCI Managed Instances. Next, you will learn how to install and remove a Java Runtime using OCI console. You will also get to verify the status of the work requests. Finally, the workshop will show you how to view and monitor Lifecycle Management requests.
+Additionally, JMS offers 4 different advanced features to manage the:
+  * Lifecycle management (LCM) - Manage the lifecycle of Java runtimes in your fleet by installing or removing reported Java runtime.
+  * Advanced usage tracking - Gain advanced insights into your Java workloads in the fleet by tracking application server and OpenJDK usage and identifying third party libraries used by applications.
+  * Crypto event analysis - Assess the impact of Oracle JRE and JDK Cryptographic roadmap on the applications running in your fleet.
+  * Java Flight Recorder (JFR) - Collect information about events in the application running in your fleet using Java Flight Recorder (JFR), a tool for collecting diagnostic and profiling data about a running Java application.
+
+In order to use these JMS advanced features, almost no or minor configuration changes are required. This workshop will walk you through the steps to enable JMS advanced features in OCI and non-OCI Managed Instances, configure Java post installation actions, install/remove Java Runtime, view/monitor work request, track Java servers, detect Java libraries, run crypto event analysis as well as run Java flight recorder. 
 
 _Estimated Time:_ 195 minutes
 
