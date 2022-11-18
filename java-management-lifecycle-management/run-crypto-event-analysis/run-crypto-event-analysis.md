@@ -4,7 +4,7 @@
 
 This lab walks you through the steps to run a Crypto Event Analysis on your Fleet.
 
-Estimated Time: 1 hour
+Estimated Time: 20 mins
 
 ### Objectives
 
@@ -12,7 +12,7 @@ In this lab, you will:
 
 * Create a Crypto Event Analysis Work Request using the Java Management Service console interface.
 * View and monitor the status of Work Requests created using the Java Management Service console interface.
-* View/download the generated Crypto Event Analysis report..
+* View/download the generated Crypto Event Analysis report.
 
 
 
@@ -20,12 +20,11 @@ In this lab, you will:
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
 * You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
-* Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-lcm-on-jms).
-* Have java applications running in your instance from [Lab 4: Track Java Servers](?lab=track-java-servers).
+* Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
 
 ## Task 1: Submit Crypto Event Analysis Work Request
 
-1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you have configured in [Lab 1](?lab=set-up-and-enable-lcm-on-jms).
+1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you have configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
   
     ![image of console navigation to java management service](images/console-navigation-jms-fleet.png)
 
@@ -33,7 +32,7 @@ In this lab, you will:
   
     ![image of fleet details page with crypto event analysis button](images/fleet-crypto-button.png)
 
-3. Under the **Recording duration in hours**, set the recording duration to 1 hour. Click the **Start** button.
+3. Under the **Recording duration in hours**, set the recording duration to 5 minutes. Click the **Start** button.
   
     ![image of crypto event run settings](images/crypto-run-duration.png)
 
@@ -45,19 +44,24 @@ In this lab, you will:
   
     ![image of work request](images/crypto-work-request-started.png)
 
-    >**Note:** If you have set the **Recording duration in hours** to 1 hours It will take approximately 1.5 hours for the request to be completed.
-
 5. Wait for the work request to be processed. If the work request has been completed successfully, the status will change to **Completed without Errors**.
   
     ![image of work request completed](images/crypto-work-request-completed.png)
 
-    >**Note:** It will take approximately 1 hour for the request to be completed.
+    >**Note:** It will take approximately 15 minutes for the request to be completed.
 
 6. Once the work request status shows **Completed without Errors**, scroll down to the **Resource** menu and select **Analysis reports**. 
 
     You should see a list of Crypto analysis reports that have been conducted in your Fleet. The latest **Crypto event analysis** that has been completed should be displayed at the top of the list.
+
+    If there are no issues found, the **Crypto event analysis** result should say **No warnings found**, otherwise it'll show **Attention needed**.
   
     ![image of crypto event analysis report](images/crypto-result-final.png)
+
+7. You can click on the **Name** of the **Analysis report** and scroll down to get more details about the issue.
+
+    ![image of crypto event analysis report](images/crypto-result-final-details.png)
+
 
 
 ## Task 2: **(Optional)** Download Crypto Event Analysis Report
@@ -145,5 +149,5 @@ You may now **proceed to the next lab.**
 
 ## Acknowledgements
 
-* **Author** - 
+* **Author** - Somik Khan, November 2022
 * **Last Updated By** - Somik Khan, November 2022

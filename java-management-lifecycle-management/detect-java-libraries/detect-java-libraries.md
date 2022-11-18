@@ -19,14 +19,14 @@ In this lab, you will:
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
 * You are using an Oracle Linux image on your Managed Instance for this workshop.
-* Access to the cloud environment and resources configured in [Lab 4](?lab=track-java-servers).
+* Access to the cloud environment and resources configured in [Lab 5](?lab=track-java-servers).
 
 ## Task 1: Detect Java libraries in deployed Java Web Application.
 
 1. This task assumes a sample Java Web Application has been deployed on a running WebLogic server in a managed instance.
 
-* Refer to **Lab 4** to deploy a Java Web Application if none has been deployed.
-* Refer to **Lab 4, Task 3** to restart the WebLogic server if it has stopped.
+* Refer to **Lab 5** to deploy a Java Web Application if none has been deployed.
+* Refer to **Lab 5, Task 3** to restart the WebLogic server if it has stopped.
 
 
 2. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.  
@@ -43,7 +43,7 @@ If your request is submitted successfully, you should receive a notification in 
 5. If your request is successful, you should see that the Status of the request is marked as **Completed without errors**. It will take approximately 10 minutes for the request to be completed.
 ![image of work request for java libraries in progress completed](images/work-request-of-libraries-scan-completed.png)
 
-6. In the same Fleet details page, under **Resource** menu, select **Java libraries** you should see Java libraries that we included in the configuration file for the deployed sample Java Web Application in lab 4.
+6. In the same Fleet details page, under **Resource** menu, select **Java libraries** you should see Java libraries that we included in the configuration file for the deployed sample Java Web Application in lab 5.
 ![image of detected java libraries](images/java-libraries-web.png)
 * The [CVSS](https://www.oracle.com/security-alerts/cvssscoringsystem.html) score is the indication of the security vulnerability associated with the Java library. The score **varies** over time and there might be new vulnerabilities affecting your application since JMS refreshes data from the National Vulnerability Database(NVD) on a weekly basis.
 * There will have **3** categories of CVSS score for Java libraries in the scan result based on availability in NVD as following:
