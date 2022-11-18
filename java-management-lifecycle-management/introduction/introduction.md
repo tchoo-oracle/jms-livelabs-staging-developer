@@ -6,9 +6,12 @@ Lifecycle Management (LCM) is a part of JMS's reporting and management infrastru
 
 As a customer, you can:
   * View and identify the Java Runtimes.
-  * Install Java Runtimes.
+  * Install Java Runtimes and perform post java installation action.
   * Remove unwanted Java Runtimes.
-  * View and understand various status and logs of LCM work requests.
+  * View and understand various status and logs of work requests.
+  * Tracks Java servers and libraries.
+  * Perform cryptographic analysis of Java applications.
+  * Perform Java Flight Recording on Java applications.
 
 ## About this Workshop
 
@@ -16,16 +19,19 @@ Java Management Service (JMS) is a reporting and management infrastructure integ
 
 In order to perform these LCM operations almost no or minor configuration changes are required. This workshop will walk you through the steps to enable LCM operations in OCI and non-OCI Managed Instances. Next, you will learn how to install and remove a Java Runtime using OCI console. You will also get to verify the status of the work requests. Finally, the workshop will show you how to view and monitor Lifecycle Management requests.
 
-_Estimated Time:_ 80 minutes
+_Estimated Time:_ 195 minutes
 
 ### Objectives
 
-* Configure and verify the Managed Instance for LCM
-* View and identify the Java Runtimes
-* Understand LCM operations
-* Install Java Runtimes
+* Set up and enable Advanced Features on Java Management Service
+* Configure Post Install Actions and Install Java Runtimes
 * Remove Java Runtimes
-* View and monitor LCM Work Requests
+* Install Java Runtimes
+* View and monitor Work Requests
+* Track Java Servers
+* Detect Java Libraries
+* Run Crypto Event Analysis
+* Run Java Flight Recorder
 
 
 ### Prerequisites
@@ -40,4 +46,4 @@ _Estimated Time:_ 80 minutes
 
 ## Acknowledgements
 * **Author** - Bhuvesh Kumar, Java Management Service
-* **Last Updated By** - Yixin Wei, August 2022
+* **Last Updated By** - Bao Jin Lee, November 2022
