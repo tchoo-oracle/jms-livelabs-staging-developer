@@ -228,7 +228,7 @@ Now that we have a running WebLogic server with the sample Java Web Application 
 
 1. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.
  ![image of navigation menu](images/console-navigation-fleet.png)
-
+Select the fleet with the advanced feature, **Lifecycle management** enabled. Refer to  [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
 2. On the Fleet details page, click **Scan for Java servers**.
 ![image of scan java servers](images/scan-java-servers.png)
 If your request is submitted successfully, you should receive a notification in green as seen below: 

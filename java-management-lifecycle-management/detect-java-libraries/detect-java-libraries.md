@@ -29,8 +29,9 @@ In this lab, you will:
 * Refer to **Lab 5, Task 3** to restart the WebLogic server if it has stopped.
 
 
-2. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.
+2. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.  
  ![image of navigation menu](images/console-navigation-fleet.png)
+ Select the fleet with the advanced feature, **Lifecycle management** enabled. Refer to  [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
 3. On the Fleet details page, click **Scan for Java libraries**.
  ![image of Fleet details page](images/scan-java-libraries.png)
 If your request is submitted successfully, you should receive a notification in green as seen below: 
@@ -198,6 +199,7 @@ public class App
 
 1. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.
  ![image of navigation menu](images/console-navigation-fleet.png)
+ Select the fleet with the advanced feature, **Lifecycle management** enabled. Refer to  [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
 2. On the Fleet details page, click **Scan for Java libraries**.
  ![image of scan for java libraries](images/scan-java-libraries.png)
 If your request is submitted successfully, you should receive a notification in green as seen below: 
