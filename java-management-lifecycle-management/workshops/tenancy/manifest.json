@@ -14,8 +14,8 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Set up and enable Lifecycle Management operations on Java Management Service",
-            "filename": "../../set-up-and-enable-lcm-on-jms/set-up-and-enable-lcm-on-jms.md"
+            "title": "Lab 1: Set up and enable Advanced Features on Java Management Service",
+            "filename": "../../set-up-and-enable-advanced-features-on-java-management-service/set-up-and-enable-advanced-features-on-java-management-service.md"
         },
         {
             "title": "Lab 2: Configure Post Install Actions and Install Java Runtimes",

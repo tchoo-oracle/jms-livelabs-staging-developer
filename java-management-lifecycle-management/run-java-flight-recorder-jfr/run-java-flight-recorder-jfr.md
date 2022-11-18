@@ -4,7 +4,7 @@
 
 This lab walks you through the steps to run Java Flight Recorder (JFR) on any java app on your Fleet.
 
-Estimated Time: 15 mins
+Estimated Time: 20 mins
 
 ### Objectives
 
@@ -61,15 +61,15 @@ In this lab, you will:
   
     ![image of work request completed](images/jfr-work-request-completed.png)
 
-    >**Note:** It will take approximately 10 minutes for the request to be completed.
+    >**Note:** It will take approximately 15 minutes for the request to be completed.
 
 8. To access the report, navigate to the **Fleet** details page and click on the **Object storage bucket** name under **Object storage**.
 
     ![image of crypto event run settings](images/fleet-bucket-link.png)
 
-9. Your **Java Flight Recorder** recording's raw copy is stored in the folder [PENDING CONTENT]
+9. The raw copy of the **Java Flight Recorder** report is stored in the file: **JMS** > **JFR** > **fleet-ocid** > **instance-ocid** > **application-name.jfr**
 
-    ![image of crypto event analysis bucket object](images/broken.png)
+    ![image of crypto event analysis bucket object](images/jfr-recording-download.png)
 
 
 10. You can open the **Java Flight Recorder** recording in your favorite JFR viewer or you can use the Oracle's **JDK Mission Control** to view th files. 
