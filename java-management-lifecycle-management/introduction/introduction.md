@@ -1,8 +1,8 @@
 # Introduction
 
-## About Java Runtime Lifecycle Management
+## About Java Management Service Advanced Features
 
-Lifecycle Management (LCM) is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE runtimes (on-premises or in the Cloud) by performing LCM operations such as installing or removing Java Runtimes.
+Java Management Service (JMS), consist of a series of advanced features that enables the user to observe and manage the lifecycles of their Java SE Runtimes, tracks the Java servers and libraries as well as perform Java Flight Recorder and cryptographic analysis on the Java applications. 
 
 As a customer, you can:
   * View and identify the Java Runtimes.
