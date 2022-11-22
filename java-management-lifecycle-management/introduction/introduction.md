@@ -2,7 +2,7 @@
 
 ## About Java Management Service Advanced Features
 
-Java Management Service (JMS), consist of a series of advanced features that enables the user to observe and manage the lifecycles of their Java SE Runtimes, tracks the Java servers and libraries as well as perform Java Flight Recorder and cryptographic analysis on the Java applications. 
+Java Management Service (JMS) consist of a series of advanced features that enables the user to observe and manage the lifecycles of their Java SE Runtimes, tracks the Java servers and libraries as well as perform Java Flight Recorder and cryptographic analysis on the Java applications. 
 
 As a customer, you can:
   * View and identify the Java Runtimes.
