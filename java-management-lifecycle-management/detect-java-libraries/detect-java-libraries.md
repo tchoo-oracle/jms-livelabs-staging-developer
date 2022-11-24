@@ -61,7 +61,7 @@ In this lab, you will:
 ## Task 2: Run Sample Java SE Application
 
 1. If you do not have a Sample Java SE Application in your managed instance, please create and build on your own behalf.
-2. The Sample Java SE Application used in this task is called **Sample-JavaSE-App** packaged using executable Java Archive (JAR) file. Below is the partial print of the pom.xml configuration file.
+2. The Sample Java SE Application used in this task is called **Sample-JavaSE-App** packaged in executable Java Archive (JAR) file. Below is the partial print of the pom.xml configuration file for the sample Java SE Application which indicates the dependency on Java libraries.
 	```xml
 	...
 		<dependency>
@@ -73,7 +73,7 @@ In this lab, you will:
 	```
 	Please take note that **Oracle Cloud Infrastructure SDK** Java library is included in the Java SE sample application.
 
-3. Run the Sample Java SE Application.
+3. Run the Sample Java SE Application with following command.
 	```
 	<copy>
 	sudo java -jar <path-to-sample-app>/<filename.jar>
@@ -98,10 +98,11 @@ In this lab, you will:
 4. If your request is successful, you should see that the Status of the request is marked as **Completed without errors**. It will take approximately 10 minutes for the request to be completed.
 	![image of work request for java libraries completed](images/work-request-of-libraries-scan-completed.png)
 
-5. On the Fleet details pages, scroll down to the **Resource** menu and select **Java libraries**. You should be able to see a list of libraries detected. Additional Java libraries are added in the result list, which are **oci-java-sdk-common** library itself and dependency libraries it included.
+5. On the Fleet details pages, scroll down to the **Resource** menu and select **Java libraries**. You should be able to see a list of libraries detected. Additional Java libraries are added in the result list which are **oci-java-sdk-common** itself and dependency libraries it included.
 	![image of detected java libraries](images/java-libraries-oci.png)
+> **Note:** The Java libraries detected in the list varies depend on the dependencies of your sample application.
 
-6. In the same Fleet details page, Click the **oci-java-sdk-common** library, you should see details of selected library and list of applications that was ran with selected library.
+6. In the same Fleet details page, Click the **oci-java-sdk-common** library, you should see details of selected library and list of applications that was run with selected library. 
 	![image of details of oci sdk libraries](images/java-se-app-info.png)
 
 7. In the same page, click **Sample-JavaSE-App.jar**, You should see the details of sample Java SE Application that was run previously.

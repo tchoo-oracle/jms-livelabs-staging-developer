@@ -6,7 +6,7 @@ Advanced usage tracking allows you to monitor the usage of Java servers in your 
 
 This lab walks you through the steps to track Java servers in a managed instance.
 
-Estimated Time: 40 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 
@@ -82,7 +82,7 @@ It will take approximately 10 minutes for the request to be completed.
     ![image of detail of deployed java web application](images/sample-java-web-application-detected.png)
 
 ## Task 4: (Optional) Tracking other Java Servers with Deployed Applications
-* Task 1 to 4 highlights the process of tracking a running Java server with deployed Web Application using WebLogic server as an example. The Java server scan is able to detect the latest versions of a variety of Java Servers including:
+* Task 1 to 3 highlights the process of tracking a running Java server with deployed sample application using WebLogic server as an example. The Java server scan is able to detect the latest versions of a variety of Java Servers including:
     * WebLogic
     * Tomcat
     * JBoss (JBoss EAP, JBoss AS/WildFly)
