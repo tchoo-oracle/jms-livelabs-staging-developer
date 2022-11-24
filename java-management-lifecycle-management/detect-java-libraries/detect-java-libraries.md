@@ -19,211 +19,99 @@ In this lab, you will:
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
 * You are using an Oracle Linux image on your Managed Instance for this workshop.
-* Access to the cloud environment and resources configured in [Lab 5](?lab=track-java-servers).
+* Access to the cloud environment and resources configured in [Lab 4](?lab=track-java-servers).
+* Familiarity with Building and Running a Java SE Application
 
-## Task 1: Detect Java libraries in deployed Java Web Application.
+## Task 1: Detect Java libraries in deployed Java Web Application
 
 1. This task assumes a sample Java Web Application has been deployed on a running WebLogic server in a managed instance.
-
-* Refer to **Lab 5** to deploy a Java Web Application if none has been deployed.
-* Refer to **Lab 5, Task 3** to restart the WebLogic server if it has stopped.
-
+	* Refer to **Lab 4, Task 2** to restart the WebLogic server with sample application if it has stopped.
 
 2. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.  
- ![image of navigation menu](images/console-navigation-fleet.png)
- Select the fleet with the advanced feature, **Lifecycle management** enabled. Refer to  [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
+	![image of navigation menu](images/console-navigation-fleet.png)
+	Select the fleet with the advanced feature, **Lifecycle management** enabled. Refer to  [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
+
 3. On the Fleet details page, click **Scan for Java libraries**.
- ![image of Fleet details page](images/scan-java-libraries.png)
-If your request is submitted successfully, you should receive a notification in green as seen below: 
-![image of created work request for java libraries](images/work-request-of-libraries-scan-created.png)
+	![image of Fleet details page](images/scan-java-libraries.png)
+	If your request is submitted successfully, you should receive a notification in green as seen below: 
+	![image of created work request for java libraries](images/work-request-of-libraries-scan-created.png)
 
 4. Scroll down the Fleet details page, under **Resource** menu, select **Work Request**. You should see the Scan for Java libraries Work Request you submitted in step 2. Wait for the work request to complete.
-![image of work request for java libraries in progress](images/work-request-of-libraries-scan-in-progress.png)
+	![image of work request for java libraries in progress](images/work-request-of-libraries-scan-in-progress.png)
 
 5. If your request is successful, you should see that the Status of the request is marked as **Completed without errors**. It will take approximately 10 minutes for the request to be completed.
-![image of work request for java libraries in progress completed](images/work-request-of-libraries-scan-completed.png)
+	![image of work request for java libraries in progress completed](images/work-request-of-libraries-scan-completed.png)
 
-6. In the same Fleet details page, under **Resource** menu, select **Java libraries** you should see Java libraries that we included in the configuration file for the deployed sample Java Web Application in lab 5.
-![image of detected java libraries](images/java-libraries-web.png)
-* The [CVSS](https://www.oracle.com/security-alerts/cvssscoringsystem.html) score is the indication of the security vulnerability associated with the Java library. The score **varies** over time and there might be new vulnerabilities affecting your application since JMS refreshes data from the National Vulnerability Database(NVD) on a weekly basis.
-* There will have **3** categories of CVSS score for Java libraries in the scan result based on availability in NVD as following:
-  1. Both Java library is found in NVD and CVSS score is obtained.
-  The CVSS score will show normally with score value and severity status of Low(green color), Medium(yellow color), High(red color) as per the range of CVSS score.
-  2. Java library is found in NVD but CVSS score is not computed.  
-  The **Unknown** will be shown under **CVSS score**.  
-  3. Java libraries is not found in NVD.  
-  The **N/A** will be shown under **Version** and **No matches found** will be shown under **CVSS score**. 
+6. In the same Fleet details page, under **Resource** menu, select **Java libraries** you should see Java libraries included for the deployed sample Java Web Application in lab 4.
+	![image of detected java libraries](images/java-libraries-web.png)
+	The [CVSS](https://www.oracle.com/security-alerts/cvssscoringsystem.html) score is the indication of the security vulnerability associated with the Java library. The score **varies** over time and there might be new vulnerabilities affecting your application since JMS refreshes data from the National Vulnerability Database(NVD) on a weekly basis.  
+	There are **3** categories of CVSS scores for Java libraries in the scan result based on availability in NVD as following:
 
-  ![image of sample if detected java libraries](images/java-libraries-categories.png)
+	1. When the Java library is found in the NVD and a CVSS score is obtained, the CVSS score will be displayed with a score and severity status. Severity statuses have categories of Low (green), Medium (yellow), High (red) as per CVSS score categories.
+
+	2. When a Java library is found in the NVD but a CVSS score is not computed, **Unknown** will be displayed in the CVSS score column.
+
+	3. When the Java library is not found in the NVD, **N/A** will be indicated in the **Version** column and **No matches** found will be shown under the **CVSS score** column.
+	![image of sample if detected java libraries](images/java-libraries-categories.png)
 
 7. You can stop the WebLogic server now by pressing **CTRL + c**.
-![image of weblogic server stopped](images/stop-weblogic-server.png)
+	![image of weblogic server stopped](images/stop-weblogic-server.png)
 
-## Task 2: Create Sample Java SE Application.
 
-1. Create a sample Java SE Application.
-* If you are not already in the home directory of your compute instance, navigate there with command as following:
-```
-    <copy>
-    cd ~
-    </copy>
-```
-* Create the sample Java SE Application named **GreetingApp** with commands as following:
-```
-    <copy>
-    mvn archetype:generate -DgroupId=com.sample -DartifactId=GreetingApp -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-    </copy>
-```
-* Navigate to the directory of the created application with following command:
-```
-    <copy>
-    cd ./GreetingApp
-    </copy>
-```
+## Task 2: Run Sample Java SE Application
 
-2. Edit main Java class.
-* Open the App.java file with following command:
-```
-    <copy>
-    nano src/main/java/com/sample/App.java
-    </copy>
-```
-* Replace the content as following. Save the file.
-```java
-    <copy>
-package com.sample;
-import com.google.gson.Gson;
-import java.text.SimpleDateFormat;
-import java.util.*;
-public class App
-{
-    public static void main(String[] args)
-    {
-        System.out.println("Greeting message in format of Json will be printed every 20 secs");
-        final Map<String, String> map = new HashMap<String, String>();
-        map.put("Message", "Hello, World!");
-        Timer t = new Timer();
-        t.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                map.put("Time", new SimpleDateFormat("yyyy-MMM-dd HH:mm:ss").format(new java.util.Date()));
-                System.out.println(new Gson().toJson(map));
-            }
-        }, 0, 20000);
-    }
-}
-    </copy>
-```
-3. Edit pom.xml configuration file.
-* Open the pom.xml file with the following command:
-```
-    <copy>
-    nano pom.xml
-    </copy>
-```
-* Replace the content as following. Save the file.
-```xml
-    
-<copy>
-	<project
-		xmlns="http://maven.apache.org/POM/4.0.0"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-		<modelVersion>4.0.0</modelVersion>
-		<groupId>com.sample</groupId>
-		<artifactId>GreetingApp </artifactId>
-		<packaging>jar</packaging>
-		<version>1.0-SNAPSHOT</version>
-		<name>AppTest</name>
-		<url>http://maven.apache.org</url>
-		<dependencies>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>3.8.1</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.google.code.gson</groupId>
-				<artifactId>gson</artifactId>
-				<version>2.9.0</version>
-			</dependency>
-		</dependencies>
-		<build>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					<executions>
-						<execution>
-							<phase>package</phase>
-							<goals>
-								<goal>single</goal>
-							</goals>
-							<configuration>
-								<archive>
-									<manifest>
-										<mainClass>com.sample.App</mainClass>
-									</manifest>
-								</archive>
-								<descriptorRefs>
-									<descriptorRef>jar-with-dependencies</descriptorRef>
-								</descriptorRefs>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</build>
-	</project>
-</copy>
-```
-3. Build Java SE Application as executable jar file using Maven.
-```
-    <copy>
-        mvn clean package
-    </copy>
-```
-* The console should show that the build is successful.
-![image of building jar file](images/build-java-se-app.png)
-4. Run Java SE application with following command.
-```
-    <copy>
-        sudo java -jar ./target/GreetingApp-1.0-SNAPSHOT-jar-with-dependencies.jar
-    </copy>
-```
-* A line containing a "Hello World" messages with the timestamp should appear every 20 seconds and you should be able to see the output similar as following after Java SE application started successfully.
-![image of output of GreetingApp](images/run-java-se-app.png)
+1. If you do not have a Sample Java SE Application in your managed instance, please create and build on your own behalf.
+2. The Sample Java SE Application used in this task is called **Sample-JavaSE-App** packaged using executable Java Archive (JAR) file. Below is the partial print of the pom.xml configuration file.
+	```xml
+	...
+		<dependency>
+			<groupId>com.oracle.oci.sdk</groupId>
+			<artifactId>oci-java-sdk-common</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+	...
+	```
+	Please take note that **Oracle Cloud Infrastructure SDK** Java library is included in the Java SE sample application.
 
-## Task 3: Detect Java libraries for Java SE Application.
+3. Run the Sample Java SE Application.
+	```
+	<copy>
+	sudo java -jar <path-to-sample-app>/<filename.jar>
+	</copy>
+	```
+> **Note:** Please make sure the sample Java SE application is continuously running without interruption during **Library Scanning** in the subsequent task.
+
+## Task 3: Detect Java libraries for Java SE Application
 
 1. Open the navigation menu, click **Observability & Management**. Under **Java Management**, select **Fleets**.
- ![image of navigation menu](images/console-navigation-fleet.png)
- Select the fleet with the advanced feature, **Lifecycle management** enabled. Refer to  [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
+	![image of navigation menu](images/console-navigation-fleet.png)
+	Select the fleet with the advanced feature, **Lifecycle management** enabled. Refer to  [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
+
 2. On the Fleet details page, click **Scan for Java libraries**.
- ![image of scan for java libraries](images/scan-java-libraries.png)
-If your request is submitted successfully, you should receive a notification in green as seen below: 
-![image of created work request for java libraries](images/work-request-of-libraries-scan-created.png)
+	![image of scan for java libraries](images/scan-java-libraries.png)
+	If your request is submitted successfully, you should receive a notification in green as seen below: 
+	![image of created work request for java libraries](images/work-request-of-libraries-scan-created.png)
+
 3. Scroll down the Fleet details page, under **Resource** menu, select **Work Request**. You should see the Scan for Java libraries Work Request you submitted in step 2. Wait for the work request to complete.
-![image of work request for java libraries in progress](images/work-request-of-libraries-scan-in-progress.png)
+	![image of work request for java libraries in progress](images/work-request-of-libraries-scan-in-progress.png)
+
 4. If your request is successful, you should see that the Status of the request is marked as **Completed without errors**. It will take approximately 10 minutes for the request to be completed.
-![image of work request for java libraries completed](images/work-request-of-libraries-scan-completed.png)
+	![image of work request for java libraries completed](images/work-request-of-libraries-scan-completed.png)
 
-5. On the Fleet details pages, scroll down to the **Resource** menu and select **Java libraries**. You should be able to see a list of libraries detected. An additional Java library named **gson**, which was included in the sample Java SE application, should also be present.
-![image of detected java libraries](images/java-library-gson.png)
+5. On the Fleet details pages, scroll down to the **Resource** menu and select **Java libraries**. You should be able to see a list of libraries detected. Additional Java libraries are added in the result list, which are **oci-java-sdk-common** library itself and dependency libraries it included.
+	![image of detected java libraries](images/java-libraries-oci.png)
 
-6. In the same Fleet details page, Click the **gson** library, you should see details of selected library and list of applications that was ran with selected library.
-![image of details of gson](images/java-se-app-info.png)
- 
-7. In the same page, click **GreetingApp-1.0-SNAPSHOT-jar-with-dependencies.jar**, You should see the details of Java SE Application that was run in the previous steps.
-![image of details of GreetingApp](images/java-se-app-detail.png)
+6. In the same Fleet details page, Click the **oci-java-sdk-common** library, you should see details of selected library and list of applications that was ran with selected library.
+	![image of details of oci sdk libraries](images/java-se-app-info.png)
+
+7. In the same page, click **Sample-JavaSE-App.jar**, You should see the details of sample Java SE Application that was run previously.
+	![image of details of GreetingApp](images/java-se-app-detail.png)
 
 > **Note:** Tracking of Java Application that is running with **Non-Oracle JDKs** in the fleet is also supported.
 
 8. You can stop the Java SE application by pressing **CTRL + c**.  
 
 You may now **proceed to the next lab.**
-
 
 ## Learn More
 * Refer to the [Java Runtime Lifecycle Management](https://docs.oracle.com/en-us/iaas/jms/doc/advanced-features.html#GUID-08673CB1-D87D-4BC5-A61D-E59DCC879ABB), [Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/getting-started-java-management-service.html#GUID-47C63464-BC0C-4059-B552-ED9F33E77ED3) and [Viewing a Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/fleet-views.html#GUID-F649F0E5-DD54-4DEC-A0F1-942FE3552C93) sections of the JMS documentation for more details.
