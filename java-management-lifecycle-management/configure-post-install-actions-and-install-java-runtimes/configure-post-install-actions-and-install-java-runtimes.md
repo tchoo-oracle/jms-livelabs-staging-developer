@@ -50,6 +50,7 @@ In this lab, you will:
    | Change minimum key length for RSA      | 2048 bits |
    | Disable TLS                            | TLS 1.0 , TLS 1.0 and TLS 1.1 |
    |Replace JDK root certificates with default operating system certificates|      |
+   {: title="Available Post Java Installation Actions"}
 
 
 6. This lab will simulate the setting up of 2 different installation actions as follows:

@@ -21,7 +21,7 @@ In this lab, you will:
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
 * You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
 * Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
-* Have java applications running in your instance from [Lab 5: Track Java Servers](?lab=track-java-servers).
+* Have java applications running in your instance from [Lab 4: Track Java Servers](?lab=track-java-servers).
 
 ## Task 1: Submit Java Flight Recorder Work Request
 
@@ -76,7 +76,6 @@ In this lab, you will:
 
     JMC download link: https://www.oracle.com/java/technologies/jdk-mission-control.html
 
- You may now **proceed to the next lab.**
 
 
 
