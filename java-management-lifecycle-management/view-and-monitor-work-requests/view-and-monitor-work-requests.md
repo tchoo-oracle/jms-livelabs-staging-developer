@@ -10,16 +10,16 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-* Understand the different components of a Work Request view
-* View and monitor the status of Work Requests created using the Java Management Service console interface
-* Cancel a Work Request using the the Java Management Service console interface
+  * Understand the different components of a Work Request view
+  * View and monitor the status of Work Requests created using the Java Management Service console interface
+  * Cancel a Work Request using the the Java Management Service console interface
 
 
 ### Prerequisites
 
-* You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-* You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
-* Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
+  * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
+  * You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
+  * Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
 
 ## Task 1: Overview of Work Request detailed views
 1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
@@ -44,24 +44,24 @@ In this lab, you will:
 4. For the list of resources which include **Associated Resources**, **Log Messages** and **Error Messages**, each list displays **50** rows at a time. You may click the header of a column to sort the list based on the title of the column, or use the text field to search the contents of the table.
 
   For the list of **Associated Resources**, you may find the following information:
-   * **Managed instance**: Name of the managed instance affected by the Work Request.
-   * **Path**: The Java runtime installation path in the managed instance affected by the operation.
-   * **Status**: Status of the operation at the associated resource.
-   * **Last updated**: Date and time when the status for this associated resource was last updated.
+    * **Managed instance**: Name of the managed instance affected by the Work Request.
+    * **Path**: The Java runtime installation path in the managed instance affected by the operation.
+    * **Status**: Status of the operation at the associated resource.
+    * **Last updated**: Date and time when the status for this associated resource was last updated.
 
   ![image of work request associated resources view](images/work-request-associated-resources.png)
 
 
   For the list of **Log Messages**, you may find the following information:
-  * **Message**: Log message reported by the agent while carrying out the Work Request.
-  * **Timestamp**: Date and time when the message was generated.
+    * **Message**: Log message reported by the agent while carrying out the Work Request.
+    * **Timestamp**: Date and time when the message was generated.
 
   ![image of work request log messages view](images/work-request-log-messages.png)
 
 
   For the list of **Error Messages**, you may find the following information. Note that error messages can be observed if your Work Request was not successful.
-  * **Message**: Error message reported by the agent while carrying out the Work Request.
-  * **Timestamp**: Date and time when the message was generated.
+    * **Message**: Error message reported by the agent while carrying out the Work Request.
+    * **Timestamp**: Date and time when the message was generated.
 
   ![image of work request error messages view](images/work-request-error-messages.png)
 
@@ -98,14 +98,14 @@ In this lab, you will:
 
 
 ## Learn More
-* Refer to the [Java Runtime Lifecycle Management](https://docs.oracle.com/en-us/iaas/jms/doc/advanced-features.html#AJSUG-GUID-08673CB1-D87D-4BC5-A61D-E59DCC879ABB), [Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/getting-started-java-management-service.html#GUID-47C63464-BC0C-4059-B552-ED9F33E77ED3) and [Viewing a Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/fleet-views.html#GUID-F649F0E5-DD54-4DEC-A0F1-942FE3552C93) sections of the JMS documentation for more details.
+ * Refer to the [Java Runtime Lifecycle Management](https://docs.oracle.com/en-us/iaas/jms/doc/advanced-features.html#AJSUG-GUID-08673CB1-D87D-4BC5-A61D-E59DCC879ABB), [Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/getting-started-java-management-service.html#GUID-47C63464-BC0C-4059-B552-ED9F33E77ED3) and [Viewing a Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/fleet-views.html#GUID-F649F0E5-DD54-4DEC-A0F1-942FE3552C93) sections of the JMS documentation for more details.
 
-* Use the [Troubleshooting](https://docs.oracle.com/en-us/iaas/jms/doc/troubleshooting.html#GUID-2D613C72-10F3-4905-A306-4F2673FB1CD3) chapter for explanations on how to diagnose and resolve common problems encountered when installing or using Java Management Service.
+ * Use the [Troubleshooting](https://docs.oracle.com/en-us/iaas/jms/doc/troubleshooting.html#GUID-2D613C72-10F3-4905-A306-4F2673FB1CD3) chapter for explanations on how to diagnose and resolve common problems encountered when installing or using Java Management Service.
 
-* If the problem still persists or it is not listed, then refer to the [Getting Help and Contacting Support](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport.htm) section. You can also open a support service request using the **Help** menu in the OCI console.
+ * If the problem still persists or it is not listed, then refer to the [Getting Help and Contacting Support](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport.htm) section. You can also open a support service request using the **Help** menu in the OCI console.
 
 
 ## Acknowledgements
 
-* **Author** - Xin Yi Tay, Java Management Service
-* **Last Updated By** - Somik Khan, November 2022
+ * **Author** - Xin Yi Tay, Java Management Service
+ * **Last Updated By** - Somik Khan, November 2022

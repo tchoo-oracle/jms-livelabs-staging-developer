@@ -78,6 +78,7 @@ In this lab, you will:
 
 
 
+You may now **proceed to the next lab.**
 
 
 ## Acknowledgements
