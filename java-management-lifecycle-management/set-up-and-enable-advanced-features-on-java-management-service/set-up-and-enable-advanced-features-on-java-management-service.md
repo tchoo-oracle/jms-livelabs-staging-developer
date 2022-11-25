@@ -30,10 +30,10 @@ In this lab, you will:
    ![image of edit fleet properties](images/fleet-edit-properties.png)
 
 3. The advanced features section should display the 4 different advanced features available:
-   * Lifecycle management
-   * Advanced usage tracking
-   * Crypto event analysis
-   * Java Flight Recorder (JFR)
+    * Lifecycle management
+    * Advanced usage tracking
+    * Crypto event analysis
+    * Java Flight Recorder (JFR)
 
 4. Ensure that the **Select all advanced features** box is checked. This should also check the boxes of all the individual features.
     
@@ -54,118 +54,118 @@ If you are using an OCI compute instance and it already has the Management Agent
 
 1. There are two ways to verify and enable `Oracle Java Management Service` plugin.
 
-   **Using OCI Console:**
-  
-   * In the Oracle Cloud console, click **Instances** under **Compute**, and select the instance that you are interested in.
-     ![image of navigate from OCI console menu to computer instances](images/navigate-to-computer-instance.png)
+    **Using OCI Console:**
 
-   * Click the **Oracle Cloud Agent** tab. The list of plugins is displayed. Verify that the **Oracle Java Management Service** OCA plugin is enabled. If it is disabled, toggle the switch for the Oracle Java Management Service plugin and ensure that the status is set to **Running**. This may take 5 to 10 minutes. This will enable the advanced features for the chosen OCI Compute Instance.
-    ![image of disabled oracle java management service oca plugin](images/oracle-jms-oca-plugin-disabled.png)
+     * In the Oracle Cloud console, click **Instances** under **Compute**, and select the instance that you are interested in.
+       ![image of navigate from OCI console menu to computer instances](images/navigate-to-computer-instance.png)
 
-   **Using Cloud Shell:**
-    * Alternatively, you can use Cloud Shell to verify and enable `Oracle Java Management Service` plugin. Click the Cloud Shell icon in the Console header. This icon is accessible from mostly all the OCI Console pages.
-      ![image of location of Cloud Shell icon](images/oci-cloud-shell-navigate.png)
-    The Cloud Shell will open and may look something like this.
-     ![image of Cloud Shell terminal](images/oci-cloud-shell-console.png)
+     * Click the **Oracle Cloud Agent** tab. The list of plugins is displayed. Verify that the **Oracle Java Management Service** OCA plugin is enabled. If it is disabled, toggle the switch for the Oracle Java Management Service plugin and ensure that the status is set to **Running**. This may take 5 to 10 minutes. This will enable the advanced features for the chosen OCI Compute Instance.
+      ![image of disabled oracle java management service oca plugin](images/oracle-jms-oca-plugin-disabled.png)
 
-      You can use the icons in the upper right corner of the Cloud Shell window to minimize, maximize, and close your Cloud Shell session. 
-      ![image of buttons on Cloud Shell](images/oci-cloud-shell-buttons.png)
-    
-    * In Cloud Shell add the following to get the Instance details. You can copy the Instance OCID from Instance detail page.
-        ```
-        <copy>
-       oci compute instance get --instance-id <INSTANCE OCID>
-        </copy>
-        ```
+    **Using Cloud Shell:**
+     * Alternatively, you can use Cloud Shell to verify and enable `Oracle Java Management Service` plugin. Click the Cloud Shell icon in the Console header. This icon is accessible from mostly all the OCI Console pages.
+       ![image of location of Cloud Shell icon](images/oci-cloud-shell-navigate.png)
+     The Cloud Shell will open and may look something like this.
+      ![image of Cloud Shell terminal](images/oci-cloud-shell-console.png)
 
-      The response may look like this.
+       You can use the icons in the upper right corner of the Cloud Shell window to minimize, maximize, and close your Cloud Shell session. 
+       ![image of buttons on Cloud Shell](images/oci-cloud-shell-buttons.png)
 
-      ![image of entering a command in Cloud Shell](images/oci-cloud-shell-command.png)
+     * In Cloud Shell add the following to get the Instance details. You can copy the Instance OCID from Instance detail page.
+         ```
+         <copy>
+        oci compute instance get --instance-id <INSTANCE OCID>
+         </copy>
+         ```
 
-    * JMS Agent plugin is controlled through this JSON tag.
-        ```
-        <copy>
-        {
-          "desired-state": "DISABLED",
-          "name": "Oracle Java Management Service"
-        }        
-        </copy>
-        ```
+       The response may look like this.
 
-        If the `desired-state` is `DISABLED` then proceed to next step to change the state to `ENABLED`, else you can skip to Step 2.
-     
+       ![image of entering a command in Cloud Shell](images/oci-cloud-shell-command.png)
 
+     * JMS Agent plugin is controlled through this JSON tag.
+         ```
+         <copy>
+         {
+           "desired-state": "DISABLED",
+           "name": "Oracle Java Management Service"
+         }        
+         </copy>
+         ```
 
-    * Create a configuration json file and add the following json code in it.
-        ```
-        <copy>
-        nano config.json  
-        </copy>
-        ```
-
-        ```
-        <copy>
-        {
-          "are-all-plugins-disabled": false,
-          "is-management-disabled": false,
-          "is-monitoring-disabled": false,
-          "plugins-config": [
-          {
-            "desired-state": "DISABLED",
-            "name": "Vulnerability Scanning"
-          },
-          {
-            "desired-state": "ENABLED",
-            "name": "OS Management Service Agent"
-          },
-          {
-            "desired-state": "DISABLED",
-            "name": "Custom Logs Monitoring"
-          },
-          {
-            "desired-state": "ENABLED",
-            "name": "Compute Instance Run Command"
-          },
-          {
-            "desired-state": "ENABLED",
-            "name": "Compute Instance Monitoring"
-          },
-          {
-            "desired-state": "DISABLED",
-            "name": "Block Volume Management"
-          },
-          {
-            "desired-state": "DISABLED",
-            "name": "Bastion"
-          },
-          {
-            "desired-state": "ENABLED",
-            "name": "Management Agent"
-          },
-          {
-            "desired-state": "ENABLED",
-            "name": "Oracle Java Management Service"
-          }
-          ]
-        }
-        </copy>
-        ```
-
-      To save the file, press **CTRL+x**. Before exiting, nano will ask you if you wish to save the file: Type **y** to save and exit, type **n** to abandon your changes and exit.
-      
+         If the `desired-state` is `DISABLED` then proceed to next step to change the state to `ENABLED`, else you can skip to Step 2.
 
 
-     * Now, in Cloud Shell add the following to update the `Oracle Java Management Service` plugin state from `DISABLED` to `ENABLED`.
 
-      ```
-      <copy>
-      oci compute instance update --instance-id <INSTANCE OCID> --agent-config file://config.json
-      </copy>
-      ```
+     * Create a configuration json file and add the following json code in it.
+         ```
+         <copy>
+         nano config.json  
+         </copy>
+         ```
 
-      If you see the response like this, the `Oracle Java Management Service` plugin has been enabled. Else in case of any error, please refer to this link [Using CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliusing.htm).
+         ```
+         <copy>
+         {
+           "are-all-plugins-disabled": false,
+           "is-management-disabled": false,
+           "is-monitoring-disabled": false,
+           "plugins-config": [
+           {
+             "desired-state": "DISABLED",
+             "name": "Vulnerability Scanning"
+           },
+           {
+             "desired-state": "ENABLED",
+             "name": "OS Management Service Agent"
+           },
+           {
+             "desired-state": "DISABLED",
+             "name": "Custom Logs Monitoring"
+           },
+           {
+             "desired-state": "ENABLED",
+             "name": "Compute Instance Run Command"
+           },
+           {
+             "desired-state": "ENABLED",
+             "name": "Compute Instance Monitoring"
+           },
+           {
+             "desired-state": "DISABLED",
+             "name": "Block Volume Management"
+           },
+           {
+             "desired-state": "DISABLED",
+             "name": "Bastion"
+           },
+           {
+             "desired-state": "ENABLED",
+             "name": "Management Agent"
+           },
+           {
+             "desired-state": "ENABLED",
+             "name": "Oracle Java Management Service"
+           }
+           ]
+         }
+         </copy>
+         ```
 
-      ![image of entering a command in Cloud Shell](images/oci-cloud-shell-update-instance-command.png)
+       To save the file, press **CTRL+x**. Before exiting, nano will ask you if you wish to save the file: Type **y** to save and exit, type **n** to abandon your changes and exit.
+
+
+
+      * Now, in Cloud Shell add the following to update the `Oracle Java Management Service` plugin state from `DISABLED` to `ENABLED`.
+
+       ```
+       <copy>
+       oci compute instance update --instance-id <INSTANCE OCID> --agent-config file://config.json
+       </copy>
+       ```
+
+       If you see the response like this, the `Oracle Java Management Service` plugin has been enabled. Else in case of any error, please refer to this link [Using CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliusing.htm).
+
+       ![image of entering a command in Cloud Shell](images/oci-cloud-shell-update-instance-command.png)
 
 
 2. Next, in the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and under **Management Agent**, click **Agents**. Select the agent you are interested in.

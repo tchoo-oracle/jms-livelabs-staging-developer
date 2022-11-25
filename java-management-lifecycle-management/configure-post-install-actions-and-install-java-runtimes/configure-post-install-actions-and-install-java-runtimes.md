@@ -10,17 +10,17 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-* Define a set of post java installation actions for use.
-* Create a Install Java Runtime Work Request using the Java Management Service console interface.
-* Verify Java Runtime installation and post java installation actions.
+   * Define a set of post java installation actions for use.
+   * Create a Install Java Runtime Work Request using the Java Management Service console interface.
+   * Verify Java Runtime installation and post java installation actions.
 
 
 ### Prerequisites
 
-* You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-* You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
-* Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
-* Advanced feature - Lifecycle management is enabled.
+   * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
+   * You are using an Oracle Linux image or Windows OS on your Managed Instance for this workshop.
+   * Access to the cloud environment and resources configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
+   * Advanced feature - Lifecycle management is enabled.
 
 ## Task 1: Enable and Setup Post Java Installation Actions
 
@@ -54,10 +54,10 @@ In this lab, you will:
 
 
 6. This lab will simulate the setting up of 2 different installation actions as follows:
-   * Minimum key length for RSA > 2048 bits (e.g. for signed jars)
-   * Disable TLS 1.0 and TLS 1.1
+      * Minimum key length for RSA > 2048 bits (e.g. for signed jars)
+      * Disable TLS 1.0 and TLS 1.1
 
-   The post java installation actions can be configured differently based on different requirements.
+      The post java installation actions can be configured differently based on different requirements.
   
 7. Select the  **Change minimum key length for RSA** option from the dropdown list. Another combo box will appear to the right. This contains the new minimum key length (in bits) that will be set for RSA signed jars.
 

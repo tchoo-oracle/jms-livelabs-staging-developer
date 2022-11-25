@@ -64,7 +64,7 @@ In this lab, you will:
 
 
 
-## Task 2: **(Optional)** Download Crypto Event Analysis Report
+## Task 2: (Optional) Download Crypto Event Analysis Report
 
 1. To access the report, navigate to the **Fleet** details page and click on the **Object storage bucket** name under **Object storage**.
 
